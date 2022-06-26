@@ -4,22 +4,6 @@ import java.awt.*;
 
 public class VerticalLayout implements LayoutStrategy {
     @Override
-    public void layoutContainer(Container parent) {
-        int width = parent.getWidth();
-        System.out.println(width);
-        System.out.println("xxx");
-        int height = parent.getHeight();
-        Component[] children = parent.getComponents();
-        int x = 0;
-        int y = 0;
-        for (int i = 0; i<children.length; i++) {
-            Component c = children[i];
-            c.setBounds(x,y,width,50);
-            y += 50;
-        }
-    }
-
-    @Override
     public void addLayoutComponent(String name, Component comp) {
 
     }
@@ -37,6 +21,22 @@ public class VerticalLayout implements LayoutStrategy {
     @Override
     public Dimension minimumLayoutSize(Container parent) {
         return null;
+    }
+
+    @Override
+    public void layoutContainer(Container parent) {
+        int width = parent.getWidth();
+        System.out.println(width);
+        System.out.println("xxx");
+        int height = parent.getHeight();
+        Component[] children = parent.getComponents();
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i<children.length; i++) {
+            Component c = children[i];
+            c.setBounds(x,y,width,50);
+            y += 50;
+        }
     }
 
     @Override

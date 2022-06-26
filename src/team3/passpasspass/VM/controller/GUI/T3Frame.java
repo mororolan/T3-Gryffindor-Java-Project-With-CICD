@@ -10,18 +10,16 @@ public class T3Frame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(500, 800);
         this.setVisible(true);
-        this.setResizable(false);
+//        this.setResizable(false);
         // set location
-        this.setLocation(500, 200);
-        // set Container
-        Container mainContainer = this.getContentPane();
-//        this.setContentPane(new T3Panel());
+        Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
+        int centerX = screenSize.width/5;
+        int centerY = screenSize.height/5;
+        this.setLocation(centerX, centerY);
         // set Layout
         this.setLayout(new VerticalLayout());
         // add ourTeamMark
         JLabel T3Mark = new TextFactory("@Copyright(c) Team #3 Work",0);
         this.add(T3Mark);
-        T3Mark.setBounds(100,600,200,100);
-
     }
 }

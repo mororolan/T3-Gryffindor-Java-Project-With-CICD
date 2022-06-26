@@ -2,7 +2,7 @@ package team3.passpasspass.VM.controller.GUI;
 
 import java.awt.*;
 
-public class TwoColumnLayout implements LayoutStrategy{
+public class TwoColumnLayout implements LayoutStrategy {
     @Override
     public void layoutContainer(Container parent) {
         int width = parent.getWidth();
