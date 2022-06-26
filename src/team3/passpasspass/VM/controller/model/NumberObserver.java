@@ -1,12 +1,8 @@
 package team3.passpasspass.VM.controller.model;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.*;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class NumberObserver {
 	public void maintainerCollectCoins(String coinsFilePath) {
@@ -15,13 +11,14 @@ public class NumberObserver {
 		coinsNumber.add(maintainerObserver);
 		maintainerObserver.changeNumber(0,coinsFilePath);
 	}
+	
 }
 
-//����Ŀ�꣺����
+//Abstract Subject
 abstract class Number {
 	protected List<VMPanel> panels = new ArrayList<VMPanel>();
 	
-	//���ӹ۲��߷���
+	//Observer method: add method
 	public void add(VMPanel panel) {
 		panels.add(panel);
 	}
@@ -30,7 +27,7 @@ abstract class Number {
 }
 
 
-//����Ŀ�꣺Ӳ������
+//Concrete Subject: Coins Number
 class CoinsNumber extends Number{
 	@Override
 	public void change(int number) {
@@ -41,13 +38,13 @@ class CoinsNumber extends Number{
 }
 
 
-//����۲��ߣ�Vending Machine Panel
+//Abstract Observer: Vending Machine Panel
 interface VMPanel{
 	void changeNumber(int number, String filePath);
 }
 
 
-//����۲���1��Maintainer Panel
+//Concrete Observer1: Maintainer Panel
 class MaintainerPanel implements VMPanel{
 	@Override
 	public void changeNumber(int coinsNumber, String coinsFilePath) {
@@ -85,12 +82,12 @@ class MaintainerPanel implements VMPanel{
 }
 
 
-//����۲���2��Customer Panel
+//Concrete Observer2: Customer Panel
 class CustomerPanel implements VMPanel{
 
 	@Override
 	public void changeNumber(int number, String path) {
-		// TODO �Զ����ɵķ������
+		// TODO 
 		
 	}
 }

@@ -50,5 +50,10 @@ public class  SimulatorControlPanel extends T3Frame {
             new MachinerySimulatorPanel("VMCS - Machinery Panel", loginStatus);
         });
 
+        bMaintainerPanel.addActionListener(e -> {
+            this.dispose();
+            new MaintainerLoginFrame().createMaintainerJFrame("VMCS - Maintainer Panel");
+        });
+
     }
 }
