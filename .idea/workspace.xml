@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="fix some structure problems">
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/DrinkMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/Goods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/MoneyCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/Per.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/customerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="merge all work">
       <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656233960833</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="merge all work">
+      <created>1656234638894</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656234638894</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,7 +178,8 @@
     <MESSAGE value="fix a bug" />
     <MESSAGE value="merge peijun &amp; robin‘s work" />
     <MESSAGE value="fix some structure problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some structure problems" />
+    <MESSAGE value="merge all work" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge all work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

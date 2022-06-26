@@ -12,58 +12,51 @@ import java.util.concurrent.atomic.AtomicBoolean;
 // TODO
 public class MachinerySimulatorPanel extends T3Frame {
 
-public MachinerySimulatorPanel(String title, boolean loginStatus) {
-    super(title);
-    ArrayList<String[]> coins = ReadCSV.readCSV("./data/dwd_money_stat.csv");
-    ArrayList<String[]> cans = ReadCSV.readCSV("./data/dwd_drink_info.csv");
-    AtomicBoolean unlockStatus = new AtomicBoolean(loginStatus);
+//public MachinerySimulatorPanel(String title, boolean loginStatus) {
+ public MachinerySimulatorPanel(String title, boolean loginStatus) {
+        super(title);
+        ArrayList<String[]> coins = ReadCSV.readCSV("./data/dwd_money_stat.csv");
+        ArrayList<String[]> cans = ReadCSV.readCSV("./data/dwd_drink_info.csv");
+        AtomicBoolean unlockStatus = new AtomicBoolean(loginStatus);
 
 
-    JLabel bigTitle = new TextFactory(title);
+        JLabel bigTitle = new TextFactory(title);
 
-    JPanel coinContainer = new T3Panel();
-    JPanel canContainer = new T3Panel();
-    System.out.println(coins.size());
-    int y = 50;
-    TextFactory warning = new TextFactory("No change");
+        JPanel coinContainer = new T3Panel();
+        JPanel canContainer = new T3Panel();
+        System.out.println(coins.size());
+        int y = 50;
+        TextFactory warning = new TextFactory("No change");
 
-    showCoinsChange(coins, unlockStatus, warning, coinContainer);
-    showCansChange(cans, unlockStatus, warning, canContainer);
+        showCoinsChange(coins, unlockStatus, warning, coinContainer);
+        showCansChange(cans, unlockStatus, warning, canContainer);
 
-    JCheckBox lockBox = new JCheckBox("Door Locked", !loginStatus);
-    System.out.println("现在状态是"+unlockStatus);
+        JCheckBox lockBox = new JCheckBox("Door Locked", !loginStatus);
+        System.out.println("现在状态是"+unlockStatus);
 
-    if (loginStatus == true) {
-        lockBox.addItemListener(e -> {
-            unlockStatus.set(!unlockStatus.get());
-            System.out.println("hahaha");
+        if (loginStatus == true) {
+            lockBox.addItemListener(e -> {
+                changeUnlockStatus(unlockStatus);
+            });
+        }
 
-        });
+        JButton backBnt = ButtonFactory.buttonFactory("Back to the Main Panel", "machineryPanel");
 
-//        public void changeUnlockStatus(AtomicBoolean unlockStatus){
-//            unlockStatus.set(!unlockStatus.get());
-//            System.out.println("hahaha");
-//        }
+        this.add(bigTitle);
+        this.add(new TextFactory("Quantity of Coins", 1));
+        this.add(coinContainer);
+        this.add(new TextFactory("Quantity of Cans", 1));
+        this.add(canContainer);
+        this.add(lockBox);
+        this.add(warning);
+        this.add(backBnt);
+
+        backBnt.addActionListener((e -> {
+            this.dispose();
+            new SimulatorControlPanel("VMCS - Simulator Control Panel", loginStatus);
+        }));
 
     }
-    JButton backBnt = ButtonFactory.buttonFactory("Back to the Main Panel", "machineryPanel");
-
-    this.add(bigTitle);
-    this.add(new TextFactory("Quantity of Coins", 1));
-    this.add(coinContainer);
-    this.add(new TextFactory("Quantity of Cans", 1));
-    this.add(canContainer);
-    this.add(lockBox);
-    this.add(warning);
-    this.add(backBnt);
-
-    backBnt.addActionListener((e -> {
-        this.dispose();
-        new SimulatorControlPanel("VMCS - Simulator Control Panel", loginStatus);
-
-    }));
-
-}
 
     public void showCoinsChange(ArrayList<String[]> coins,AtomicBoolean unlockStatus,TextFactory warning,JPanel coinContainer){
         for (int i = 1; i < coins.size(); i++) {
@@ -159,6 +152,12 @@ public MachinerySimulatorPanel(String title, boolean loginStatus) {
                 warning.setText("Wrong Input, please notify the range you can change is [0-20]");
         }
     }
+
+    public void changeUnlockStatus(AtomicBoolean unlockStatus){
+        unlockStatus.set(!unlockStatus.get());
+        System.out.println("hahaha");
+    }
+
 
     //    public MachinerySimulatorPanel(String title, boolean loginStatus) {
 //        super(title);
