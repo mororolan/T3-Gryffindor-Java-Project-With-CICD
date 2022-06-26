@@ -40,6 +40,11 @@ public MachinerySimulatorPanel(String title, boolean loginStatus) {
 
         });
 
+//        public void changeUnlockStatus(AtomicBoolean unlockStatus){
+//            unlockStatus.set(!unlockStatus.get());
+//            System.out.println("hahaha");
+//        }
+
     }
     JButton backBnt = ButtonFactory.buttonFactory("Back to the Main Panel", "machineryPanel");
 
