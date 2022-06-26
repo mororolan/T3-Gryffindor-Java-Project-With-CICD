@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="add loginstatus">
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/LayoutStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Panel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TwoColumnLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/TestPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/DisplayCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/NumberObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/WriteCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_user_info.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/VerticalLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/VerticalLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ReadCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ReadCSV.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AfMppEnH3CUAxwz4novy8T7KG1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/src/team3/passpasspass/VM/controller/GUI",
+    "settings.editor.selected.configurable": "File.Encoding"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\GUI" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\GUI" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="team3.passpasspass.VM.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="T3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="team3.passpasspass.VM.controller.SimulatorControlPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="team3.passpasspass.VM.controller.SimulatorControlPanel" />
+      <module name="T3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="team3.passpasspass.VM.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.team3.passpasspass.VM.controller.SimulatorControlPanel" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="" />
+      <created>1655396374701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655396374701</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add loginstatus">
+      <created>1655995509458</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655995509458</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add loginstatus">
+      <created>1655995552626</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655995552626</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add loginstatus" />
+    <option name="LAST_COMMIT_MESSAGE" value="add loginstatus" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/awt/LayoutManager2.java</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
