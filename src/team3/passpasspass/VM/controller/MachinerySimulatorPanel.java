@@ -75,7 +75,7 @@ public class MachinerySimulatorPanel extends T3Frame {
                     warning.setText("the door is closed, you can't change the data");
                 } else if (testText >= 0 & testText <= 20) {
                     String[] record = cans.get(finalI);
-                    record[1] = b.getText();
+                    record[2] = b.getText();
                     cans.set(finalI, record);
                     WriteCSV.writeCSV(cans, "drink");
                     warning.setText("Congratulations on your simulated modification of the number of drinks");
