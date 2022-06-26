@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="fix a bug">
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/NewMaintainerPanel.java" afterDir="false" />
+    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/test/team3/passpasspass/VM/controller/MaintainerPanelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerLoginFrame.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/NewMaintainerPanel.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/Per.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +55,13 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/src/team3/passpasspass/VM/controller",
+    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/test/team3/passpasspass/VM/controller",
     "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\passpasspass\VM\controller" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\GUI" />
     </key>
@@ -91,7 +86,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimulatorControlPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="team3.passpasspass.VM.controller.SimulatorControlPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="team3.passpasspass.VM.controller.SimulatorControlPanel" />
       <module name="T3" />
       <extension name="coverage">
@@ -176,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656234972634</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update">
+      <created>1656252729443</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1656252729443</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,7 +199,8 @@
     <MESSAGE value="fix some structure problems" />
     <MESSAGE value="merge all work" />
     <MESSAGE value="fix a bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix a bug" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
