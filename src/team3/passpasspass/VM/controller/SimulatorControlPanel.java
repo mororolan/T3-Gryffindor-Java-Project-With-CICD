@@ -52,7 +52,8 @@ public class  SimulatorControlPanel extends T3Frame {
 
         bMaintainerPanel.addActionListener(e -> {
             this.dispose();
-            new MaintainerLoginFrame().createMaintainerJFrame("VMCS - Maintainer Panel");
+            new MaintainerPanel().createMaintainerJFrame("VMCS - Maintainer Panel");
+//            new NewMaintainerPanel("VMCS - Maintainer Panel");
         });
 
     }

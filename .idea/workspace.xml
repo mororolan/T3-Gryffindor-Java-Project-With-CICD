@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="merge all work">
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" afterDir="false" />
+    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="fix a bug">
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/NewMaintainerPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerLoginFrame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/Per.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/User.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +91,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="team3.passpasspass.VM.controller.SimulatorControlPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="SimulatorControlPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="team3.passpasspass.VM.controller.SimulatorControlPanel" />
       <module name="T3" />
       <extension name="coverage">
@@ -158,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656234638894</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix a bug">
+      <created>1656234972634</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656234972634</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,11 +193,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add loginstatus" />
     <MESSAGE value="add a lot of things" />
-    <MESSAGE value="fix a bug" />
     <MESSAGE value="merge peijun &amp; robin‘s work" />
     <MESSAGE value="fix some structure problems" />
     <MESSAGE value="merge all work" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge all work" />
+    <MESSAGE value="fix a bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix a bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -188,6 +206,10 @@
           <url>jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/awt/LayoutManager2.java</url>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

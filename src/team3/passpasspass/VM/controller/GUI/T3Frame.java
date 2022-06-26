@@ -8,7 +8,7 @@ public class T3Frame extends JFrame {
     public T3Frame(String title) throws HeadlessException {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(500, 800);
+        this.setSize(600, 1000);
         this.setVisible(true);
 //        this.setResizable(false);
         // set location

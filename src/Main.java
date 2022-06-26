@@ -1,4 +1,5 @@
 import team3.passpasspass.VM.controller.MachinerySimulatorPanel;
+import team3.passpasspass.VM.controller.NewMaintainerPanel;
 import team3.passpasspass.VM.controller.SimulatorControlPanel;
 import team3.passpasspass.VM.controller.model.ReadCSV;
 
@@ -9,7 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
         boolean loginStatus = false;
-        new SimulatorControlPanel("VMCS - Simulator Control Panel",loginStatus);
+//        new SimulatorControlPanel("VMCS - Simulator Control Panel",loginStatus);
+        new NewMaintainerPanel("test",loginStatus);
 //        new MachinerySimulatorPanel("VMCS - Machinery Panel",loginStatus);
     }
 }

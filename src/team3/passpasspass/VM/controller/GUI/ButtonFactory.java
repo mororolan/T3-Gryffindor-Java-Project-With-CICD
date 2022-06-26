@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class ButtonFactory {
+    public ButtonFactory(String valid_password, String jbMaintainerPasswordValid) {
+    }
+
     public static JButton buttonFactory(String buttonTitle, String buttonType) {
         if (buttonType == null) {
             return null;
@@ -23,6 +26,37 @@ public class ButtonFactory {
                 button.setForeground(Color.white);
                 button.setBackground(Color.gray);
                 return button;
+            case "jbMaintainerPasswordValid":
+                button.setBounds(100,150,250,50);
+                button.setFont(new Font("",1,15));
+                button.setForeground(Color.white);
+                button.setBackground(Color.gray);
+                return button;
+            case "jbMaintainerPasswordInvalid":
+                button.setBounds(360,150,280,50);
+                button.setFont(new Font("",1,15));
+                button.setForeground(Color.black);
+                button.setBackground(Color.gray);
+                return button;
+            case "jbCoin":
+                button.setBackground(Color.white);
+                return button;
+            case "jbShowTotal":
+                button.setBounds(200,700,300,30);
+                button.setFont(new Font("",1,15));
+                button.setBackground(Color.white);
+                return button;
+            case "jbCollectCash":
+                button.setBounds(250,750,300,30);
+                button.setFont(new Font("",1,15));
+                button.setBackground(Color.white);
+                return button;
+            case "jbFinished":
+                button.setBounds(240,880,300,30);
+                button.setFont(new Font("",1,15));
+                button.setBackground(Color.white);
+                return button;
+
         }
         return button;
     }
