@@ -12,8 +12,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
 // TODO
 public class MachinerySimulatorPanel extends T3Frame {
 
-//public MachinerySimulatorPanel(String title, boolean loginStatus) {
- public MachinerySimulatorPanel(String title, boolean loginStatus) {
+    //public MachinerySimulatorPanel(String title, boolean loginStatus) {
+    public MachinerySimulatorPanel(String title, boolean loginStatus) {
         super(title);
         ArrayList<String[]> coins = ReadCSV.readCSV("./data/dwd_money_stat.csv");
         ArrayList<String[]> cans = ReadCSV.readCSV("./data/dwd_drink_info.csv");
@@ -52,12 +52,17 @@ public class MachinerySimulatorPanel extends T3Frame {
         this.add(backBnt);
 
         backBnt.addActionListener((e -> {
-            this.dispose();
-            new SimulatorControlPanel("VMCS - Simulator Control Panel", loginStatus);
+            openControllerPannel(loginStatus);
         }));
+
+        setVisible(true);
 
     }
 
+    public String openControllerPannel(boolean loginStatus){
+        this.dispose();
+        return new SimulatorControlPanel("VMCS - Simulator Control Panel", loginStatus).getTitle();
+    }
     public void showCoinsChange(ArrayList<String[]> coins,AtomicBoolean unlockStatus,TextFactory warning,JPanel coinContainer){
         for (int i = 1; i < coins.size(); i++) {
             TextFactory a = new TextFactory(coins.get(i)[0]);
@@ -67,24 +72,25 @@ public class MachinerySimulatorPanel extends T3Frame {
 
             int finalI = i;
             b.addKeyListener(new CheckKeyType());
+            System.out.println(b.getText());
+            int testText = Integer.parseInt(b.getText());
 
             bnt.addActionListener(e -> {
-                coinsChange(coins,unlockStatus,warning,finalI,b);
+                coinsChange(coins,unlockStatus,warning,finalI,testText);
             });
             coinContainer.add(a);
             coinContainer.add(b);
             coinContainer.add(bnt);
         }
     }
-    public void coinsChange(ArrayList<String[]> coins,AtomicBoolean unlockStatus,TextFactory warning,int finalI,JTextField b){
-        int testText = Integer.parseInt(b.getText());
+    public void coinsChange(ArrayList<String[]> coins,AtomicBoolean unlockStatus,TextFactory warning,int finalI,int testText){
         String type = "coin";
         System.out.println(testText);
         System.out.println(unlockStatus.get());
         if (!unlockStatus.get()) {
             cantChange(warning);
         } else if (testText >= 0 & testText <= 40) {
-            canChange(coins, warning, finalI, b, type);
+            canChange(coins, warning, finalI, testText, type);
         } else {
             failToChange(warning, type);
         }
@@ -99,9 +105,10 @@ public class MachinerySimulatorPanel extends T3Frame {
 
             int finalI = i;
             b.addKeyListener(new CheckKeyType());
+            int testText = Integer.parseInt(b.getText());
 
             bnt.addActionListener(e -> {
-                cansChange(cans,unlockStatus,warning,finalI,b);
+                cansChange(cans,unlockStatus,warning,finalI,testText);
             });
 
             canContainer.add(a);
@@ -110,14 +117,13 @@ public class MachinerySimulatorPanel extends T3Frame {
         }
     }
 
-    public void cansChange(ArrayList<String[]> cans,AtomicBoolean unlockStatus,TextFactory warning,int finalI,JTextField b){
-        int testText = Integer.parseInt(b.getText());
+    public void cansChange(ArrayList<String[]> cans,AtomicBoolean unlockStatus,TextFactory warning,int finalI,int testText){
         String type = "can";
         System.out.println(testText);
         if (!unlockStatus.get()) {
             cantChange(warning);
         } else if (testText >= 0 & testText <= 20) {
-            canChange(cans, warning, finalI, b, type);
+            canChange(cans, warning, finalI, testText, type);
         } else {
             failToChange(warning, type);
         }
@@ -126,16 +132,16 @@ public class MachinerySimulatorPanel extends T3Frame {
     public void cantChange(TextFactory warning){
         warning.setText("The door is closed, you can't change the data");
     }
-    public void canChange(ArrayList<String[]> data,TextFactory warning,int finalI,JTextField b,String type){
+    public void canChange(ArrayList<String[]> data,TextFactory warning,int finalI,int testText,String type){
         String[] record = data.get(finalI);
         String info = "";
         switch (type){
             case "coin":
-                record[1] = b.getText();
+                record[1] = String.valueOf(testText);
                 info = "coin";
                 break;
             case "can":
-                record[2] = b.getText();
+                record[2] = String.valueOf(testText);
                 info = "drink";
         }
         data.set(finalI, record);

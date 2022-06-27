@@ -43,7 +43,34 @@ public class TextFactory extends JLabel {
             this.setBounds(320,800,100,20);
             this.setFont(new Font("",1,15));
         }
+        if (type == 7) {
+            this.setPreferredSize(new Dimension(200,30));
+            this.setFont(new Font("Microsoft Black",1,15));
+        }
+        if (type == 8) {
+            this.setFont(new Font("Microsoft Black",1,20));
+        }
+        if (type == 9) {//warning
+            this.setPreferredSize(new Dimension(150,20));
+            this.setOpaque(true);
+            this.setFont(new Font("Microsoft Black",1,13));
+            this.setBackground(Color.RED);
+            this.setForeground(Color.WHITE);
+        }
+        if (type == 10) {// no warning
+            this.setPreferredSize(new Dimension(150,20));
+            this.setOpaque(true);
+            this.setFont(new Font("Microsoft Black",1,13));
+            this.setBackground(Color.RED);
+            this.setForeground(Color.GRAY);
+        }
+        if (type == 11) {// customer black+yellow
+            this.setPreferredSize(new Dimension(100,20));
+            this.setOpaque(true);
+            this.setFont(new Font("Times New Roman",1,15));
+            this.setBackground(Color.black);
+            this.setForeground(Color.YELLOW);
+        }
     }
 
-
-    }
+}

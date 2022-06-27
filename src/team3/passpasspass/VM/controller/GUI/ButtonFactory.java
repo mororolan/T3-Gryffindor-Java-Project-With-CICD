@@ -56,7 +56,18 @@ public class ButtonFactory {
                 button.setFont(new Font("",1,15));
                 button.setBackground(Color.white);
                 return button;
-
+            case "jbEnterCoins":
+                button.setPreferredSize(new Dimension(90, 30));
+                button.setBackground(Color.white);
+                return button;
+            case "jbChooseDrink":
+                button.setPreferredSize(new Dimension(200, 40));
+                button.setBackground(Color.white);
+                return button;
+            case "jbTerminate":
+                button.setPreferredSize(new Dimension(250, 25));
+                button.setBackground(Color.white);
+                return button;
         }
         return button;
     }
