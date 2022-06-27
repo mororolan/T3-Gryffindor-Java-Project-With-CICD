@@ -34,8 +34,8 @@ public class VerticalLayout implements LayoutStrategy {
         int y = 0;
         for (int i = 0; i<children.length; i++) {
             Component c = children[i];
-            c.setBounds(x,y,width,50);
-            y += 50;
+            c.setBounds(x,y,width,height/children.length);
+            y += height/children.length;
         }
     }
 

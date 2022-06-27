@@ -8,7 +8,6 @@ public class TextFactory extends JLabel {
         super(text);
         this.setPreferredSize(new Dimension(250, 60));
         this.setHorizontalAlignment(SwingConstants.CENTER);
-        this.setVerticalAlignment(SwingConstants.CENTER);
         this.setFont(new Font(Font.SERIF, Font.PLAIN, 24));
     }
 
@@ -70,6 +69,14 @@ public class TextFactory extends JLabel {
             this.setFont(new Font("Times New Roman",1,15));
             this.setBackground(Color.black);
             this.setForeground(Color.YELLOW);
+        }
+        if (type == 12) {
+            // Title
+            this.setFont(new Font("Microsoft Black",1,33));
+        }
+        if (type == 13) {
+            this.setFont(new Font("Microsoft Black",1,15));
+            this.setPreferredSize(new Dimension(200,30));
         }
     }
 

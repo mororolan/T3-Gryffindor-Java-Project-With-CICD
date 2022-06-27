@@ -13,9 +13,9 @@ public class  SimulatorControlPanel extends T3Frame {
 
     public SimulatorControlPanel(String title, boolean loginStatus) {
         super(title);
-        this.setLayout(new FlowLayout());
+        this.setLayout(new VerticalLayout());
         // set text
-        this.add(new TextFactory("Simulator Control Panel"));
+        this.add(new TextFactory("Simulator Control Panel",12));
 
         bBeginSimulation = ButtonFactory.buttonFactory("Begin Simulation","mainPanel");
         bEndSimulation = ButtonFactory.buttonFactory("End Simulation","mainPanel");

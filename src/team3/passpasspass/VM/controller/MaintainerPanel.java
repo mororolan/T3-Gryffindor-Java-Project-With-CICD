@@ -3,6 +3,7 @@ package team3.passpasspass.VM.controller;
 import team3.passpasspass.VM.controller.GUI.ButtonFactory;
 import team3.passpasspass.VM.controller.GUI.T3Frame;
 import team3.passpasspass.VM.controller.GUI.TextFactory;
+import team3.passpasspass.VM.controller.GUI.VerticalLayout;
 import team3.passpasspass.VM.controller.model.CheckKeyType;
 import team3.passpasspass.VM.controller.model.NumberObserver;
 import team3.passpasspass.VM.controller.model.ReadCSV;
@@ -17,6 +18,9 @@ public class MaintainerPanel extends T3Frame {
 
     public MaintainerPanel(String title, boolean loginStatus) throws HeadlessException {
         super(title);
+        this.setSize(600, 1000);
+        this.setLayout(new VerticalLayout());
+
         ArrayList<String[]> coins = ReadCSV.readCSV("./data/dwd_money_stat.csv");
         ArrayList<String[]> cans = ReadCSV.readCSV("./data/dwd_drink_info.csv");
 

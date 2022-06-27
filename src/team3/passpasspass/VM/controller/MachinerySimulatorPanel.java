@@ -6,6 +6,7 @@ import team3.passpasspass.VM.controller.model.ReadCSV;
 import team3.passpasspass.VM.controller.model.WriteCSV;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -15,6 +16,7 @@ public class MachinerySimulatorPanel extends T3Frame {
     //public MachinerySimulatorPanel(String title, boolean loginStatus) {
     public MachinerySimulatorPanel(String title, boolean loginStatus) {
         super(title);
+        this.setLayout(new VerticalLayout());
         ArrayList<String[]> coins = ReadCSV.readCSV("./data/dwd_money_stat.csv");
         ArrayList<String[]> cans = ReadCSV.readCSV("./data/dwd_drink_info.csv");
         AtomicBoolean unlockStatus = new AtomicBoolean(loginStatus);
@@ -23,7 +25,12 @@ public class MachinerySimulatorPanel extends T3Frame {
         JLabel bigTitle = new TextFactory(title);
 
         JPanel coinContainer = new T3Panel();
+        coinContainer.setLayout(new GridLayout(coins.size() - 1, 1, 40, 1));
+        coinContainer.setPreferredSize(new Dimension(350,80));
+//        coinContainer.setBounds(350, 80);
         JPanel canContainer = new T3Panel();
+        canContainer.setLayout(new GridLayout(cans.size() - 1, 1, 40, 1));
+        canContainer.setPreferredSize(new Dimension(350,100));
         System.out.println(coins.size());
         int y = 50;
         TextFactory warning = new TextFactory("No change");
@@ -32,6 +39,7 @@ public class MachinerySimulatorPanel extends T3Frame {
         showCansChange(cans, unlockStatus, warning, canContainer);
 
         JCheckBox lockBox = new JCheckBox("Door Locked", !loginStatus);
+        lockBox.setEnabled(unlockStatus.get());
         System.out.println("现在状态是"+unlockStatus);
 
         if (loginStatus == true) {
@@ -40,7 +48,10 @@ public class MachinerySimulatorPanel extends T3Frame {
             });
         }
 
+
         JButton backBnt = ButtonFactory.buttonFactory("Back to the Main Panel", "machineryPanel");
+
+
 
         this.add(bigTitle);
         this.add(new TextFactory("Quantity of Coins", 1));
@@ -65,8 +76,14 @@ public class MachinerySimulatorPanel extends T3Frame {
     }
     public void showCoinsChange(ArrayList<String[]> coins,AtomicBoolean unlockStatus,TextFactory warning,JPanel coinContainer){
         for (int i = 1; i < coins.size(); i++) {
-            TextFactory a = new TextFactory(coins.get(i)[0]);
+            String coinsName = coins.get(i)[0] + "c";
+            if (coins.get(i)[0].equals("100")) {
+                coinsName = "$1";
+            }
+            TextFactory a = new TextFactory(coinsName,13);
             JTextField b = new JTextField(coins.get(i)[1], 5);
+            b.setBackground(Color.PINK);
+//            b.setText(Color.yellow);
             JButton bnt = new JButton("Change Simulator");
             bnt.setEnabled(unlockStatus.get());
 
@@ -98,8 +115,9 @@ public class MachinerySimulatorPanel extends T3Frame {
 
     public void showCansChange(ArrayList<String[]> cans,AtomicBoolean unlockStatus,TextFactory warning,JPanel canContainer){
         for (int i = 1; i < cans.size(); i++) {
-            TextFactory a = new TextFactory(cans.get(i)[1]);
+            TextFactory a = new TextFactory(cans.get(i)[1],13);
             JTextField b = new JTextField(cans.get(i)[2], 5);
+            b.setBackground(Color.PINK);
             JButton bnt = new JButton("Change Simulator");
             bnt.setEnabled(unlockStatus.get());
 
