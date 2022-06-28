@@ -20,7 +20,7 @@ public class TextFactory extends JLabel {
             this.setFont(new Font("Times New Romans", Font.BOLD, 15));
         }
         if (type == 2) {
-            this.setBounds(250,0,400,50);
+//            this.setBounds(250,0,400,50);
             this.setFont(new Font("Microsoft Black",1,25));
         }
         if (type == 3) {

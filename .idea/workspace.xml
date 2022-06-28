@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="write new layout and fix some bugs">
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/LayoutAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/VerticalLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/VerticalLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" afterDir="false" />
+    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="fix bugs and layout">
       <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +13,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,14 +53,14 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/test/team3/passpasspass/VM/controller",
+    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/src/team3/passpasspass/VM/controller",
     "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\passpasspass\VM\controller" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller" />
+      <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\passpasspass\VM\controller" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\GUI" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -197,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656345298078</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix bugs and layout">
+      <created>1656350540238</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1656350540239</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,7 +222,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="update and fix some bugs" />
     <MESSAGE value="write new layout and fix some bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="write new layout and fix some bugs" />
+    <MESSAGE value="fix bugs and layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs and layout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
