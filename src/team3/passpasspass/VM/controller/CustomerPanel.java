@@ -159,6 +159,7 @@ public class CustomerPanel extends T3Frame {
             else
                 lblDrinkCnt.add(new TextFactory("Not in Stock",9));
         }
+        checkNullStock();
         lblNoChange = new TextFactory("No Change Available",10);
         lblChangeSuccess = new TextFactory("Change Successfully", 7);
     }
@@ -311,7 +312,11 @@ public class CustomerPanel extends T3Frame {
         setShouldPay(pay);
         isEnough = false;
         chosenId = id;
-        for (int i=0; i<btnCoins.size(); i++){
+        for(int i = 0; i < btnCans.size(); i++){
+            if(i != chosenId - 1)
+                btnCans.get(i).setEnabled(false);
+        }
+        for (int i = 0; i < btnCoins.size(); i++){
             btnCoins.get(i).setEnabled(true);
         }
         lblStartDispensing.setVisible(false);
@@ -321,7 +326,15 @@ public class CustomerPanel extends T3Frame {
     }
 
     public void addTerminate(){////未完成
-
+        for(int i = 0; i < btnCans.size(); i++){
+            if(i != chosenId - 1)
+                btnCans.get(i).setEnabled(true);
+        }
+        for (int i=0; i<btnCoins.size(); i++){
+            btnCoins.get(i).setEnabled(false);
+        }
+        startChange();
+        btnInvalid.setEnabled(false);
     }
 
     public String addBackControllerPanel(boolean loginStatus){
@@ -358,14 +371,19 @@ public class CustomerPanel extends T3Frame {
 
     public void startChange(){///////未完成
         ArrayList<String[]> changeSol = new ArrayList<>();
-        if(totalCoins != shouldPay){
-            int change = totalCoins - shouldPay;
-            for (int i=1; i<coins.size(); i++){
-                changeSol.add(coins.get(i));
-                changeSol.get(i-1)[1] = String.valueOf(0);
-            }
+        int change = 0;
+        if(totalCoins >= shouldPay){
+            change = totalCoins - shouldPay;
+//            for (int i=1; i<coins.size(); i++){
+//                changeSol.add(coins.get(i));
+//                changeSol.get(i-1)[1] = String.valueOf(0);
+//            }
 //            changeSol = getChange(change);
         }
+        else if(totalCoins < shouldPay){
+            change = totalCoins;
+        }
+        lblCollectCoinsNum.setText(String.valueOf(change) + 'c');
         lblChangeSuccess.setVisible(true);
     }
 
@@ -383,15 +401,31 @@ public class CustomerPanel extends T3Frame {
 
     public void updateStock(){
         int newNum = drinkList.getNumber(chosenId);
-        if(newNum == 0)
-            lblDrinkCnt.get(chosenId-1).setForeground(Color.WHITE);//Update panel information
+        if(newNum == 0) {
+            lblDrinkCnt.get(chosenId - 1).setForeground(Color.WHITE);//Update panel information
+//            btnCans.get(chosenId - 1).setEnabled(false);
+        }
         cans.get(chosenId)[2] = String.valueOf(newNum);
         WriteCSV.writeCSV(cans,"drink");//Update database
     }
 
     public void purchaseSuccess(){
         lblPurchaseSuccess.setVisible(true);
+        for(int i = 0; i < cans.size(); i++){
+            if(chosenId == i + 1)
+                lblCollectCanInfo.setText(cans.get(chosenId)[1]);
+        }
+//        System.out.println();
         chosenId = 0;
+    }
+
+    public void checkNullStock() {
+        for(int i = 0; i < cans.size() - 1; i++) {
+            int id = i+1;
+            System.out.println(drinkList.getNumber(id));
+            if(drinkList.getNumber(id) == 0)
+                btnCans.get(i).setEnabled(false);
+        }
     }
 
 }
