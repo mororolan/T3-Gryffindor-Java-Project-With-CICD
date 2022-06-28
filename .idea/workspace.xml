@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="add some functions">
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ChangeIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ChangeMemento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/CoinList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/TerminateChange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/T3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/T3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/CustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/CustomerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +129,7 @@
       <workItem from="1656411869641" duration="1099000" />
       <workItem from="1656413548512" duration="743000" />
       <workItem from="1656414315164" duration="17227000" />
+      <workItem from="1656432977018" duration="1108000" />
     </task>
     <task id="LOCAL-00001" summary="add loginstatus">
       <created>1655995509458</created>
