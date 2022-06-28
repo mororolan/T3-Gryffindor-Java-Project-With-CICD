@@ -1,8 +1,7 @@
 package team3.passpasspass.VM.controller;
 
 import team3.passpasspass.VM.controller.GUI.*;
-import team3.passpasspass.VM.controller.model.NumberObserver;
-import team3.passpasspass.VM.controller.model.ReadCSV;
+import team3.passpasspass.VM.controller.model.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -10,6 +9,7 @@ import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class MaintainerPanel extends T3Frame {
@@ -17,12 +17,13 @@ public class MaintainerPanel extends T3Frame {
     public MaintainerPanel(String title, boolean loginStatus) throws HeadlessException {
 
         super(title);
+        AtomicInteger clickCoinBnt = new AtomicInteger();
+        AtomicInteger clickDrinkBnt = new AtomicInteger();
         AtomicReference<ArrayList<String[]>> coins = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
         AtomicReference<ArrayList<String[]>> cans = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_drink_info.csv"));
         final boolean[] logStatus = {loginStatus};
 
         this.setSize(600, 1000);
-        //this.setLayout(new VerticalLayout());
         JPanel contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         contentPane.setLayout(new AfAnyWhereLayout());
@@ -74,7 +75,6 @@ public class MaintainerPanel extends T3Frame {
         jlCoins.setPreferredSize(new Dimension(200,30));
 
         //------CENTER jpCoins and CoinsTextField-----//
-        //int coinsLine = coins.size() - 1;
         JPanel jpCoins = new JPanel();
         jpCoins.setLayout(new GridLayout(coins.get().size() - 1, 1, 10, 0));
         jpCoins.setPreferredSize(new Dimension(280, 200));
@@ -84,6 +84,22 @@ public class MaintainerPanel extends T3Frame {
         jtfTotalCoins.setHorizontalAlignment(JTextField.CENTER);
         jtfTotalCoins.setForeground(Color.yellow);
         jtfTotalCoins.setBackground(Color.black);
+        jtfTotalCoins.addKeyListener(new CheckKeyType());
+        jtfTotalCoins.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char checkAns = e.getKeyChar();
+                String text;
+                super.keyTyped(e);
+                if(checkAns == KeyEvent.VK_ENTER) {
+                    text=jtfTotalCoins.getText();
+                    System.out.println("点击时输出的"+text);
+                    checkPressEnter(coins.get(),text,clickCoinBnt.get(),"coin");
+                }}});
+
+
+
+
 
         for (int i = 1; i< coins.get().size(); i++) {
             String coinsName = coins.get().get(i)[0] + "c";
@@ -97,6 +113,8 @@ public class MaintainerPanel extends T3Frame {
             jbCoin.addActionListener(e -> {
                 coins.set(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
                 jtfTotalCoins.setText(coins.get().get(finalI)[1]);
+                clickCoinBnt.set(finalI);
+
             });
         }
 
@@ -117,22 +135,46 @@ public class MaintainerPanel extends T3Frame {
         jtfDrinksAvailable.setHorizontalAlignment(JTextField.CENTER);
         jtfDrinksAvailable.setForeground(Color.yellow);
         jtfDrinksAvailable.setBackground(Color.black);
+        jtfDrinksAvailable.addKeyListener(new CheckKeyType());
+        jtfDrinksAvailable.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char checkAns = e.getKeyChar();
+                String text;
+                super.keyTyped(e);
+                if(checkAns == KeyEvent.VK_ENTER) {
+                    text=jtfDrinksAvailable.getText();
+                    checkPressEnter(cans.get(),text,clickDrinkBnt.get(),"drink");
+                }}});
 
         JLabel jlBrandPrice = new TextFactory("Brand Price",5);
         JTextField jtfBrandPrice = new JTextField(null);
         jtfBrandPrice.setPreferredSize(new Dimension(80, 20));
+        jtfBrandPrice.addKeyListener(new CheckKeyType());
+        jtfBrandPrice.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char checkAns = e.getKeyChar();
+                String text;
+                super.keyTyped(e);
+                if(checkAns == KeyEvent.VK_ENTER) {
+                    text=jtfBrandPrice.getText();
+                    checkPressEnter(cans.get(),text,clickDrinkBnt.get(),"drink_price");
+                }}});
 
-        //jtfBrandPrice.addKeyListener(new CheckKeyType());//添加：输入金额后，改变文件对应饮料的价格
+
+
 
         for (int i = 1; i< cans.get().size(); i++) {
-            String cansName = cans.get().get(i)[1] + "c";
+            String cansName = cans.get().get(i)[1];
             JButton jbDrink = ButtonFactory.buttonFactory(cansName, "jbCoin");
             jpDrinks.add(jbDrink);
             int finalI = i;
             jbDrink.addActionListener(e -> {
                 cans.set(ReadCSV.readCSV("./data/dwd_drink_info.csv"));
                 jtfDrinksAvailable.setText(cans.get().get(finalI)[2]);
-                jtfBrandPrice.setText(cans.get().get(finalI)[3] + "c");
+                jtfBrandPrice.setText(cans.get().get(finalI)[3]);
+                clickDrinkBnt.set(finalI);
             });
         }
 
@@ -169,6 +211,7 @@ public class MaintainerPanel extends T3Frame {
         jtfTotalCash.setHorizontalAlignment(JTextField.CENTER);
         jtfTotalCash.setForeground(Color.yellow);
         jtfTotalCash.setBackground(Color.black);
+        jtfTotalCash.addKeyListener(new CheckKeyType());
 
         final int[] coinsTotal = {0};
 
@@ -198,6 +241,7 @@ public class MaintainerPanel extends T3Frame {
         jtfCollectCash.setHorizontalAlignment(JTextField.CENTER);
         jtfCollectCash.setForeground(Color.yellow);
         jtfCollectCash.setBackground(Color.black);
+        jtfCollectCash.addKeyListener(new CheckKeyType());
 
         jbCollectCash.addActionListener(e -> {
             jtfCollectCash.setText(String.valueOf((coinsTotal[0]) + "c"));
@@ -276,5 +320,22 @@ public class MaintainerPanel extends T3Frame {
         maintainerContainer.add(jbMaintainerPasswordValid);
         maintainerContainer.add(jbMaintainerPasswordInvalid);
         */
+//        b.addKeyListener(new CheckKeyType());
+
+    }
+    public void checkPressEnter(ArrayList<String[]> writeList, String num, int index, String type) {
+//        System.out.println("对象带来了吗"+num);
+        String[] record = writeList.get(index);
+        if (type.equals("coin")) {
+            record[1]=num;
+        } else if (type.equals("drink")){
+            record[2]=num;
+        } else {
+            record[3]=num;
+            type = "drink";
+        }
+        writeList.set(index, record);
+        WriteCSV.writeCSV(writeList, type);
+//        System.out.println("输出的函数是"+ num);
     }
 }

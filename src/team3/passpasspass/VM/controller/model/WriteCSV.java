@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class WriteCSV {
-    public static void writeCSV(ArrayList<String[]> writeList, String type) {
+    public static void writeCSV(ArrayList<String[]> writeList,String type) {
         String filePath;
         if (type.equals("drink")) {
             filePath = "./Data/dwd_drink_info.csv";
@@ -20,8 +20,8 @@ public class WriteCSV {
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
             for (int i = 0; i < writeList.size(); i++) {
+                System.out.println((String.join(",", writeList.get(i)) + "\n"));
                 writer.write(String.join(",", writeList.get(i)) + "\n");
-//                writer.newLine();
             }
             writer.close();
         } catch (FileNotFoundException e) {

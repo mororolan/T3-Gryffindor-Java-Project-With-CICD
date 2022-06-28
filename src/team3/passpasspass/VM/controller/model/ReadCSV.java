@@ -11,7 +11,6 @@ public class ReadCSV {
     public static ArrayList<String[]> readCSV(String fileName) {
         try {
             BufferedReader file = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF-8"));
-//            file.readLine();
             String record = file.readLine();
             ArrayList<String[]> data = new ArrayList<>();
 
@@ -19,9 +18,6 @@ public class ReadCSV {
                 String[] item = record.split(",");
                 data.add(item);
                 record = file.readLine();
-//                System.out.println(record);
-//                System.out.println(data);
-
             }
             return data;
         } catch (Exception e) {
