@@ -78,6 +78,10 @@ public class TextFactory extends JLabel {
             this.setFont(new Font("Microsoft Black",1,15));
             this.setPreferredSize(new Dimension(200,30));
         }
+        if (type == 14){
+            // warning
+            this.setFont(new Font("Microsoft Black",1,15));
+        }
     }
 
 }

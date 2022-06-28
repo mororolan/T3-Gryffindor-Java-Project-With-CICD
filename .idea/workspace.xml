@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="add customer layout">
-      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/CheckPress.java" afterDir="false" />
+    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="set checkPressEnter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ReadCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ReadCSV.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/WriteCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/WriteCSV.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656425116836</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="set checkPressEnter">
+      <created>1656435745790</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656435745790</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +251,8 @@
     <MESSAGE value="write new layout and fix some bugs" />
     <MESSAGE value="fix bugs and layout" />
     <MESSAGE value="add customer layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="add customer layout" />
+    <MESSAGE value="set checkPressEnter" />
+    <option name="LAST_COMMIT_MESSAGE" value="set checkPressEnter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

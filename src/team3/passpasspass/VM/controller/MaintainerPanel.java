@@ -249,6 +249,13 @@ public class MaintainerPanel extends T3Frame {
             new NumberObserver().maintainerCollectCoins("./Data/dwd_money_stat.csv");
         });
 
+        JButton btnMachinery = ButtonFactory.buttonFactory("Go to the Machinery Panel","jbFinished");
+        btnMachinery.setPreferredSize(new Dimension(300,30));
+        btnMachinery.addActionListener(e -> {
+            this.dispose();
+            new  MachinerySimulatorPanel("VMCS - Machinery Panel", true);
+        });
+
         //----Bottom Bottom----//
         JPanel panelBottom_Bottom = new JPanel();
         panelBottom_Bottom.setPreferredSize(new Dimension(600,100));
@@ -271,7 +278,14 @@ public class MaintainerPanel extends T3Frame {
         panelBottom_Center.add(jbCollectCash, new AfMargin().TOP_CENTER);
         panelBottom_Center.add(jlCollectCash, new AfMargin(40,200,-1,-1));
         panelBottom_Center.add(jtfCollectCash, new AfMargin(45,310,-1,-1));
-        panelBottom_Center.add(jbFinished, new AfMargin().BOTTOM_CENTER);
+        panelBottom_Center.add(jbFinished, new AfMargin().BOTTOM_LEFT);
+        panelBottom_Center.add(btnMachinery,new AfMargin().BOTTOM_RIGHT);
+
+
+
+
+
+
 
 
         panelCenter.setVisible(logStatus[0]);
@@ -309,18 +323,9 @@ public class MaintainerPanel extends T3Frame {
         contentPane.add(panelCenter, new AfMargin().CENTER_LEFT);
         contentPane.add(panelBottom, new AfMargin().BOTTOM_CENTER);
 
-        setVisible(true);
-        /*
-        Container maintainerContainer = this.getContentPane();
-        //jlBrandPrice.addKeyListener();
 
-        maintainerContainer.add(jlMaintainerTitle);
-        maintainerContainer.add(jlMaintainerPassword);
-        maintainerContainer.add(jpfMaintainerPassword);
-        maintainerContainer.add(jbMaintainerPasswordValid);
-        maintainerContainer.add(jbMaintainerPasswordInvalid);
-        */
-//        b.addKeyListener(new CheckKeyType());
+
+        setVisible(true);
 
     }
     public void checkPressEnter(ArrayList<String[]> writeList, String num, int index, String type) {

@@ -33,7 +33,7 @@ public class MachinerySimulatorPanel extends T3Frame {
         canContainer.setPreferredSize(new Dimension(350,100));
         System.out.println(coins.size());
         int y = 50;
-        TextFactory warning = new TextFactory("No change");
+        TextFactory warning = new TextFactory("No change",14);
 
         showCoinsChange(coins, unlockStatus, warning, coinContainer);
         showCansChange(cans, unlockStatus, warning, canContainer);
