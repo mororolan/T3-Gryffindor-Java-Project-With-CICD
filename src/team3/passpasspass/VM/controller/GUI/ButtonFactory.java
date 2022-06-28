@@ -65,6 +65,7 @@ public class ButtonFactory {
                 button.setBackground(Color.white);
                 return button;
             case "jbTerminate":
+            case "jbCustomerBack":
                 button.setPreferredSize(new Dimension(250, 25));
                 button.setBackground(Color.white);
                 return button;
