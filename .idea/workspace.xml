@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="fix bugs and layout">
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="add customer layout" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656350540239</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add customer layout">
+      <created>1656424720809</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656424720809</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +228,8 @@
     <MESSAGE value="update and fix some bugs" />
     <MESSAGE value="write new layout and fix some bugs" />
     <MESSAGE value="fix bugs and layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs and layout" />
+    <MESSAGE value="add customer layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add customer layout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
