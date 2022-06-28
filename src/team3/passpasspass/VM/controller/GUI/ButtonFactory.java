@@ -64,6 +64,11 @@ public class ButtonFactory {
                 button.setPreferredSize(new Dimension(200, 40));
                 button.setBackground(Color.white);
                 return button;
+            case "jbContinueToBuy":
+                button.setPreferredSize(new Dimension(150, 25));
+//                button.setOpaque(true);
+                button.setBackground(Color.red);
+                return button;
             case "jbTerminate":
             case "jbCustomerBack":
                 button.setPreferredSize(new Dimension(250, 25));
