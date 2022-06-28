@@ -75,7 +75,7 @@ public class  SimulatorControlPanel extends T3Frame {
 
     public String openCustomerPanel(boolean loginStatus){
         this.dispose();
-        return new CustomerPanel("VMCS - Customer Panel").getTitle();
+        return new CustomerPanel("VMCS - Customer Panel",loginStatus).getTitle();
     }
     public String openMachineryPanel(boolean loginStatus){
         this.dispose();
