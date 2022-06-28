@@ -1,7 +1,9 @@
 package team3.passpasspass.VM.controller;
 
 import team3.passpasspass.VM.controller.GUI.*;
+import team3.passpasspass.VM.controller.model.DrinkList;
 import team3.passpasspass.VM.controller.model.ReadCSV;
+import team3.passpasspass.VM.controller.model.WriteCSV;
 
 import java.awt.*;
 
@@ -56,23 +58,30 @@ public class CustomerPanel extends T3Frame {
     //Bottom_Bottom
     JLabel lblCollectCan;
     JLabel lblCollectCanInfo;
+    JButton btnBackController;
 
     boolean haveDispensed;
     boolean isEnough;
+    boolean loginStatus;
 
     int totalCoins;//The sum of the value of all coins the customer has put in
     int shouldPay;//The price of the drink selected by the customer
+    int chosenId;
     ArrayList<Integer> justCoin;//The value of the coin the customer just put in
+    DrinkList drinkList;
 
     /**
      * Create the frame.
      */
-    public CustomerPanel(String title) {
+    public CustomerPanel(String title,Boolean loginStatus) {
         super(title);
+        this.loginStatus = loginStatus;
         haveDispensed = false;
         isEnough = false;
         totalCoins = 0;
         shouldPay = 0;
+        chosenId = 0;
+        drinkList = new DrinkList(this);
         coins = ReadCSV.readCSV("./data/dwd_money_stat.csv");
         cans = ReadCSV.readCSV("./data/dwd_drink_info.csv");
         btnCoins = new ArrayList<>();
@@ -173,30 +182,7 @@ public class CustomerPanel extends T3Frame {
         //BOTTOM
         lblCollectCan = new TextFactory("Collect Can Here:",7);
         lblCollectCanInfo = new TextFactory("NO CAN",11);
-    }
-
-    public void addListener(){
-        for (int i = 0; i < btnCoins.size(); i++){
-            int finalI = i+1;
-            btnCoins.get(i).addActionListener(e -> {
-                try {
-                    addCoin(Integer.parseInt(coins.get(finalI)[0]));
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
-                }
-            });
-        }
-
-        btnInvalid.addActionListener(e -> {
-            addCheckInvalid();
-        });
-
-        for (int i = 0; i < btnCans.size(); i++){
-            int finalI = i+1;
-            btnCans.get(i).addActionListener(e -> {
-                addChooseDrink(Integer.parseInt(cans.get(finalI)[3]));
-            });
-        }
+        btnBackController = ButtonFactory.buttonFactory("Back to the Main Panel","jbCustomerBack");
     }
 
     public void addTop(){
@@ -211,6 +197,7 @@ public class CustomerPanel extends T3Frame {
         lblEnoughCoins.setVisible(false);
         for (int i=0; i<btnCoins.size(); i++){
             panelTop_Center.add(btnCoins.get(i),new AfMargin(35,15+i*95,-1,-1));
+            btnCoins.get(i).setEnabled(false);
         }
         panelTop_Center.add(btnInvalid,new AfMargin(35,490,-1,-1));
         //BOTTOM
@@ -245,11 +232,44 @@ public class CustomerPanel extends T3Frame {
         lblPurchaseSuccess.setVisible(false);
         panelBottom.add(btnTerminate, new AfMargin(65,190,-1,-1));
         //CENTER
-        panelBottom.add(lblCollectCoins, new AfMargin(110,150,-1,-1));
-        panelBottom.add(lblCollectCoinsNum, new AfMargin(115,330,-1,-1));
+        panelBottom.add(lblCollectCoins, new AfMargin(90,150,-1,-1));
+        panelBottom.add(lblCollectCoinsNum, new AfMargin(95,330,-1,-1));
         //BOTTOM
-        panelBottom.add(lblCollectCan, new AfMargin(150,150,-1,-1));
-        panelBottom.add(lblCollectCanInfo, new AfMargin(155,330,-1,-1));
+        panelBottom.add(lblCollectCan, new AfMargin(120,150,-1,-1));
+        panelBottom.add(lblCollectCanInfo, new AfMargin(125,330,-1,-1));
+        panelBottom.add(btnBackController, new AfMargin(155,190,-1,-1));
+    }
+
+    public void addListener(){
+        for (int i = 0; i < btnCoins.size(); i++){
+            int finalI = i+1;
+            btnCoins.get(i).addActionListener(e -> {
+                try {
+                    addCoin(Integer.parseInt(coins.get(finalI)[0]));
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                }
+            });
+        }
+
+        btnInvalid.addActionListener(e -> {
+            addCheckInvalid();
+        });
+
+        for (int i = 0; i < btnCans.size(); i++){
+            int finalI = i+1;
+            btnCans.get(i).addActionListener(e -> {
+                addChooseDrink(Integer.parseInt(cans.get(finalI)[3]), Integer.parseInt(cans.get(finalI)[0]));
+            });
+        }
+
+        btnTerminate.addActionListener(e -> {
+            addTerminate();
+        });
+
+        btnBackController.addActionListener(e -> {
+            addBackControllerPanel(loginStatus);
+        });
     }
 
     public void addCoin(int newCoin) throws InterruptedException {
@@ -258,11 +278,12 @@ public class CustomerPanel extends T3Frame {
         justCoin.add(newCoin);
         lblTotalMoneyNum.setText(String.valueOf(totalCoins)+" c");
         btnInvalid.setEnabled(true);
-        // Time for the simulation machine to judge the validity of the coin
-        // after the last coin is put in, give the simulator time to click the invalid button
-        sleep(1000);
+//        // Time for the simulation machine to judge the validity of the coin
+//        // after the last coin is put in, give the simulator time to click the invalid button
+//        sleep(1000);
         checkStopEnter();
         if(isEnough) {
+            btnInvalid.setEnabled(false);
             startChange();
             startDispense();
             purchaseSuccess();
@@ -286,14 +307,26 @@ public class CustomerPanel extends T3Frame {
         }
     }
 
-    public void addChooseDrink(int pay){
+    public void addChooseDrink(int pay,int id){
         setShouldPay(pay);
+        isEnough = false;
+        chosenId = id;
         for (int i=0; i<btnCoins.size(); i++){
             btnCoins.get(i).setEnabled(true);
         }
         lblStartDispensing.setVisible(false);
         lblPurchaseSuccess.setVisible(false);
         btnTerminate.setEnabled(true);
+        lblChangeSuccess.setVisible(false);
+    }
+
+    public void addTerminate(){////未完成
+
+    }
+
+    public String addBackControllerPanel(boolean loginStatus){
+        this.dispose();
+        return new SimulatorControlPanel("VMCS - Simulator Control Panel", loginStatus).getTitle();
     }
 
     public void setShouldPay(int pay){
@@ -323,23 +356,42 @@ public class CustomerPanel extends T3Frame {
             isEnough = true;
     }
 
-    public void startChange(){//未完成
+    public void startChange(){///////未完成
+        ArrayList<String[]> changeSol = new ArrayList<>();
         if(totalCoins != shouldPay){
             int change = totalCoins - shouldPay;
-
+            for (int i=1; i<coins.size(); i++){
+                changeSol.add(coins.get(i));
+                changeSol.get(i-1)[1] = String.valueOf(0);
+            }
+//            changeSol = getChange(change);
         }
         lblChangeSuccess.setVisible(true);
     }
+
+//    public ArrayList<String[]> getChange(ArrayList<String> changeSol,int change){
+//
+//    }
 
     public void startDispense() throws InterruptedException {
         btnTerminate.setEnabled(false);
         lblStartDispensing.setVisible(true);
         sleep(1000);
-        lblChangeSuccess.setVisible(false);
+        lblStartDispensing.setVisible(false);
+        drinkList.setNumber(chosenId,Integer.parseInt(cans.get(chosenId)[2])-1);
+    }
+
+    public void updateStock(){
+        int newNum = drinkList.getNumber(chosenId);
+        if(newNum == 0)
+            lblDrinkCnt.get(chosenId-1).setForeground(Color.WHITE);//Update panel information
+        cans.get(chosenId)[2] = String.valueOf(newNum);
+        WriteCSV.writeCSV(cans,"drink");//Update database
     }
 
     public void purchaseSuccess(){
         lblPurchaseSuccess.setVisible(true);
-//        sleep(1000);
+        chosenId = 0;
     }
+
 }
