@@ -27,13 +27,13 @@ public class ButtonFactory {
                 button.setBackground(Color.gray);
                 return button;
             case "jbMaintainerPasswordValid":
-                button.setBounds(100,150,250,50);
+                button.setBounds(100,150,100,30);
                 button.setFont(new Font("",1,15));
                 button.setForeground(Color.white);
                 button.setBackground(Color.gray);
                 return button;
             case "jbMaintainerPasswordInvalid":
-                button.setBounds(360,150,280,50);
+//                button.setBounds(360,150,280,50);
                 button.setFont(new Font("",1,15));
                 button.setForeground(Color.black);
                 button.setBackground(Color.gray);

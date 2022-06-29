@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="add some functions">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="the new version 0630">
+      <change afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/TerminateMemento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/CustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/CustomerPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,22 +57,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/src/team3/passpasspass/VM/controller/model",
+    "settings.editor.selected.configurable": "File.Encoding"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\passpasspass\VM\controller" />
+      <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\model" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller" />
+      <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\passpasspass\VM\controller" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\GUI" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -79,6 +81,9 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\GUI" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="team3.passpasspass.VM.controller.model" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="team3.passpasspass.VM.controller" />
@@ -208,14 +213,63 @@
       <option name="project" value="LOCAL" />
       <updated>1656345298078</updated>
     </task>
-    <task id="LOCAL-00012" summary="add some functions">
-      <created>1656411978544</created>
+    <task id="LOCAL-00012" summary="fix bugs and layout">
+      <created>1656350540238</created>
       <option name="number" value="00012" />
       <option name="presentableId" value="LOCAL-00012" />
       <option name="project" value="LOCAL" />
-      <updated>1656411978544</updated>
+      <updated>1656350540239</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add customer layout">
+      <created>1656424720809</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1656424720809</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add customer layout">
+      <created>1656425116836</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1656425116836</updated>
+    </task>
+    <task id="LOCAL-00015" summary="set checkPressEnter">
+      <created>1656435745790</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1656435745790</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add button">
+      <created>1656436886346</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1656436886346</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add button">
+      <created>1656436967844</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1656436967844</updated>
+    </task>
+    <task id="LOCAL-00018" summary="test">
+      <created>1656516548004</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1656516548004</updated>
+    </task>
+    <task id="LOCAL-00019" summary="the new version 0630">
+      <created>1656519666470</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1656519666470</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,8 +297,13 @@
     <MESSAGE value="update" />
     <MESSAGE value="update and fix some bugs" />
     <MESSAGE value="write new layout and fix some bugs" />
-    <MESSAGE value="add some functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some functions" />
+    <MESSAGE value="fix bugs and layout" />
+    <MESSAGE value="add customer layout" />
+    <MESSAGE value="set checkPressEnter" />
+    <MESSAGE value="add button" />
+    <MESSAGE value="test" />
+    <MESSAGE value="the new version 0630" />
+    <option name="LAST_COMMIT_MESSAGE" value="the new version 0630" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
