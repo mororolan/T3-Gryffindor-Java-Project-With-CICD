@@ -67,12 +67,10 @@ public class CustomerPanel extends T3Frame {
     int totalCoins;//The sum of the value of all coins the customer has put in
     int shouldPay;//The price of the drink selected by the customer
     int chosenId;
-    ArrayList<Integer> justCoin;//The value of the coin the customer just put in
     DrinkList drinkList;
     CoinList coinList;
     boolean successBuy = false;
-    ChangeMemento changeMemento;
-    CustomerController customerController;
+    TerminateMemento terminateMemento;
 
     /**
      * Create the frame.
@@ -92,13 +90,13 @@ public class CustomerPanel extends T3Frame {
         chosenId = 0;
         drinkList = new DrinkList(this);
         coinList = new CoinList(this);
+        terminateMemento = new TerminateMemento();
         coins = ReadCSV.readCSV("./data/dwd_money_stat.csv");
         cans = ReadCSV.readCSV("./data/dwd_drink_info.csv");
         btnCoins = new ArrayList<>();
         btnCans = new ArrayList<>();
         lblDrinkPrice = new ArrayList<>();
         lblDrinkCnt = new ArrayList<>();
-        justCoin = new ArrayList<>();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         contentPane = new JPanel();
@@ -295,12 +293,13 @@ public class CustomerPanel extends T3Frame {
     public void addCoin(int newCoin) throws InterruptedException {
         lblWarningInvalid.setForeground(Color.GRAY);
         totalCoins += newCoin;
-        justCoin.add(newCoin);
+        terminateMemento.addCoin(newCoin);
         lblTotalMoneyNum.setText(String.valueOf(totalCoins)+" c");
 //        btnInvalid.setEnabled(true);
 //        // Time for the simulation machine to judge the validity of the coin
 //        // after the last coin is put in, give the simulator time to click the invalid button
 //        sleep(1000);
+
         checkStopEnter();
         if(isEnough) {
 //            btnInvalid.setEnabled(false);
@@ -312,10 +311,6 @@ public class CustomerPanel extends T3Frame {
 
     public void addCheckInvalid(){
         lblWarningInvalid.setForeground(Color.WHITE);
-        totalCoins -= justCoin.get(justCoin.size()-1);
-        System.out.println(justCoin);
-        justCoin.remove(justCoin.size()-1);
-        System.out.println(justCoin);
         lblTotalMoneyNum.setText(String.valueOf(totalCoins)+" c");
 //        btnInvalid.setEnabled(false);
         if(isEnough){
@@ -345,17 +340,18 @@ public class CustomerPanel extends T3Frame {
     }
 
     public void addTerminate(){////未完成
-        for(int i = 0; i < btnCans.size(); i++){
-            if(i != chosenId - 1)
-                btnCans.get(i).setEnabled(true);
-        }
-        for (int i=0; i<btnCoins.size(); i++){
-            btnCoins.get(i).setEnabled(false);
-        }
-        terminateChange();
-        for(int i = 0; i < coins.size() - 1; i++)
-            System.out.println("cnt use memento: " + coinList.getNumber(i + 1));
-        btnInvalid.setEnabled(false);
+//        for(int i = 0; i < btnCans.size(); i++){
+//            if(i != chosenId - 1)
+//                btnCans.get(i).setEnabled(true);
+//        }
+//        for (int i=0; i<btnCoins.size(); i++){
+//            btnCoins.get(i).setEnabled(false);
+//        }
+//        terminateChange();
+//        for(int i = 0; i < coins.size() - 1; i++)
+//            System.out.println("cnt use memento: " + coinList.getNumber(i + 1));
+//        btnInvalid.setEnabled(false);
+        terminateMemento();
     }
 
     public String addBackControllerPanel(boolean loginStatus){
@@ -412,17 +408,9 @@ public class CustomerPanel extends T3Frame {
         lblChangeSuccess.setVisible(true);
     }
 
-    public CoinList terminateChange() {
-        changeMemento = new ChangeMemento(coinList);
-        changeMemento.newCoinsList(justCoin);
-        customerController = new CustomerController();
-        customerController.add(saveChangeMemento(changeMemento.newCoinsList(justCoin)));
-        ChangeMemento originalMem = customerController.get(0);
-        return originalMem.getCoinList();
-    }
 
-    public ChangeMemento saveChangeMemento(CoinList coinList) {
-        return new ChangeMemento(coinList);
+    public void terminateMemento() {
+        terminateMemento.clearcoinsEntered();
     }
 
     public void updateCoinNum(){// Observer
@@ -465,9 +453,9 @@ public class CustomerPanel extends T3Frame {
 //            System.out.println(justCoin.get(i));
         for(int i = 0; i < coins.size() - 1; i++)
             System.out.println("original cnt: " + coinList.getNumber(i + 1));
-        for(int i = 0; i < justCoin.size(); i++) {
+        for(int i = 0; i < terminateMemento.getState().size(); i++) {
             for (int j = 1; j < coins.size(); j++) {
-                if(justCoin.get(i) == Integer.parseInt(coins.get(j)[0]))
+                if(terminateMemento.getState().get(i) == Integer.parseInt(coins.get(j)[0]))
                     coinList.setNumber(j,Integer.parseInt(coins.get(j)[1]) + 1);
             }
         }
