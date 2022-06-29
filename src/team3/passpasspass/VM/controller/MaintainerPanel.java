@@ -37,7 +37,7 @@ public class MaintainerPanel extends T3Frame {
         JPanel panelTop_Top = new JPanel();
         panelTop_Top.setPreferredSize(new Dimension(600,30));
         panelTop_Top.setLayout(new AfAnyWhereLayout());
-        JLabel jlMaintainerTitle = new TextFactory("VMCS - Maintainer Penel", 2);
+        JLabel jlMaintainerTitle = new TextFactory("VMCS - Maintainer Penel", 15);
         //----Top_Bottom----//
         JPanel panelTop_Bottom = new JPanel();
         panelTop_Bottom.setPreferredSize(new Dimension(600,120));

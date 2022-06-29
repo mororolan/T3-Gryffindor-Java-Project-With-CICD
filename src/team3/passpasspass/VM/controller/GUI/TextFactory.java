@@ -82,6 +82,9 @@ public class TextFactory extends JLabel {
             // warning
             this.setFont(new Font("Microsoft Black",1,15));
         }
+        if (type == 15) {
+            this.setFont(new Font("Microsoft Black", 1, 20));
+        }
     }
 
 }
