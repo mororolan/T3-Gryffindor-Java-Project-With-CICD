@@ -19,8 +19,8 @@ public class CustomerPanel extends T3Frame {
     JPanel contentPane;
     ArrayList<String[]> coins;
     ArrayList<String[]> cans;
-    ArrayList<JButton> btnCoins;
-    ArrayList<JButton> btnCans;
+    public ArrayList<JButton> btnCoins;
+    public ArrayList<JButton> btnCans;
     ArrayList<JLabel> lblDrinkPrice;
     ArrayList<JLabel> lblDrinkCnt;
 
@@ -44,32 +44,32 @@ public class CustomerPanel extends T3Frame {
     JLabel lblTotalMoneyNum;
     //Center_Center
     JLabel lblNoChange;
-    JLabel lblChangeSuccess;
+    public JLabel lblChangeSuccess;
     //Bottom_Top
-    JLabel lblStartDispensing;
-    JLabel lblPurchaseSuccess;
-    JButton btnTerminate;
+    public JLabel lblStartDispensing;
+    public JLabel lblPurchaseSuccess;
+    public JButton btnTerminate;
     //Bottom_Center
     JLabel lblCollectCoins;
     JLabel lblCollectCoinsNum;
     //Bottom_Bottom
     JLabel lblCollectCan;
-    JLabel lblCollectCanInfo;
+    public JLabel lblCollectCanInfo;
     JButton btnBackController;
-    JButton btnContinueToBuy;
+    public JButton btnContinueToBuy;
 
     boolean haveDispensed;
     boolean isEnough;
     boolean loginStatus;
 
-    int totalCoins;//The sum of the value of all coins the customer has put in
+    public int totalCoins;//The sum of the value of all coins the customer has put in
     int shouldPay;//The price of the drink selected by the customer
     int chosenId;
     int totalCoinsEntered;
-    DrinkList drinkList;
+    public DrinkList drinkList;
     CoinList coinList;
     boolean successBuy = false;
-    TerminateMemento terminateMemento;
+    public TerminateMemento terminateMemento;
 
     /**
      * Create the frame.

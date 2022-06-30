@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import team3.Gryffindor.VM.GUI.ButtonFactory;
 import team3.Gryffindor.VM.model.ReadCSV;
+import team3.Gryffindor.VM.panel.CustomerPanel;
+import team3.Gryffindor.VM.panel.SimulatorControlPanel;
 
 import javax.swing.*;
 import java.util.ArrayList;
