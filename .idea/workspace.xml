@@ -5,11 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="add some functions">
+      <change afterPath="$PROJECT_DIR$/src/res/icon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/icon.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/CustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/CustomerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/TerminateChange.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/CustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/CustomerPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/AfAnyWhereLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/AfMargin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/AfMargin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/ButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/ButtonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/LayoutAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/LayoutStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/LayoutStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/T3Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/T3Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/T3Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/TextFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/TwoColumnLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/GUI/VerticalLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/VerticalLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MachinerySimulatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MaintainerPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/SimulatorControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/SimulatorControlPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/DrinkMachine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/Goods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/Menu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/MoneyCounter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/customer/customerPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ChangeIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/ChangeIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ChangeMemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/ChangeMemento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/CheckKeyType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/CheckKeyType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/CoinList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/CoinList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/DrinkList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/DrinkList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/Filter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/MaintainerFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/MaintainerFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/NumberObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/NumberObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/ReadCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/ReadCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/TerminateMemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/TerminateMemento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/passpasspass/VM/controller/model/WriteCSV.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/WriteCSV.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/team3/passpasspass/VM/controller/MachinerySimulatorPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/team3/passpasspass/VM/controller/MaintainerPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MaintainerPanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/team3/passpasspass/VM/controller/SimulatorControlPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/SimulatorControlPanelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
