@@ -85,7 +85,7 @@ public class CustomerPanel extends T3Frame {
         haveDispensed = false;
         isEnough = false;
         totalCoins = 0;
-        shouldPay = 0;
+        shouldPay = 200;
         chosenId = 0;
         drinkList = new DrinkList(this);
         coinList = new CoinList(this);
