@@ -20,11 +20,11 @@ public class  SimulatorControlPanel extends T3Frame {
         // set text
         this.add(new TextFactory("Simulator Control Panel",12));
 
-        bBeginSimulation = ButtonFactory.changeButton("Begin Simulation","mainPanel");
-        bEndSimulation = ButtonFactory.changeButton("End Simulation","mainPanel");
-        bCustomerPanel = ButtonFactory.changeButton("Activate Customer Panel","mainPanel");
-        bMaintainerPanel = ButtonFactory.changeButton("Activate Maintainer Panel","mainPanel");
-        bMachineryPanel = ButtonFactory.changeButton("Activate Machinery Panel","mainPanel");
+        bBeginSimulation = ButtonFactory.addButton("Begin Simulation","mainPanel");
+        bEndSimulation = ButtonFactory.addButton("End Simulation","mainPanel");
+        bCustomerPanel = ButtonFactory.addButton("Activate Customer Panel","mainPanel");
+        bMaintainerPanel = ButtonFactory.addButton("Activate Maintainer Panel","mainPanel");
+        bMachineryPanel = ButtonFactory.addButton("Activate Machinery Panel","mainPanel");
 
         bEndSimulation.setEnabled(false);
         bCustomerPanel.setEnabled(false);

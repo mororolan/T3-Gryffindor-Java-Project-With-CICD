@@ -46,7 +46,7 @@ public class MachinerySimulatorPanel extends T3Frame {
         }
 
 
-        JButton backBnt = ButtonFactory.changeButton("Back to the Main Panel", "machineryPanel");
+        JButton backBnt = ButtonFactory.addButton("Back to the Main Panel", "machineryPanel");
 
 
 

@@ -48,8 +48,8 @@ public class MaintainerPanel extends T3Frame {
         JLabel jlMaintainerPassword = new TextFactory("Password:", 2);
         JPasswordField jpfMaintainerPassword = new JPasswordField();
         jpfMaintainerPassword.setPreferredSize(new Dimension(100,30));
-        JButton jbMaintainerPasswordValid = ButtonFactory.changeButton("Valid Password", "jbMaintainerPasswordValid");
-        JButton jbMaintainerPasswordInvalid = ButtonFactory.changeButton("Invalid Password", "jbMaintainerPasswordInvalid"); // 没改
+        JButton jbMaintainerPasswordValid = ButtonFactory.addButton("Valid Password", "jbMaintainerPasswordValid");
+        JButton jbMaintainerPasswordInvalid = ButtonFactory.addButton("Invalid Password", "jbMaintainerPasswordInvalid"); // 没改
         jbMaintainerPasswordValid.setPreferredSize(new Dimension(200,30));
         jbMaintainerPasswordInvalid.setPreferredSize(new Dimension(200,30));
 
@@ -109,7 +109,7 @@ public class MaintainerPanel extends T3Frame {
             if (coins.get().get(i)[0].equals("100")) {
                 coinsName = "$1";
             }
-            JButton jbCoin = ButtonFactory.changeButton(coinsName, "jbCoin");
+            JButton jbCoin = ButtonFactory.addButton(coinsName, "jbCoin");
             jpCoins.add(jbCoin);
 
             int finalI = i;
@@ -170,7 +170,7 @@ public class MaintainerPanel extends T3Frame {
 
         for (int i = 1; i< cans.get().size(); i++) {
             String cansName = cans.get().get(i)[1];
-            JButton jbDrink = ButtonFactory.changeButton(cansName, "jbCoin");
+            JButton jbDrink = ButtonFactory.addButton(cansName, "jbCoin");
             jpDrinks.add(jbDrink);
             int finalI = i;
             jbDrink.addActionListener(e -> {
@@ -206,7 +206,7 @@ public class MaintainerPanel extends T3Frame {
         JPanel panelBottom_Top = new JPanel();
         panelBottom_Top.setPreferredSize(new Dimension(600,50));
         panelBottom_Top.setLayout(new AfAnyWhereLayout());
-        JButton jbShowTotal = ButtonFactory.changeButton("Show Total Cash Held","jbShowTotal");
+        JButton jbShowTotal = ButtonFactory.addButton("Show Total Cash Held","jbShowTotal");
         jbShowTotal.setPreferredSize(new Dimension(200,30));
 
         JTextField jtfTotalCash = new JTextField();
@@ -233,7 +233,7 @@ public class MaintainerPanel extends T3Frame {
         JPanel panelBottom_Center = new JPanel();
         panelBottom_Center.setPreferredSize(new Dimension(600,100));
         panelBottom_Center.setLayout(new AfAnyWhereLayout());
-        JButton jbCollectCash = ButtonFactory.changeButton("Press to Collect All Cash","jbCollectCash");
+        JButton jbCollectCash = ButtonFactory.addButton("Press to Collect All Cash","jbCollectCash");
         jbCollectCash.setPreferredSize(new Dimension(300,30));
         JLabel jlCollectCash = new TextFactory("Collect Cash:",6);
         jlCollectCash.setPreferredSize(new Dimension(100,30));
@@ -252,7 +252,7 @@ public class MaintainerPanel extends T3Frame {
             new NumberObserver().maintainerCollectCoins("./Data/dwd_money_stat.csv");
         });
 
-        JButton btnMachinery = ButtonFactory.changeButton("Go to the Machinery Panel","jbFinished");
+        JButton btnMachinery = ButtonFactory.addButton("Go to the Machinery Panel","jbFinished");
         btnMachinery.setPreferredSize(new Dimension(300,30));
         btnMachinery.addActionListener(e -> {
             this.dispose();
@@ -263,7 +263,7 @@ public class MaintainerPanel extends T3Frame {
         JPanel panelBottom_Bottom = new JPanel();
         panelBottom_Bottom.setPreferredSize(new Dimension(600,100));
         panelBottom_Bottom.setLayout(new AfAnyWhereLayout());
-        JButton jbFinished = ButtonFactory.changeButton("Press Here when Finished","jbFinished");
+        JButton jbFinished = ButtonFactory.addButton("Press Here when Finished","jbFinished");
         jbFinished.setPreferredSize(new Dimension(300,30));
         jbFinished.addActionListener(e -> {
             logStatus[0] = false;

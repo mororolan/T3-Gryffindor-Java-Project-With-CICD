@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="add TEST">
-      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/CustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/CustomerPanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="change addButton Name" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,11 +54,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/test/team3/Gryffindor/VM"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;E:/IdeaWorkplace/VendingMachineT3/test/team3/Gryffindor/VM&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\Gryffindor\VM" />
@@ -278,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656603165977</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="change addButton Name">
+      <created>1656609599096</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1656609599096</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +340,8 @@
     <MESSAGE value="the new version 0630" />
     <MESSAGE value="refine code structure" />
     <MESSAGE value="add TEST" />
-    <option name="LAST_COMMIT_MESSAGE" value="add TEST" />
+    <MESSAGE value="change addButton Name" />
+    <option name="LAST_COMMIT_MESSAGE" value="change addButton Name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -6,7 +6,7 @@ import java.awt.*;
 public class ButtonFactory {
 
 
-    public static JButton changeButton(String buttonTitle, String buttonType) {
+    public static JButton addButton(String buttonTitle, String buttonType) {
         if (buttonType == null) {
             return null;
         }

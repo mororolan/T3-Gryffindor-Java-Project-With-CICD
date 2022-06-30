@@ -33,7 +33,7 @@ public class CustomerPanelTest {
     @Test
     public void addCoin() throws InterruptedException {
         for (int i=1; i<coins.size(); i++){
-            btnCoins.add(ButtonFactory.changeButton(coins.get(i)[0]+"c","jbEnterCoins"));
+            btnCoins.add(ButtonFactory.addButton(coins.get(i)[0]+"c","jbEnterCoins"));
         }
 
         for(int i = 1; i < coins.size(); i++){

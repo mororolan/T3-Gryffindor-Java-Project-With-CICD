@@ -135,9 +135,9 @@ public class CustomerPanel extends T3Frame {
         lblEnterCoins = new TextFactory("Enter Coins Here",7);
         lblEnoughCoins = new TextFactory("Coins Entered is Enough",7);
         for (int i=1; i<coins.size(); i++){
-            btnCoins.add(ButtonFactory.changeButton(coins.get(i)[0]+"c","jbEnterCoins"));
+            btnCoins.add(ButtonFactory.addButton(coins.get(i)[0]+"c","jbEnterCoins"));
         }
-        btnInvalid = ButtonFactory.changeButton("invalid","jbEnterCoins");
+        btnInvalid = ButtonFactory.addButton("invalid","jbEnterCoins");
         btnInvalid.setEnabled(true);
         //BOTTOM
         panelTop_Bottom = new JPanel();
@@ -155,7 +155,7 @@ public class CustomerPanel extends T3Frame {
         lblTotalMoneyNum = new TextFactory("0 c",11);
         //CENTER
         for (int i=1; i<cans.size(); i++){
-            btnCans.add(ButtonFactory.changeButton(cans.get(i)[1],"jbChooseDrink"));
+            btnCans.add(ButtonFactory.addButton(cans.get(i)[1],"jbChooseDrink"));
         }
         for (int i=1; i<cans.size(); i++){
             lblDrinkPrice.add(new TextFactory(cans.get(i)[3]+"c",11));
@@ -179,8 +179,8 @@ public class CustomerPanel extends T3Frame {
         lblStartDispensing = new TextFactory("Start Dispensing",2);
         lblPurchaseSuccess = new TextFactory("Purchase Successfully",2);
         lblPurchaseSuccess.setPreferredSize(new Dimension(300,30));
-        btnContinueToBuy = ButtonFactory.changeButton("Continue to Buy","jbContinueToBuy");
-        btnTerminate = ButtonFactory.changeButton("Terminate and Return Cash","jbTerminate");
+        btnContinueToBuy = ButtonFactory.addButton("Continue to Buy","jbContinueToBuy");
+        btnTerminate = ButtonFactory.addButton("Terminate and Return Cash","jbTerminate");
         if(!haveDispensed)
             btnTerminate.setEnabled(false);
         else
@@ -191,7 +191,7 @@ public class CustomerPanel extends T3Frame {
         //BOTTOM
         lblCollectCan = new TextFactory("Collect Can Here:",7);
         lblCollectCanInfo = new TextFactory("NO CAN",11);
-        btnBackController = ButtonFactory.changeButton("Back to the Main Panel","jbCustomerBack");
+        btnBackController = ButtonFactory.addButton("Back to the Main Panel","jbCustomerBack");
     }
 
     public void addTop(){
