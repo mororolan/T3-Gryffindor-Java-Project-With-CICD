@@ -3,8 +3,8 @@ package team3.Gryffindor.VM;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import team3.passpasspass.VM.controller.GUI.ButtonFactory;
-import team3.passpasspass.VM.controller.model.ReadCSV;
+import team3.Gryffindor.VM.GUI.ButtonFactory;
+import team3.Gryffindor.VM.model.ReadCSV;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ public class CustomerPanelTest {
     @Test
     public void addCoin() throws InterruptedException {
         for (int i=1; i<coins.size(); i++){
-            btnCoins.add(ButtonFactory.buttonFactory(coins.get(i)[0]+"c","jbEnterCoins"));
+            btnCoins.add(ButtonFactory.changeButton(coins.get(i)[0]+"c","jbEnterCoins"));
         }
 
         for(int i = 1; i < coins.size(); i++){
