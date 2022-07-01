@@ -3,6 +3,14 @@
 ## How to run this project？
 * Run **test/team3/Gryffindor/VM**
 
+## Project Structure
+- src
+  - team3/Gryffindor/VM
+    - GUI
+    - panel
+    - model
+  - Main.java  
+
 ## All Use Cases
 Customer	
 - Purchase drinks cans
