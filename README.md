@@ -8,7 +8,7 @@
   - team3/Gryffindor/VM
     - GUI: Layout and UI component set
     - panel: User interface & functions
-    - model: some universal methonds
+    - model: some universal methods
   - Main.java: Main Function
 
 ## All Use Cases
