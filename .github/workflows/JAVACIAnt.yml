@@ -25,13 +25,13 @@ jobs:
       run: ant -noinput -buildfile build.xml
     - name: Run CustomerPanelTest
       run:
-        Cat ./test/team3/Gryffindor/VM/CustomerPanelTest.java
+        cat ./test/team3/Gryffindor/VM/CustomerPanelTest.java
     - name: Run MachinerySimulatorPanelTest
       run:
-        Cat ./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java
+        cat ./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java
     - name: Run MaintainerPanelTest
       run:
-        Cat ./test/team3/Gryffindor/VM/MaintainerPanelTest.java
+        cat ./test/team3/Gryffindor/VM/MaintainerPanelTest.java
     - name: Run SimulatorControlPanelTest
       run:
-        Cat ./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java
+        cat ./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java
