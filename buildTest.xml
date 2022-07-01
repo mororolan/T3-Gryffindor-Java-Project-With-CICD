@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<project name="VendingMachine" default="run" basedir=".">
+<project name="VendingMachine" default="junit" basedir=".">
     <!--<property />define variable-->
     <property name="src" value="src"/>
     <property name="dest" value="result"/>
     <property name="testResult" value="testResult"/>
     <property name="testResultFile" value="testResultFile"/>
     <property name="result_app" value="vendingMachine.jar"/>
-    <!--    <property name="CustomerPanelTest" value="test.team3.Gryffindor.VM.CustomerPanelTest"/>-->
-    <!--    <property name="MachinerySimulatorPanelTest" value="./test/team3.Gryffindor.VM/MachinerySimulatorPanelTest"/>-->
-    <!--    <property name="MachinerySimulatorPanelTest" value="./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java"/>-->
-    <property name="MachinerySimulatorPanelTest" value="MachinerySimulatorPanelTest.java"/>
-    <!--    <property name="MaintainerPanelTest" value="test.team3.Gryffindor.VM.MaintainerPanelTest"/>-->
-    <!--    <property name="SimulatorControlPanelTest" value="test.team3.Gryffindor.VM.SimulatorControlPanelTest"/>-->
 
     <!--new folder-->
     <target name="init">
@@ -27,44 +21,33 @@
         <jar jarfile="${result_app}" basedir="${dest}"/>
     </target>
     <!--begin to run-->
-    <target name="run" depends="build">
+<!--    <target name="run" depends="build">-->
 
-        <junit haltonfailure = "yes" printsummary = "true">
+<!--        <junit haltonfailure = "yes" printsummary = "true">-->
+<!--            <classpath location="./jars/junit-4.11.jar"/>-->
+<!--            <classpath location="./jars/hamcrest-core-1.3.jar"/>-->
+<!--&lt;!&ndash;            <classpath location="./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            <test name="MachinerySimulatorPanelTest"/>&ndash;&gt;-->
+<!--                <test name = "${MachinerySimulatorPanelTest}"/>-->
+<!--        </junit>-->
+<!--    </target>-->
+
+    <target name="junit" depends="build">
+
+
+        <junit printsummary="yes" haltonfailure="no">
+            <!--配置运行时classpath-->
             <classpath location="./jars/junit-4.11.jar"/>
             <classpath location="./jars/hamcrest-core-1.3.jar"/>
-            <test name="MachinerySimulatorPanelTest"/>
-            <!--            <test name = "${MachinerySimulatorPanelTest}"/>-->
+            <!--测试报告以文本的形式生成，type配置成xml，以xml的形式生成测试报告-->
+            <formatter type="plain"/>
+            <batchtest fork="yes" todir="${dest}">
+                <!-- 这里路径指向测试类 -->
+                <fileset dir="test" includes="/**/*Test.java"/>
+<!--                <fileset dir="test" includes="/**/*Test.java"/>-->
+            </batchtest>
         </junit>
     </target>
 
-    <!-- Define the classpath which includes the junit.jar and the classes after compiling -->
-    <!--    <path id="junit.class.path">-->
-    <!--        <pathelement location="./jars/junit-4.11.jar" />-->
-    <!--        <pathelement location="/jars/hamcrest-core-1.3.jar" />-->
-    <!--    </path>-->
-
-    <!--    &lt;!&ndash; Run the JUnit Tests &ndash;&gt;-->
-    <!--    &lt;!&ndash; Output is XML, could also be plain &ndash;&gt;-->
-    <!--    <target name="junit" depends="compile">-->
-    <!--        <junit printsummary="on" fork="true" haltonfailure="yes">-->
-    <!--            <classpath refid="junit.class.path" />-->
-    <!--            <formatter type="xml" />-->
-    <!--            <batchtest todir="test">-->
-    <!--                <fileset dir="test/team3/Gryffindor/VM">-->
-    <!--                    <include name="MachinerySimulatorPanelTest.java" />-->
-    <!--                </fileset>-->
-    <!--            </batchtest>-->
-    <!--        </junit>-->
-    <!--    </target>-->
-
-<!--        &lt;!&ndash;删除生成的文件&ndash;&gt;-->
-<!--        <target name="clean" depends="run">-->
-<!--            <delete dir="${result}"/>-->
-<!--            <delete file="${test_jar}"/>-->
-<!--        </target>-->
-<!--        <target name="rerun" depends="clean,run">-->
-<!--            <ant target="clean" />-->
-<!--            <ant target="run" />-->
-<!--        </target>-->
 
 </project>

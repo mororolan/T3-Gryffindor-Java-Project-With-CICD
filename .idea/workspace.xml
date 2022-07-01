@@ -4,7 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="update" />
+    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/result/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfMargin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/ButtonFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/LayoutStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/T3Frame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/T3Panel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/TextFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/VerticalLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/ChangeIterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/ChangeMemento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CheckKeyType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CoinList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CoinsNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CustomerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/DrinkList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/MaintainerFileManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/MaintainerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/Number.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/NumberObserver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/ReadCSV.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/TerminateMemento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/VMPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/WriteCSV.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/CustomerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/SimulatorControlPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buildTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendingMachine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/vendingMachine.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +139,7 @@
       <recent name="team3.passpasspass.VM.controller.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MachinerySimulatorPanelTest">
+  <component name="RunManager" selected="JUnit.CustomerPanelTest.addChooseDrink">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="T3" />
@@ -152,8 +193,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MachinerySimulatorPanelTest" />
         <item itemvalue="JUnit.CustomerPanelTest.addChooseDrink" />
+        <item itemvalue="JUnit.MachinerySimulatorPanelTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.team3.passpasspass.VM.controller.SimulatorControlPanel" />
       </list>
@@ -361,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656683913034</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="update">
+      <created>1656688309886</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1656688309886</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
