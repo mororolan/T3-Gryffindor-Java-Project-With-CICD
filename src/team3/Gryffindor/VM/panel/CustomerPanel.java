@@ -340,18 +340,7 @@ public class CustomerPanel extends T3Frame {
         lblChangeSuccess.setVisible(false);
     }
 
-    public void addTerminate(){////未完成
-//        for(int i = 0; i < btnCans.size(); i++){
-//            if(i != chosenId - 1)
-//                btnCans.get(i).setEnabled(true);
-//        }
-//        for (int i=0; i<btnCoins.size(); i++){
-//            btnCoins.get(i).setEnabled(false);
-//        }
-//        terminateChange();
-//        for(int i = 0; i < coins.size() - 1; i++)
-//            System.out.println("cnt use memento: " + coinList.getNumber(i + 1));
-//        btnInvalid.setEnabled(false);
+    public void addTerminate(){
         terminateMemento();
     }
 
