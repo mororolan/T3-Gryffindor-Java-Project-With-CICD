@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/result/TEST-team3.Gryffindor.VM.CustomerPanelTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/TEST-team3.Gryffindor.VM.MachinerySimulatorPanelTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/TEST-team3.Gryffindor.VM.MaintainerPanelTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/TEST-team3.Gryffindor.VM.SimulatorControlPanelTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buildTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendingMachine.jar" beforeDir="false" afterPath="$PROJECT_DIR$/vendingMachine.jar" afterDir="false" />
+    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="change build">
+      <change afterPath="$PROJECT_DIR$/result/TEST-team3.Gryffindor.VM.JunitRunner.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,7 @@
       <recent name="team3.passpasspass.VM.controller.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerPanelTest.addChooseDrink">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="T3" />
@@ -159,9 +154,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CustomerPanelTest.addChooseDrink" />
         <item itemvalue="JUnit.MachinerySimulatorPanelTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.team3.passpasspass.VM.controller.SimulatorControlPanel" />
       </list>
     </recent_temporary>
@@ -382,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656689888769</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="change build">
+      <created>1656690201899</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1656690201899</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +447,8 @@
     <MESSAGE value="add lib files" />
     <MESSAGE value="CI" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="change build" />
+    <option name="LAST_COMMIT_MESSAGE" value="change build" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
