@@ -21,7 +21,7 @@ public class SimulatorControlPanelTest {
 
     @Test
     public void beginSimulation() {
-        SCP.beginSimulation(SCP.bBeginSimulation, SCP.bEndSimulation, SCP.bCustomerPanel, SCP.bMaintainerPanel, SCP.bMachineryPanel);
+        SCP.beginSimulation();
         assertEquals(false,SCP.bBeginSimulation.isEnabled());
         assertEquals(true,SCP.bEndSimulation.isEnabled());
         assertEquals(true,SCP.bCustomerPanel.isEnabled());
@@ -31,7 +31,7 @@ public class SimulatorControlPanelTest {
 
     @Test
     public void endSimulation() {
-        SCP.endSimulation(SCP.bBeginSimulation, SCP.bEndSimulation, SCP.bCustomerPanel, SCP.bMaintainerPanel, SCP.bMachineryPanel);
+        SCP.endSimulation();
         assertEquals(true,SCP.bBeginSimulation.isEnabled());
         assertEquals(false,SCP.bEndSimulation.isEnabled());
         assertEquals(false,SCP.bCustomerPanel.isEnabled());
