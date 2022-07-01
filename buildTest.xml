@@ -31,11 +31,11 @@
             <test name = "CustomerPanelTest"/>
         </junit>
     </target>
-    <!--删除生成的文件-->
-    <target name="clean" depends="run">
-        <delete dir="${result}"/>
-        <delete file="${test_jar}"/>
-    </target>
+<!--    &lt;!&ndash;删除生成的文件&ndash;&gt;-->
+<!--    <target name="clean" depends="run">-->
+<!--        <delete dir="${result}"/>-->
+<!--        <delete file="${test_jar}"/>-->
+<!--    </target>-->
     <target name="rerun" depends="clean,run">
         <ant target="clean" />
         <ant target="run" />
