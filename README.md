@@ -6,10 +6,10 @@
 ## Project Structure
 - src
   - team3/Gryffindor/VM
-    - GUI
-    - panel
-    - model
-  - Main.java  
+    - GUI: Layout and UI component set
+    - panel: User interface & functions
+    - model: some universal methonds
+  - Main.java: Main Function
 
 ## All Use Cases
 Customer	
