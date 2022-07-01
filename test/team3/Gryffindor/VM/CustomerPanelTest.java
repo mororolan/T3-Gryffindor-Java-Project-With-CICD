@@ -71,7 +71,7 @@ public class CustomerPanelTest {
 
     @Test
     public void startDispense() {
-        CustomerPanel customerPanel1 = new CustomerPanel("VMCS - Customer Panel", true);
+        CustomerPanel customerPanel1 = new CustomerPanel1("VMCS - Customer Panel", true);
         assertEquals(false,customerPanel.btnTerminate.isEnabled());
         assertEquals(false,customerPanel.lblStartDispensing.isVisible());
     }
