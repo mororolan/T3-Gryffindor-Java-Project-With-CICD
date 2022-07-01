@@ -8,11 +8,11 @@ import javax.swing.*;
 
 public class  SimulatorControlPanel extends T3Frame {
     // set Buttons
-    JButton bBeginSimulation;
-    JButton bEndSimulation;
-    JButton bCustomerPanel;
-    JButton bMaintainerPanel;
-    JButton bMachineryPanel;
+    public JButton bBeginSimulation;
+    public JButton bEndSimulation;
+    public JButton bCustomerPanel;
+    public JButton bMaintainerPanel;
+    public JButton bMachineryPanel;
 
     public SimulatorControlPanel(String title, boolean loginStatus) {
         super(title);
@@ -38,11 +38,11 @@ public class  SimulatorControlPanel extends T3Frame {
         this.add(bMachineryPanel);
 
         bBeginSimulation.addActionListener(e -> {
-            beginSimulation(bBeginSimulation,bEndSimulation,bCustomerPanel,bMaintainerPanel,bMachineryPanel);
+            beginSimulation();
         });
 
         bEndSimulation.addActionListener(e -> {
-            endSimulation(bBeginSimulation,bEndSimulation,bCustomerPanel,bMaintainerPanel,bMachineryPanel);
+            endSimulation();
         });
 
         bCustomerPanel.addActionListener(e -> {
@@ -60,7 +60,7 @@ public class  SimulatorControlPanel extends T3Frame {
         setVisible(true);
     }
 
-    public void beginSimulation(JButton bBeginSimulation, JButton bEndSimulation, JButton bCustomerPanel, JButton bMaintainerPanel, JButton bMachineryPanel){
+    public void beginSimulation(){
         bBeginSimulation.setEnabled(false);
         bEndSimulation.setEnabled(true);
         bCustomerPanel.setEnabled(true);
@@ -68,7 +68,7 @@ public class  SimulatorControlPanel extends T3Frame {
         bMachineryPanel.setEnabled(true);
     }
 
-    public void endSimulation(JButton bBeginSimulation, JButton bEndSimulation, JButton bCustomerPanel, JButton bMaintainerPanel, JButton bMachineryPanel){
+    public void endSimulation(){
         bEndSimulation.setEnabled(false);
         bBeginSimulation.setEnabled(true);
         bCustomerPanel.setEnabled(false);
