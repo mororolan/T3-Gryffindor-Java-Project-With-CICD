@@ -19,5 +19,5 @@ jobs:
           distribution: 'temurin'
 
       - name: Simulator Control Panel
-        run: javac -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar";".test/team3" ./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java
+        run: javac -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar";".src/team3/Gryffindor/VM/panel/SimulatorControlPanel.java" ./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java
         shell: cmd
