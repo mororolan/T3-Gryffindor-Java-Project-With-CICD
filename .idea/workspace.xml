@@ -4,54 +4,98 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="CI">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/testCIAnt.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$Item.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfMargin.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/ButtonFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/LayoutStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/T3Frame.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/T3Panel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/TextFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/VerticalLayout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/ChangeIterator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/ChangeMemento.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CheckKeyType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CoinList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CoinsNumber.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CustomerController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CustomerPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/DrinkList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/MaintainerFileManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/MaintainerPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/Number.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/NumberObserver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/ReadCSV.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/TerminateMemento.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/VMPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/WriteCSV.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/CustomerPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/SimulatorControlPanel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/JAVACIAnt.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/testCI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/testCI.yml" afterDir="false" />
+    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/MachinerySimulatorPanelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$Item.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/AfMargin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/ButtonFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/LayoutStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/T3Frame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/T3Panel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/TextFactory.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/GUI/VerticalLayout.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/ChangeIterator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/ChangeMemento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CheckKeyType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CoinList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CoinsNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/CustomerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/DrinkList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/MaintainerFileManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/MaintainerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/Number.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/NumberObserver.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/ReadCSV.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/TerminateMemento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/VMPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/model/WriteCSV.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/CustomerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/MaintainerPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/team3/Gryffindor/VM/panel/SimulatorControlPanel.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendingMachine.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/buildTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buildTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MaintainerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/team3/Gryffindor/VM/CustomerPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/CustomerPanelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/team3/Gryffindor/VM/JunitRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MaintainerPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MaintainerPanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.apiguardian_1.0.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.hamcrest.core_1.3.0.v20180420-1519.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.api_5.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.engine_5.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.migrationsupport_5.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.params_5.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.commons_1.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.engine_1.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.launcher_1.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.runner_1.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.suite.api_1.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.junit.vintage.engine_5.4.0.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/org.opentest4j_1.1.1.v20190212-2109.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfAnyWhereLayout$Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/AfMargin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/ButtonFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/LayoutStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/T3Frame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/T3Panel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/TextFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/GUI/VerticalLayout.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/ChangeIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/ChangeMemento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CheckKeyType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CoinList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CoinsNumber.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/CustomerPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/DrinkList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/MaintainerFileManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/MaintainerPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/Number.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/NumberObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/ReadCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/TerminateMemento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/VMPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/model/WriteCSV.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/CustomerPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/MaintainerPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result1/team3/Gryffindor/VM/panel/SimulatorControlPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +155,7 @@
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/jars/junit-4.11.jar",
+    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -122,11 +165,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkplace\VendingMachineT3" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\Gryffindor\VM" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\Gryffindor\VM\panel" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\model" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller" />
-      <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\passpasspass\VM\controller" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -147,7 +190,7 @@
       <recent name="team3.passpasspass.VM.controller.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomerPanelTest.addChooseDrink">
+  <component name="RunManager" selected="JUnit.MachinerySimulatorPanelTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="T3" />
@@ -184,8 +227,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MachinerySimulatorPanelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="team3.Gryffindor.VM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="team3.Gryffindor.VM" />
+      <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.MachinerySimulatorPanelTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MachinerySimulatorPanelTest" />
         <item itemvalue="JUnit.CustomerPanelTest.addChooseDrink" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.team3.passpasspass.VM.controller.SimulatorControlPanel" />
@@ -387,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656612388291</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="update">
+      <created>1656683913034</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1656683913034</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +501,6 @@
     <MESSAGE value="fix some structure problems" />
     <MESSAGE value="merge all work" />
     <MESSAGE value="fix a bug" />
-    <MESSAGE value="update" />
     <MESSAGE value="update and fix some bugs" />
     <MESSAGE value="write new layout and fix some bugs" />
     <MESSAGE value="fix bugs and layout" />
@@ -450,7 +515,8 @@
     <MESSAGE value="fix bugs" />
     <MESSAGE value="add lib files" />
     <MESSAGE value="CI" />
-    <option name="LAST_COMMIT_MESSAGE" value="CI" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,7 @@
 drink_id,drink_name,drink_cnt,drink_price
-1,Coca-Cola,13,70
-2,Fanta,8,80
+1,Coca-Cola,5,70
+2,Fanta,6,80
 3,Sarsi,14,85
-4,Soya Bean,15,60
-5,Sprite,10,30
-6,Bing Feng,9,70
+4,Soya Bean,18,60
+5,Sprite,4,30
+6,Bing Feng,8,70
