@@ -36,9 +36,9 @@
 <!--        <delete dir="${result}"/>-->
 <!--        <delete file="${test_jar}"/>-->
 <!--    </target>-->
-    <target name="rerun" depends="clean,run">
-        <ant target="clean" />
-        <ant target="run" />
-    </target>
+<!--    <target name="rerun" depends="clean,run">-->
+<!--        <ant target="clean" />-->
+<!--        <ant target="run" />-->
+<!--    </target>-->
 
 </project>
