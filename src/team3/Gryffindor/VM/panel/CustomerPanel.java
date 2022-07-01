@@ -440,15 +440,12 @@ public class CustomerPanel extends T3Frame {
         }
         chosenId = 0;
         successBuy = true;
-         for(int i = 0; i < terminateMemento.getState().size(); i++) {
+        for(int i = 0; i < terminateMemento.getState().size(); i++) {
             for (int j = 1; j < coins.size(); j++) {
                 if(terminateMemento.getState().get(i) == Integer.parseInt(coins.get(j)[0]))
                     coinList.setNumber(j,Integer.parseInt(coins.get(j)[1]) + 1);
             }
         }
-        for(int i = 0; i < coins.size() - 1; i++)
-            System.out.println("new cnt: " + coinList.getNumber(i + 1));
-
     }
 
     public void checkNullStock() {
