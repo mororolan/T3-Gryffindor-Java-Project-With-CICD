@@ -17,13 +17,19 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class MaintainerPanel extends T3Frame {
 
+    public JPanel panelTop;
+    public JPanel panelCenter;
+    public JPanel panelBottom;
+    public AtomicReference<ArrayList<String[]>> coins;
+    public AtomicReference<ArrayList<String[]>> cans;
+    public final int[] coinsTotal;
     public MaintainerPanel(String title, boolean loginStatus) throws HeadlessException {
 
         super(title);
         AtomicInteger clickCoinBnt = new AtomicInteger();
         AtomicInteger clickDrinkBnt = new AtomicInteger();
-        AtomicReference<ArrayList<String[]>> coins = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
-        AtomicReference<ArrayList<String[]>> cans = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_drink_info.csv"));
+        coins = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
+        cans = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_drink_info.csv"));
         final boolean[] logStatus = {loginStatus};
 
         this.setSize(600, 1000);
@@ -33,7 +39,7 @@ public class MaintainerPanel extends T3Frame {
         setContentPane(contentPane);
 
         //-------------------Top------------------------//
-        JPanel panelTop = new JPanel();
+        panelTop = new JPanel();
         panelTop.setPreferredSize(new Dimension(600,150));
         panelTop.setLayout(new AfAnyWhereLayout());
         //----Top_Top----//
@@ -67,7 +73,7 @@ public class MaintainerPanel extends T3Frame {
 
 
         //----------------------------CENTER--------------------------------//
-        JPanel panelCenter = new JPanel();
+        panelCenter = new JPanel();
         panelCenter.setPreferredSize(new Dimension(600,540));
         panelCenter.setLayout(new AfAnyWhereLayout());
         //------CENTER TOP------//
@@ -198,7 +204,7 @@ public class MaintainerPanel extends T3Frame {
 
 
         //----------------------------BOTTOM--------------------------------//
-        JPanel panelBottom = new JPanel();
+        panelBottom = new JPanel();
         panelBottom.setPreferredSize(new Dimension(600,200));
         panelBottom.setLayout(new AfAnyWhereLayout());
 
@@ -216,7 +222,7 @@ public class MaintainerPanel extends T3Frame {
         jtfTotalCash.setBackground(Color.black);
         jtfTotalCash.addKeyListener(new CheckKeyType());
 
-        final int[] coinsTotal = {0};
+        coinsTotal = new int[]{0};
 
         jbShowTotal.addActionListener(e -> {
             coins.set(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
