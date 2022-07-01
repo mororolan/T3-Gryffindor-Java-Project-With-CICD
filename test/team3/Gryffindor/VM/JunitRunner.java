@@ -6,9 +6,9 @@ import org.junit.runner.notification.Failure;
 
 public class JunitRunner {
     public static void main(String[] args) {
+        Result maintainerPanelResult = JUnitCore.runClasses(MaintainerPanelTest.class);
         Result customerPanelResult = JUnitCore.runClasses(CustomerPanelTest.class);
         Result machinerySimulatorPanelResult = JUnitCore.runClasses(MachinerySimulatorPanelTest.class);
-        Result maintainerPanelResult = JUnitCore.runClasses(MaintainerPanelTest.class);
         Result simulatorControlPanelResult = JUnitCore.runClasses(SimulatorControlPanelTest.class);
 
         if (customerPanelResult.wasSuccessful()) {
