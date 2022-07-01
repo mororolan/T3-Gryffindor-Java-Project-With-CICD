@@ -19,7 +19,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Ant
-        run: ant -noinput -buildfile build.xml
+        run: ant -noinput -buildfile buildTest.xml
 
 #      - name: Simulator Control Panel
 #        run: javac -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar";".src/team3/Gryffindor/VM/panel/SimulatorControlPanel.java" ./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java
