@@ -1,0 +1,660 @@
+Index: .github/workflows/testCI.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># This is a basic workflow to help you get started with Actions\r\nname: CI\r\n\r\non:\r\n  push:\r\n    branches: \r\n      - finalVersion\r\n\r\njobs:\r\n  test:\r\n    runs-on: windows-latest\r\n\r\n    steps:\r\n      - uses: actions/checkout@v3\r\n      \r\n      - name: Set up JDK 11\r\n        uses: actions/setup-java@v3\r\n        with:\r\n          java-version: '11'\r\n          distribution: 'temurin'\r\n\r\n      - name: Test\r\n        run: |\r\n          javac -d . \"./src/team3/Gryffindor/VM/GUI/LayoutStrategy.java\" \"./src/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.java\" \"./src/team3/Gryffindor/VM/GUI/AfMargin.java\" \"./src/team3/Gryffindor/VM/GUI/ButtonFactory.java\" \"./src/team3/Gryffindor/VM/GUI/T3Frame.java\" \"./src/team3/Gryffindor/VM/GUI/T3Panel.java\" \"./src/team3/Gryffindor/VM/GUI/TextFactory.java\" \"./src/team3/Gryffindor/VM/GUI/VerticalLayout.java\" \"./src/team3/Gryffindor/VM/model/NumberObserver.java\"\r\n          javac -d . \"./src/team3/Gryffindor/VM/model/ChangeIterator.java\" \"./src/team3/Gryffindor/VM/model/CheckKeyType.java\" \"./src/team3/Gryffindor/VM/model/ReadCSV.java\" \"./src/team3/Gryffindor/VM/model/WriteCSV.java\" \"./src/team3/Gryffindor/VM/model/TerminateMemento.java\"\r\n          javac -d . \"./src/team3/Gryffindor/VM/model/ChangeMemento.java\" \"./src/team3/Gryffindor/VM/model/CoinList.java\" \"./src/team3/Gryffindor/VM/model/DrinkList.java\" \"./src/team3/Gryffindor/VM/panel/CustomerPanel.java\" \"./src/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.java\" \"./src/team3/Gryffindor/VM/panel/MaintainerPanel.java\" \"./src/team3/Gryffindor/VM/panel/SimulatorControlPanel.java\"\r\n          javac -d . -classpath \"./jars/junit-4.11.jar\";\"./jars/hamcrest-core-1.3.jar\"; \"./test/team3/Gryffindor/VM/CustomerPanelTest.java\" \"./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java\" \"./test/team3/Gryffindor/VM/MaintainerPanelTest.java\" \"./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java\"\r\n          javac -classpath \"./jars/junit-4.11.jar\";\"./jars/hamcrest-core-1.3.jar\"; \"./test/team3/Gryffindor/VM/JunitRunner.java\"\r\n          java -classpath \"./jars/junit-4.11.jar\";\"./jars/hamcrest-core-1.3.jar\"; \"./test/team3/Gryffindor/VM/JunitRunner.java\"\r\n          \r\n        shell: cmd\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/testCI.yml b/.github/workflows/testCI.yml
+--- a/.github/workflows/testCI.yml	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/.github/workflows/testCI.yml	(date 1656683347942)
+@@ -3,7 +3,7 @@
+ 
+ on:
+   push:
+-    branches: 
++    branches:
+       - finalVersion
+ 
+ jobs:
+@@ -12,7 +12,7 @@
+ 
+     steps:
+       - uses: actions/checkout@v3
+-      
++
+       - name: Set up JDK 11
+         uses: actions/setup-java@v3
+         with:
+@@ -27,5 +27,5 @@
+           javac -d . -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar"; "./test/team3/Gryffindor/VM/CustomerPanelTest.java" "./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java" "./test/team3/Gryffindor/VM/MaintainerPanelTest.java" "./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java"
+           javac -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar"; "./test/team3/Gryffindor/VM/JunitRunner.java"
+           java -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar"; "./test/team3/Gryffindor/VM/JunitRunner.java"
+-          
+-        shell: cmd
++
++        shell: cmd
+\ No newline at end of file
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Vending Machine\r\n\r\n## How to run this project？\r\n* Run **test/team3/Gryffindor/VM**\r\n\r\n## Project Structure\r\n- src\r\n  - team3/Gryffindor/VM\r\n    - GUI: Layout and UI component set\r\n    - panel: User interface & functions\r\n    - model: some universal methods\r\n  - Main.java: Main Function\r\n\r\n## All Use Cases\r\nCustomer\t\r\n- Purchase drinks cans\r\n- Terminate transaction\r\nMaintainer\t\r\n- Log in\r\n- Manage drinks\r\n- Manage Cash\r\n- Log out\r\nController\t\r\n- Initiate and terminate simulator\r\n- Monitor State\r\n- Simulate Replenishment\r\n- Simulate Door Locked\r\n\r\n![image](https://user-images.githubusercontent.com/42712987/176857007-fddf0884-cf2a-40dd-9fe9-8b4a5a6dc03e.png)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/README.md	(date 1656682843383)
+@@ -3,6 +3,9 @@
+ ## How to run this project？
+ * Run **test/team3/Gryffindor/VM**
+ 
++## Maintainer Password
++* 123abc
++
+ ## Project Structure
+ - src
+   - team3/Gryffindor/VM
+Index: buildTest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n<!--build.xml中的第一句话，没有实际的意义-->\r\n<!--Ant的所有内容必须包含在<project></project>里面，name是你给它取的名字，basedir指工作的根目录，.代表当前目录，default代表默认要做的事情。-->\r\n<project name=\"VendingMachine\" default=\"run\" basedir=\".\">\r\n    <!--<property />设置变量-->\r\n    <property name=\"src\" value=\"src\"/>\r\n    <property name=\"result\" value=\"result\"/>\r\n    <property name=\"test_jar\" value=\"test.jar\"/>\r\n    <property name=\"CustomerPanelTest\" value=\"test.team3.Gryffindor.VM.CustomerPanelTest\"/>\r\n    <!--每个target代表你想做的操作，给这个操作命名，及name值，depends是它所依赖的target在执行这个target，例如这里的compile之前ant会先检查init是否曾经被执行过，如果执行\r\n        过则直接直接执行compile，如果没有则会先执行它依赖的target例如这里的init，然后在执行这个target-->\r\n    <!--新建文件夹-->\r\n    <target name=\"init\">\r\n        <mkdir dir=\"${result}\"/>\r\n    </target>\r\n    <!--开始编辑-->\r\n    <target name=\"compile\" depends=\"init\">\r\n        <javac srcdir=\"${src}\" destdir=\"${result}\"/>\r\n    </target>\r\n    <!--创建jar包-->\r\n    <target name=\"build\" depends=\"compile\">\r\n        <jar jarfile=\"${test_jar}\" basedir=\"${result}\"/>\r\n    </target>\r\n    <!--开始运行-->\r\n    <target name=\"run\" depends=\"build\">\r\n        <java classname=\"HelloWorld\" classpath=\"${test_jar}\"/>\r\n    </target>\r\n    <!--    test-->\r\n    <target name = \"customerPanelTest\" depends=\"build\">\r\n        <junit haltonfailure = \"true\" printsummary = \"true\">\r\n            <test name = \"CustomerPanelTest\"/>\r\n        </junit>\r\n    </target>\r\n<!--    &lt;!&ndash;删除生成的文件&ndash;&gt;-->\r\n<!--    <target name=\"clean\" depends=\"run\">-->\r\n<!--        <delete dir=\"${result}\"/>-->\r\n<!--        <delete file=\"${test_jar}\"/>-->\r\n<!--    </target>-->\r\n<!--    <target name=\"rerun\" depends=\"clean,run\">-->\r\n<!--        <ant target=\"clean\" />-->\r\n<!--        <ant target=\"run\" />-->\r\n<!--    </target>-->\r\n\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/buildTest.xml b/buildTest.xml
+--- a/buildTest.xml	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/buildTest.xml	(date 1656687493660)
+@@ -1,36 +1,62 @@
+ <?xml version="1.0" encoding="UTF-8" ?>
+-<!--build.xml中的第一句话，没有实际的意义-->
+-<!--Ant的所有内容必须包含在<project></project>里面，name是你给它取的名字，basedir指工作的根目录，.代表当前目录，default代表默认要做的事情。-->
++
+ <project name="VendingMachine" default="run" basedir=".">
+-    <!--<property />设置变量-->
++    <!--<property />define variable-->
+     <property name="src" value="src"/>
+-    <property name="result" value="result"/>
+-    <property name="test_jar" value="test.jar"/>
+-    <property name="CustomerPanelTest" value="test.team3.Gryffindor.VM.CustomerPanelTest"/>
+-    <!--每个target代表你想做的操作，给这个操作命名，及name值，depends是它所依赖的target在执行这个target，例如这里的compile之前ant会先检查init是否曾经被执行过，如果执行
+-        过则直接直接执行compile，如果没有则会先执行它依赖的target例如这里的init，然后在执行这个target-->
+-    <!--新建文件夹-->
++    <property name="dest" value="result"/>
++    <property name="testResult" value="testResult"/>
++    <property name="testResultFile" value="testResultFile"/>
++    <property name="result_app" value="vendingMachine.jar"/>
++<!--    <property name="CustomerPanelTest" value="test.team3.Gryffindor.VM.CustomerPanelTest"/>-->
++<!--    <property name="MachinerySimulatorPanelTest" value="./test/team3.Gryffindor.VM/MachinerySimulatorPanelTest"/>-->
++<!--    <property name="MachinerySimulatorPanelTest" value="./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java"/>-->
++    <property name="MachinerySimulatorPanelTest" value="MachinerySimulatorPanelTest.java"/>
++<!--    <property name="MaintainerPanelTest" value="test.team3.Gryffindor.VM.MaintainerPanelTest"/>-->
++<!--    <property name="SimulatorControlPanelTest" value="test.team3.Gryffindor.VM.SimulatorControlPanelTest"/>-->
++
++    <!--new folder-->
+     <target name="init">
+-        <mkdir dir="${result}"/>
++        <mkdir dir="${dest}"/>
+     </target>
+-    <!--开始编辑-->
++    <!--begin compile-->
+     <target name="compile" depends="init">
+-        <javac srcdir="${src}" destdir="${result}"/>
++        <javac srcdir="${src}" destdir="${dest}"/>
+     </target>
+-    <!--创建jar包-->
++    <!--create jar-->
+     <target name="build" depends="compile">
+-        <jar jarfile="${test_jar}" basedir="${result}"/>
++        <jar jarfile="${result_app}" basedir="${dest}"/>
+     </target>
+-    <!--开始运行-->
++    <!--begin to run-->
+     <target name="run" depends="build">
+-        <java classname="HelloWorld" classpath="${test_jar}"/>
+-    </target>
+-    <!--    test-->
+-    <target name = "customerPanelTest" depends="build">
+-        <junit haltonfailure = "true" printsummary = "true">
+-            <test name = "CustomerPanelTest"/>
++
++        <junit haltonfailure = "yes" printsummary = "true">
++            <classpath location="./jars/junit-4.11.jar"/>
++            <classpath location="./jars/hamcrest-core-1.3.jar"/>
++            <test name="MachinerySimulatorPanelTest"/>
++<!--            <test name = "${MachinerySimulatorPanelTest}"/>-->
+         </junit>
+     </target>
++
++    <!-- Define the classpath which includes the junit.jar and the classes after compiling -->
++<!--    <path id="junit.class.path">-->
++<!--        <pathelement location="./jars/junit-4.11.jar" />-->
++<!--        <pathelement location="/jars/hamcrest-core-1.3.jar" />-->
++<!--    </path>-->
++
++<!--    &lt;!&ndash; Run the JUnit Tests &ndash;&gt;-->
++<!--    &lt;!&ndash; Output is XML, could also be plain &ndash;&gt;-->
++<!--    <target name="junit" depends="compile">-->
++<!--        <junit printsummary="on" fork="true" haltonfailure="yes">-->
++<!--            <classpath refid="junit.class.path" />-->
++<!--            <formatter type="xml" />-->
++<!--            <batchtest todir="test">-->
++<!--                <fileset dir="test/team3/Gryffindor/VM">-->
++<!--                    <include name="MachinerySimulatorPanelTest.java" />-->
++<!--                </fileset>-->
++<!--            </batchtest>-->
++<!--        </junit>-->
++<!--    </target>-->
++
+ <!--    &lt;!&ndash;删除生成的文件&ndash;&gt;-->
+ <!--    <target name="clean" depends="run">-->
+ <!--        <delete dir="${result}"/>-->
+Index: .github/workflows/JAVACIAnt.yml
+===================================================================
+diff --git a/.github/workflows/JAVACIAnt.yml b/.github/workflows/JAVACIAnt.yml
+deleted file mode 100644
+--- a/.github/workflows/JAVACIAnt.yml	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ /dev/null	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
+@@ -1,31 +0,0 @@
+-# This is a basic workflow to help you get started with Actions
+-name: CI
+-
+-on:
+-  push:
+-    branches: 
+-      - finalVersion
+-
+-jobs:
+-  test:
+-    runs-on: windows-latest
+-
+-    steps:
+-      - uses: actions/checkout@v3
+-      
+-      - name: Set up JDK 11
+-        uses: actions/setup-java@v3
+-        with:
+-          java-version: '11'
+-          distribution: 'temurin'
+-
+-      - name: Test
+-        run: |
+-          javac -d . "./src/team3/Gryffindor/VM/GUI/LayoutStrategy.java" "./src/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.java" "./src/team3/Gryffindor/VM/GUI/AfMargin.java" "./src/team3/Gryffindor/VM/GUI/ButtonFactory.java" "./src/team3/Gryffindor/VM/GUI/T3Frame.java" "./src/team3/Gryffindor/VM/GUI/T3Panel.java" "./src/team3/Gryffindor/VM/GUI/TextFactory.java" "./src/team3/Gryffindor/VM/GUI/VerticalLayout.java" "./src/team3/Gryffindor/VM/model/NumberObserver.java"
+-          javac -d . "./src/team3/Gryffindor/VM/model/ChangeIterator.java" "./src/team3/Gryffindor/VM/model/CheckKeyType.java" "./src/team3/Gryffindor/VM/model/ReadCSV.java" "./src/team3/Gryffindor/VM/model/WriteCSV.java" "./src/team3/Gryffindor/VM/model/TerminateMemento.java"
+-          javac -d . "./src/team3/Gryffindor/VM/model/ChangeMemento.java" "./src/team3/Gryffindor/VM/model/CoinList.java" "./src/team3/Gryffindor/VM/model/DrinkList.java" "./src/team3/Gryffindor/VM/panel/CustomerPanel.java" "./src/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.java" "./src/team3/Gryffindor/VM/panel/MaintainerPanel.java" "./src/team3/Gryffindor/VM/panel/SimulatorControlPanel.java"
+-          javac -d . -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar"; "./test/team3/Gryffindor/VM/CustomerPanelTest.java" "./test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java" "./test/team3/Gryffindor/VM/MaintainerPanelTest.java" "./test/team3/Gryffindor/VM/SimulatorControlPanelTest.java"
+-          javac -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar"; "./test/team3/Gryffindor/VM/JunitRunner.java"
+-          java -classpath "./jars/junit-4.11.jar";"./jars/hamcrest-core-1.3.jar"; "./test/team3/Gryffindor/VM/JunitRunner.java"
+-          
+-        shell: cmd
+Index: test/team3/Gryffindor/VM/MaintainerPanelTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package team3.Gryffindor.VM;\r\n\r\nimport javax.swing.*;\r\n\r\nimport static org.junit.Assert.*;\r\n\r\npublic class MaintainerPanelTest {\r\n//    @Test\r\n//    void testOpenMaintainerFrame() {\r\n//        JFrame maintainerFrame = new MaintainerLoginFrame();\r\n//        String maintainerFrameTitle = \"Test Maintainer Panel\";\r\n//        ((MaintainerLoginFrame) maintainerFrame).createMaintainerJFrame(maintainerFrameTitle);\r\n//    }\r\n//\r\n//    @Test\r\n//    void testGetTotalCash() {\r\n//        MaintainerFileManager mfm = new MaintainerFileManager();\r\n//        int totalCash = mfm.getTotalCash(\"./maintainerData/coins.csv\");\r\n//        assertEquals(totalCash,5380);\r\n//    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/team3/Gryffindor/VM/MaintainerPanelTest.java b/test/team3/Gryffindor/VM/MaintainerPanelTest.java
+--- a/test/team3/Gryffindor/VM/MaintainerPanelTest.java	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/test/team3/Gryffindor/VM/MaintainerPanelTest.java	(date 1656683200004)
+@@ -1,21 +1,109 @@
+ package team3.Gryffindor.VM;
+ 
++import org.junit.After;
++import org.junit.Before;
++import org.junit.Test;
++import team3.Gryffindor.VM.GUI.ButtonFactory;
++import team3.Gryffindor.VM.model.ReadCSV;
++import team3.Gryffindor.VM.panel.MaintainerPanel;
++
+ import javax.swing.*;
+ 
++import java.util.ArrayList;
++import java.util.concurrent.atomic.AtomicReference;
++
+ import static org.junit.Assert.*;
+ 
+ public class MaintainerPanelTest {
+-//    @Test
+-//    void testOpenMaintainerFrame() {
+-//        JFrame maintainerFrame = new MaintainerLoginFrame();
+-//        String maintainerFrameTitle = "Test Maintainer Panel";
+-//        ((MaintainerLoginFrame) maintainerFrame).createMaintainerJFrame(maintainerFrameTitle);
+-//    }
+-//
+-//    @Test
+-//    void testGetTotalCash() {
+-//        MaintainerFileManager mfm = new MaintainerFileManager();
+-//        int totalCash = mfm.getTotalCash("./maintainerData/coins.csv");
+-//        assertEquals(totalCash,5380);
+-//    }
++    int coinsActualTotal = 0;
++    boolean logStatus = false;
++    @Before
++    public void setUp() throws Exception {
++    }
++
++    @After
++    public void tearDown() throws Exception {
++    }
++
++    @Test
++    public void testOpenMaintainerFrame_WithoutLogin() {
++        String maintainerFrameTitle = "Test Maintainer Panel (Not Login)";
++        JFrame maintainerFrame = new MaintainerPanel(maintainerFrameTitle,true);
++        assertTrue(maintainerFrame.isVisible());
++    }
++
++    @Test
++    public void testOpenMaintainerFrame_WithLogin() {
++        String maintainerFrameTitle = "Test Maintainer Panel (Login)";
++        JFrame maintainerFrame = new MaintainerPanel(maintainerFrameTitle,true);
++        assertTrue(maintainerFrame.isVisible());
++    }
++
++    @Test
++    public void successHideMaintainerFunction_WithoutLogin() {
++        String maintainerFrameTitle = "Test Maintainer Panel (WithoutLogin)";
++        MaintainerPanel maintainerFrame = new MaintainerPanel(maintainerFrameTitle,false);
++        assertTrue(maintainerFrame.panelTop.isVisible());
++        assertFalse(maintainerFrame.panelCenter.isVisible());
++        assertFalse(maintainerFrame.panelBottom.isVisible());
++    }
++
++    @Test
++    public void successShowMaintainerFunction_Login() {
++        String maintainerFrameTitle = "Test Maintainer Panel (Login)";
++        MaintainerPanel maintainerFrame = new MaintainerPanel(maintainerFrameTitle,true);
++        assertTrue(maintainerFrame.panelTop.isVisible());
++        assertTrue(maintainerFrame.panelCenter.isVisible());
++        assertTrue(maintainerFrame.panelBottom.isVisible());
++    }
++
++    @Test
++    public void correctShowCoinsList() {
++        String maintainerFrameTitle = "Test Show Coins (Login)";
++        MaintainerPanel maintainerFrame = new MaintainerPanel(maintainerFrameTitle,true);
++        assertEquals((maintainerFrame.coins.get().size()-1),5);
++        AtomicReference<ArrayList<String[]>> coinsTest = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
++        String actualCoinNameTest = coinsTest.get().get(5)[0];
++        String actualCoinNumberTest = coinsTest.get().get(5)[1];
++        assertEquals(maintainerFrame.coins.get().get(5)[0],actualCoinNameTest);
++        assertEquals(maintainerFrame.coins.get().get(5)[1],actualCoinNumberTest);
++    }
++
++    @Test
++    public void correctShowDrinkList() {
++        String maintainerFrameTitle = "Test Show Drinks (Login)";
++        MaintainerPanel maintainerFrame = new MaintainerPanel(maintainerFrameTitle,true);
++        AtomicReference<ArrayList<String[]>> drinksTest = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_drink_info.csv"));
++        int actualDrinksLinesTest = drinksTest.get().size() - 1;
++        String actualDrinkNameTest = drinksTest.get().get(4)[1];
++        String actualDrinkNumberTest = drinksTest.get().get(5)[2];
++        assertEquals((maintainerFrame.cans.get().size()-1),actualDrinksLinesTest);
++        assertEquals(maintainerFrame.cans.get().get(4)[1],actualDrinkNameTest);
++        assertEquals(maintainerFrame.cans.get().get(5)[2],actualDrinkNumberTest);
++    }
++
++    @Test
++    public void testGetTotalCash() {
++        String maintainerFrameTitle = "Test Show Total Coins (Login)";
++        MaintainerPanel maintainerFrame = new MaintainerPanel(maintainerFrameTitle,true);
++        for (int i = 1; i < maintainerFrame.coins.get().size(); i++) {
++            maintainerFrame.coinsTotal[0] += Integer.parseInt(maintainerFrame.coins.get().get(i)[0]) * Integer.parseInt(maintainerFrame.coins.get().get(i)[1]);
++        }
++        AtomicReference<ArrayList<String[]>> coinsTest = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
++        coinsActualTotal = 0;
++        for (int i = 1; i < coinsTest.get().size(); i++) {
++            coinsActualTotal += Integer.parseInt(coinsTest.get().get(i)[0]) * Integer.parseInt(coinsTest.get().get(i)[1]);
++        }
++        assertEquals(maintainerFrame.coinsTotal[0],coinsActualTotal);
++    }
++
++    @Test
++    public void testLogout() {
++        String maintainerFrameTitle = "Test Maintainer Panel (Logout)";
++        MaintainerPanel maintainerFrame = new MaintainerPanel(maintainerFrameTitle,false);
++        logStatus = false;
++        assertTrue(maintainerFrame.panelTop.isVisible());
++        assertFalse(maintainerFrame.panelCenter.isVisible());
++        assertFalse(maintainerFrame.panelBottom.isVisible());
++    }
+ }
+\ No newline at end of file
+Index: src/team3/Gryffindor/VM/panel/MaintainerPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package team3.Gryffindor.VM.panel;\r\n\r\nimport team3.Gryffindor.VM.GUI.*;\r\nimport team3.Gryffindor.VM.model.CheckKeyType;\r\nimport team3.Gryffindor.VM.model.NumberObserver;\r\nimport team3.Gryffindor.VM.model.ReadCSV;\r\nimport team3.Gryffindor.VM.model.WriteCSV;\r\n\r\nimport javax.swing.*;\r\nimport javax.swing.border.EmptyBorder;\r\nimport java.awt.*;\r\nimport java.awt.event.KeyAdapter;\r\nimport java.awt.event.KeyEvent;\r\nimport java.util.ArrayList;\r\nimport java.util.concurrent.atomic.AtomicInteger;\r\nimport java.util.concurrent.atomic.AtomicReference;\r\n\r\npublic class MaintainerPanel extends T3Frame {\r\n\r\n    public MaintainerPanel(String title, boolean loginStatus) throws HeadlessException {\r\n\r\n        super(title);\r\n        AtomicInteger clickCoinBnt = new AtomicInteger();\r\n        AtomicInteger clickDrinkBnt = new AtomicInteger();\r\n        AtomicReference<ArrayList<String[]>> coins = new AtomicReference<>(ReadCSV.readCSV(\"./data/dwd_money_stat.csv\"));\r\n        AtomicReference<ArrayList<String[]>> cans = new AtomicReference<>(ReadCSV.readCSV(\"./data/dwd_drink_info.csv\"));\r\n        final boolean[] logStatus = {loginStatus};\r\n\r\n        this.setSize(600, 1000);\r\n        JPanel contentPane = new JPanel();\r\n        contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));\r\n        contentPane.setLayout(new AfAnyWhereLayout());\r\n        setContentPane(contentPane);\r\n\r\n        //-------------------Top------------------------//\r\n        JPanel panelTop = new JPanel();\r\n        panelTop.setPreferredSize(new Dimension(600,150));\r\n        panelTop.setLayout(new AfAnyWhereLayout());\r\n        //----Top_Top----//\r\n        JPanel panelTop_Top = new JPanel();\r\n        panelTop_Top.setPreferredSize(new Dimension(600,30));\r\n        panelTop_Top.setLayout(new AfAnyWhereLayout());\r\n        JLabel jlMaintainerTitle = new TextFactory(\"VMCS - Maintainer Penel\", 15);\r\n        //----Top_Bottom----//\r\n        JPanel panelTop_Bottom = new JPanel();\r\n        panelTop_Bottom.setPreferredSize(new Dimension(600,120));\r\n        panelTop_Bottom.setLayout(new AfAnyWhereLayout());\r\n        JLabel jlMaintainerPassword = new TextFactory(\"Password:\", 2);\r\n        JPasswordField jpfMaintainerPassword = new JPasswordField();\r\n        jpfMaintainerPassword.setPreferredSize(new Dimension(100,30));\r\n        JButton jbMaintainerPasswordValid = ButtonFactory.addButton(\"Valid Password\", \"jbMaintainerPasswordValid\");\r\n        JButton jbMaintainerPasswordInvalid = ButtonFactory.addButton(\"Invalid Password\", \"jbMaintainerPasswordInvalid\"); // 没改\r\n        jbMaintainerPasswordValid.setPreferredSize(new Dimension(200,30));\r\n        jbMaintainerPasswordInvalid.setPreferredSize(new Dimension(200,30));\r\n\r\n        //----Add Top----//\r\n        panelTop.add(panelTop_Top, new AfMargin().TOP_CENTER);\r\n        panelTop.add(panelTop_Bottom, new AfMargin().BOTTOM_CENTER);\r\n\r\n        panelTop_Top.add(jlMaintainerTitle, new AfMargin().CENTER);\r\n        panelTop_Bottom.add(jlMaintainerPassword, new AfMargin(25,120,-1,-1));\r\n        panelTop_Bottom.add(jpfMaintainerPassword, new AfMargin(42,320,-1,-1));\r\n        panelTop_Bottom.add(jbMaintainerPasswordValid, new AfMargin(90,85,-1,-1));\r\n        panelTop_Bottom.add(jbMaintainerPasswordInvalid, new AfMargin(90,-1,-1,85));\r\n\r\n        //----------------------------TOP END-------------------------------//\r\n\r\n\r\n        //----------------------------CENTER--------------------------------//\r\n        JPanel panelCenter = new JPanel();\r\n        panelCenter.setPreferredSize(new Dimension(600,540));\r\n        panelCenter.setLayout(new AfAnyWhereLayout());\r\n        //------CENTER TOP------//\r\n        JPanel panelCenter_Top = new JPanel();\r\n        panelCenter_Top.setPreferredSize(new Dimension(600,250));\r\n        panelCenter_Top.setLayout(new AfAnyWhereLayout());\r\n        JLabel jlCoins = new TextFactory(\"Quantity of Coins Available\", 3);\r\n        jlCoins.setPreferredSize(new Dimension(200,30));\r\n\r\n        //------CENTER jpCoins and CoinsTextField-----//\r\n        JPanel jpCoins = new JPanel();\r\n        jpCoins.setLayout(new GridLayout(coins.get().size() - 1, 1, 10, 0));\r\n        jpCoins.setPreferredSize(new Dimension(280, 200));\r\n\r\n        JTextField jtfTotalCoins = new JTextField(null);\r\n        jtfTotalCoins.setPreferredSize(new Dimension(60, 20));\r\n        jtfTotalCoins.setHorizontalAlignment(JTextField.CENTER);\r\n        jtfTotalCoins.setForeground(Color.yellow);\r\n        jtfTotalCoins.setBackground(Color.black);\r\n        jtfTotalCoins.addKeyListener(new CheckKeyType());\r\n        jtfTotalCoins.addKeyListener(new KeyAdapter() {\r\n            @Override\r\n            public void keyTyped(KeyEvent e) {\r\n                char checkAns = e.getKeyChar();\r\n                String text;\r\n                super.keyTyped(e);\r\n                if(checkAns == KeyEvent.VK_ENTER) {\r\n                    text=jtfTotalCoins.getText();\r\n\r\n                    checkPressEnter(coins.get(),text,clickCoinBnt.get(),\"coin\");\r\n                }}});\r\n\r\n\r\n\r\n\r\n\r\n        for (int i = 1; i< coins.get().size(); i++) {\r\n            String coinsName = coins.get().get(i)[0] + \"c\";\r\n            if (coins.get().get(i)[0].equals(\"100\")) {\r\n                coinsName = \"$1\";\r\n            }\r\n            JButton jbCoin = ButtonFactory.addButton(coinsName, \"jbCoin\");\r\n            jpCoins.add(jbCoin);\r\n\r\n            int finalI = i;\r\n            jbCoin.addActionListener(e -> {\r\n                coins.set(ReadCSV.readCSV(\"./data/dwd_money_stat.csv\"));\r\n                jtfTotalCoins.setText(coins.get().get(finalI)[1]);\r\n                clickCoinBnt.set(finalI);\r\n\r\n            });\r\n        }\r\n\r\n        //-----------CENTER_CENTER----------//\r\n        JPanel panelCenter_Center = new JPanel();\r\n        panelCenter_Center.setPreferredSize(new Dimension(600,230));\r\n        panelCenter_Center.setLayout(new AfAnyWhereLayout());\r\n        JLabel jlDrinksAvailable = new TextFactory(\"Quantity of Drinks Available\",4);\r\n        jlDrinksAvailable.setPreferredSize(new Dimension(200,30));\r\n\r\n        //------CENTER jpDrinks and DrinksTextField-----//\r\n        JPanel jpDrinks = new JPanel();\r\n        jpDrinks.setLayout(new GridLayout(cans.get().size()-1,1,10,0));\r\n        jpDrinks.setPreferredSize(new Dimension(280, 200));\r\n\r\n        JTextField jtfDrinksAvailable = new JTextField(null);\r\n        jtfDrinksAvailable.setPreferredSize(new Dimension(60, 20));\r\n        jtfDrinksAvailable.setHorizontalAlignment(JTextField.CENTER);\r\n        jtfDrinksAvailable.setForeground(Color.yellow);\r\n        jtfDrinksAvailable.setBackground(Color.black);\r\n        jtfDrinksAvailable.addKeyListener(new CheckKeyType());\r\n        jtfDrinksAvailable.addKeyListener(new KeyAdapter() {\r\n            @Override\r\n            public void keyTyped(KeyEvent e) {\r\n                char checkAns = e.getKeyChar();\r\n                String text;\r\n                super.keyTyped(e);\r\n                if(checkAns == KeyEvent.VK_ENTER) {\r\n                    text=jtfDrinksAvailable.getText();\r\n                    checkPressEnter(cans.get(),text,clickDrinkBnt.get(),\"drink\");\r\n                }}});\r\n\r\n        JLabel jlBrandPrice = new TextFactory(\"Brand Price\",5);\r\n        JTextField jtfBrandPrice = new JTextField(null);\r\n        jtfBrandPrice.setPreferredSize(new Dimension(80, 20));\r\n        jtfBrandPrice.addKeyListener(new CheckKeyType());\r\n        jtfBrandPrice.addKeyListener(new KeyAdapter() {\r\n            @Override\r\n            public void keyTyped(KeyEvent e) {\r\n                char checkAns = e.getKeyChar();\r\n                String text;\r\n                super.keyTyped(e);\r\n                if(checkAns == KeyEvent.VK_ENTER) {\r\n                    text=jtfBrandPrice.getText();\r\n                    checkPressEnter(cans.get(),text,clickDrinkBnt.get(),\"drink_price\");\r\n                }}});\r\n\r\n\r\n\r\n\r\n        for (int i = 1; i< cans.get().size(); i++) {\r\n            String cansName = cans.get().get(i)[1];\r\n            JButton jbDrink = ButtonFactory.addButton(cansName, \"jbCoin\");\r\n            jpDrinks.add(jbDrink);\r\n            int finalI = i;\r\n            jbDrink.addActionListener(e -> {\r\n                cans.set(ReadCSV.readCSV(\"./data/dwd_drink_info.csv\"));\r\n                jtfDrinksAvailable.setText(cans.get().get(finalI)[2]);\r\n                jtfBrandPrice.setText(cans.get().get(finalI)[3]);\r\n                clickDrinkBnt.set(finalI);\r\n            });\r\n        }\r\n\r\n        //-----Add Center-----//\r\n        panelCenter.add(panelCenter_Top, new AfMargin(0,0,-1,-1));\r\n        panelCenter.add(panelCenter_Center, new AfMargin(250,0,-1,-1));\r\n\r\n        panelCenter_Top.add(jlCoins, new AfMargin(0,10,-1,-1));\r\n        panelCenter_Top.add(jpCoins, new AfMargin(30,10,-1,-1));\r\n        panelCenter_Top.add(jtfTotalCoins, new AfMargin(40,310,-1,-1));\r\n\r\n        panelCenter_Center.add(jlDrinksAvailable, new AfMargin(0,10,-1,-1));\r\n        panelCenter_Center.add(jpDrinks, new AfMargin(30,10,-1,-1));\r\n        panelCenter_Center.add(jtfDrinksAvailable, new AfMargin(40,310,-1,-1));\r\n        panelCenter.add(jlBrandPrice, new AfMargin(475,110,-1,-1));\r\n        panelCenter.add(jtfBrandPrice, new AfMargin(495,-1,-1,225));\r\n        //----------------------------CENTER END--------------------------------//\r\n\r\n\r\n        //----------------------------BOTTOM--------------------------------//\r\n        JPanel panelBottom = new JPanel();\r\n        panelBottom.setPreferredSize(new Dimension(600,200));\r\n        panelBottom.setLayout(new AfAnyWhereLayout());\r\n\r\n        //----Bottom Top----//\r\n        JPanel panelBottom_Top = new JPanel();\r\n        panelBottom_Top.setPreferredSize(new Dimension(600,50));\r\n        panelBottom_Top.setLayout(new AfAnyWhereLayout());\r\n        JButton jbShowTotal = ButtonFactory.addButton(\"Show Total Cash Held\",\"jbShowTotal\");\r\n        jbShowTotal.setPreferredSize(new Dimension(200,30));\r\n\r\n        JTextField jtfTotalCash = new JTextField();\r\n        jtfTotalCash.setPreferredSize(new Dimension(80,20));\r\n        jtfTotalCash.setHorizontalAlignment(JTextField.CENTER);\r\n        jtfTotalCash.setForeground(Color.yellow);\r\n        jtfTotalCash.setBackground(Color.black);\r\n        jtfTotalCash.addKeyListener(new CheckKeyType());\r\n\r\n        final int[] coinsTotal = {0};\r\n\r\n        jbShowTotal.addActionListener(e -> {\r\n            coins.set(ReadCSV.readCSV(\"./data/dwd_money_stat.csv\"));\r\n            coinsTotal[0] = 0;//Peijun\r\n            for (int i = 1; i < coins.get().size(); i++) {\r\n                coinsTotal[0] += Integer.parseInt(coins.get().get(i)[0]) * Integer.parseInt(coins.get().get(i)[1]);\r\n\r\n\r\n            }\r\n            jtfTotalCash.setText(String.valueOf(coinsTotal[0])+\"c\");\r\n        });\r\n\r\n        //----Bottom Center----//\r\n        JPanel panelBottom_Center = new JPanel();\r\n        panelBottom_Center.setPreferredSize(new Dimension(600,100));\r\n        panelBottom_Center.setLayout(new AfAnyWhereLayout());\r\n        JButton jbCollectCash = ButtonFactory.addButton(\"Press to Collect All Cash\",\"jbCollectCash\");\r\n        jbCollectCash.setPreferredSize(new Dimension(300,30));\r\n        JLabel jlCollectCash = new TextFactory(\"Collect Cash:\",6);\r\n        jlCollectCash.setPreferredSize(new Dimension(100,30));\r\n        JTextField jtfCollectCash = new JTextField(\"0 c\");\r\n        jtfCollectCash.setPreferredSize(new Dimension(80,20));\r\n\r\n        jtfCollectCash.setBounds(430,800,50,20);\r\n        jtfCollectCash.setHorizontalAlignment(JTextField.CENTER);\r\n        jtfCollectCash.setForeground(Color.yellow);\r\n        jtfCollectCash.setBackground(Color.black);\r\n        jtfCollectCash.addKeyListener(new CheckKeyType());\r\n\r\n        jbCollectCash.addActionListener(e -> {\r\n            jtfCollectCash.setText(String.valueOf((coinsTotal[0]) + \"c\"));\r\n            coinsTotal[0] = 0;\r\n            new NumberObserver().maintainerCollectCoins(\"./Data/dwd_money_stat.csv\");\r\n        });\r\n\r\n        JButton btnMachinery = ButtonFactory.addButton(\"Go to the Machinery Panel\",\"jbFinished\");\r\n        btnMachinery.setPreferredSize(new Dimension(300,30));\r\n        btnMachinery.addActionListener(e -> {\r\n            this.dispose();\r\n            new MachinerySimulatorPanel(\"VMCS - Machinery Panel\", true);\r\n        });\r\n\r\n        //----Bottom Bottom----//\r\n        JPanel panelBottom_Bottom = new JPanel();\r\n        panelBottom_Bottom.setPreferredSize(new Dimension(600,100));\r\n        panelBottom_Bottom.setLayout(new AfAnyWhereLayout());\r\n        JButton jbFinished = ButtonFactory.addButton(\"Press Here when Finished\",\"jbFinished\");\r\n        jbFinished.setPreferredSize(new Dimension(300,30));\r\n        jbFinished.addActionListener(e -> {\r\n            logStatus[0] = false;\r\n            this.dispose();\r\n            new SimulatorControlPanel(\"VMCS - Simulator Control Panel\",logStatus[0]);\r\n        });\r\n\r\n        //----Add Bottom----//\r\n        panelBottom.add(panelBottom_Top, new AfMargin().TOP_CENTER);\r\n        panelBottom.add(panelBottom_Center, new AfMargin().CENTER);\r\n        panelBottom.add(panelBottom_Bottom, new AfMargin().BOTTOM_CENTER);\r\n\r\n        panelBottom_Top.add(jbShowTotal, new AfMargin(0,120,-1,-1));\r\n        panelBottom_Top.add(jtfTotalCash, new AfMargin(5,340,-1,-1));\r\n        panelBottom_Center.add(jbCollectCash, new AfMargin().TOP_CENTER);\r\n        panelBottom_Center.add(jlCollectCash, new AfMargin(40,200,-1,-1));\r\n        panelBottom_Center.add(jtfCollectCash, new AfMargin(45,310,-1,-1));\r\n        panelBottom_Center.add(jbFinished, new AfMargin().BOTTOM_LEFT);\r\n        panelBottom_Center.add(btnMachinery,new AfMargin().BOTTOM_RIGHT);\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n        panelCenter.setVisible(logStatus[0]);\r\n        panelBottom.setVisible(logStatus[0]);\r\n\r\n        jpfMaintainerPassword.addKeyListener(new KeyAdapter() {\r\n            @Override\r\n            public void keyTyped(KeyEvent e) {\r\n                char passwordChar = e.getKeyChar();\r\n                super.keyTyped(e);\r\n                char[] passwordEntered = jpfMaintainerPassword.getPassword();\r\n                String a = String.valueOf(passwordEntered);\r\n                String maintainerPassword = \"123abc\";\r\n                if(passwordChar == KeyEvent.VK_ENTER) {\r\n                    if(passwordEntered.length == 6 && a.equals(maintainerPassword)) {\r\n                        logStatus[0] = true;\r\n                        jbMaintainerPasswordValid.setBackground(Color.green);\r\n                        jbMaintainerPasswordInvalid.setForeground(Color.black);\r\n                        jbMaintainerPasswordInvalid.setBackground(Color.gray);\r\n                    }\r\n                    else{\r\n                        logStatus[0] = false;\r\n                        jbMaintainerPasswordValid.setBackground(Color.gray);\r\n                        jbMaintainerPasswordInvalid.setForeground(Color.gray);\r\n                        jbMaintainerPasswordInvalid.setBackground(Color.red);\r\n                    }\r\n                };\r\n                panelCenter.setVisible(logStatus[0]);\r\n                panelBottom.setVisible(logStatus[0]);\r\n            }\r\n        });\r\n\r\n        //Last, add panels\r\n        contentPane.add(panelTop, new AfMargin().TOP_CENTER);\r\n        contentPane.add(panelCenter, new AfMargin().CENTER_LEFT);\r\n        contentPane.add(panelBottom, new AfMargin().BOTTOM_CENTER);\r\n\r\n\r\n\r\n        setVisible(true);\r\n\r\n    }\r\n    public void checkPressEnter(ArrayList<String[]> writeList, String num, int index, String type) {\r\n        String[] record = writeList.get(index);\r\n        if (type.equals(\"coin\")) {\r\n            record[1]=num;\r\n        } else if (type.equals(\"drink\")){\r\n            record[2]=num;\r\n        } else {\r\n            record[3]=num;\r\n            type = \"drink\";\r\n        }\r\n        writeList.set(index, record);\r\n        WriteCSV.writeCSV(writeList, type);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/team3/Gryffindor/VM/panel/MaintainerPanel.java b/src/team3/Gryffindor/VM/panel/MaintainerPanel.java
+--- a/src/team3/Gryffindor/VM/panel/MaintainerPanel.java	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/src/team3/Gryffindor/VM/panel/MaintainerPanel.java	(date 1656683200035)
+@@ -17,13 +17,19 @@
+ 
+ public class MaintainerPanel extends T3Frame {
+ 
++    public JPanel panelTop;
++    public JPanel panelCenter;
++    public JPanel panelBottom;
++    public AtomicReference<ArrayList<String[]>> coins;
++    public AtomicReference<ArrayList<String[]>> cans;
++    public final int[] coinsTotal;
+     public MaintainerPanel(String title, boolean loginStatus) throws HeadlessException {
+ 
+         super(title);
+         AtomicInteger clickCoinBnt = new AtomicInteger();
+         AtomicInteger clickDrinkBnt = new AtomicInteger();
+-        AtomicReference<ArrayList<String[]>> coins = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
+-        AtomicReference<ArrayList<String[]>> cans = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_drink_info.csv"));
++        coins = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
++        cans = new AtomicReference<>(ReadCSV.readCSV("./data/dwd_drink_info.csv"));
+         final boolean[] logStatus = {loginStatus};
+ 
+         this.setSize(600, 1000);
+@@ -33,7 +39,7 @@
+         setContentPane(contentPane);
+ 
+         //-------------------Top------------------------//
+-        JPanel panelTop = new JPanel();
++        panelTop = new JPanel();
+         panelTop.setPreferredSize(new Dimension(600,150));
+         panelTop.setLayout(new AfAnyWhereLayout());
+         //----Top_Top----//
+@@ -67,7 +73,7 @@
+ 
+ 
+         //----------------------------CENTER--------------------------------//
+-        JPanel panelCenter = new JPanel();
++        panelCenter = new JPanel();
+         panelCenter.setPreferredSize(new Dimension(600,540));
+         panelCenter.setLayout(new AfAnyWhereLayout());
+         //------CENTER TOP------//
+@@ -198,7 +204,7 @@
+ 
+ 
+         //----------------------------BOTTOM--------------------------------//
+-        JPanel panelBottom = new JPanel();
++        panelBottom = new JPanel();
+         panelBottom.setPreferredSize(new Dimension(600,200));
+         panelBottom.setLayout(new AfAnyWhereLayout());
+ 
+@@ -216,7 +222,7 @@
+         jtfTotalCash.setBackground(Color.black);
+         jtfTotalCash.addKeyListener(new CheckKeyType());
+ 
+-        final int[] coinsTotal = {0};
++        coinsTotal = new int[]{0};
+ 
+         jbShowTotal.addActionListener(e -> {
+             coins.set(ReadCSV.readCSV("./data/dwd_money_stat.csv"));
+Index: test/team3/Gryffindor/VM/CustomerPanelTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package team3.Gryffindor.VM;\r\n\r\nimport org.junit.After;\r\nimport org.junit.Before;\r\nimport org.junit.Test;\r\nimport team3.Gryffindor.VM.GUI.ButtonFactory;\r\nimport team3.Gryffindor.VM.model.ReadCSV;\r\nimport team3.Gryffindor.VM.panel.CustomerPanel;\r\nimport team3.Gryffindor.VM.panel.SimulatorControlPanel;\r\n\r\nimport javax.swing.*;\r\nimport java.util.ArrayList;\r\n\r\nimport static org.junit.Assert.*;\r\n\r\npublic class CustomerPanelTest {\r\n\r\n    ArrayList<String[]> coins = ReadCSV.readCSV(\"./data/dwd_money_stat.csv\");\r\n    ArrayList<String[]> cans = ReadCSV.readCSV(\"./data/dwd_drink_info.csv\");\r\n    private static ArrayList<JButton> btnCoins = new ArrayList<>();\r\n    private static CustomerPanel customerPanel = new CustomerPanel(\"VMCS - Customer Panel\", true);\r\n    private static ArrayList<JButton> btnCans = new ArrayList<>();\r\n    private static int chosenID;\r\n\r\n\r\n\r\n    @Before\r\n    public void setUp() throws Exception {\r\n    }\r\n\r\n    @After\r\n    public void tearDown() throws Exception {\r\n    }\r\n\r\n    @Test\r\n    public void addCoin() throws InterruptedException {\r\n        for (int i=1; i<coins.size(); i++){\r\n            btnCoins.add(ButtonFactory.addButton(coins.get(i)[0]+\"c\",\"jbEnterCoins\"));\r\n        }\r\n\r\n        for(int i = 1; i < coins.size(); i++){\r\n            customerPanel.addCoin(Integer.parseInt(coins.get(i)[0]));\r\n        }\r\n        assertEquals(185,customerPanel.totalCoins);\r\n    }\r\n\r\n\r\n    @Test\r\n    public void addChooseDrink() {\r\n        chosenID = 1;\r\n        customerPanel.addChooseDrink(Integer.parseInt(cans.get(chosenID)[3]), Integer.parseInt(cans.get(chosenID)[0]));\r\n        for(int i = 0; i < btnCans.size(); i++){\r\n            if(i != chosenID - 1)\r\n                assertEquals(false, customerPanel.btnCans.get(i).isEnabled());\r\n        }\r\n        for (int i = 0; i < btnCoins.size(); i++){\r\n            assertEquals(true,customerPanel.btnCoins.get(i).isEnabled());\r\n        }\r\n        assertEquals(false,customerPanel.lblStartDispensing.isVisible());\r\n        assertEquals(false,customerPanel.lblPurchaseSuccess.isVisible());\r\n        assertEquals(true,customerPanel.btnTerminate.isEnabled());\r\n        assertEquals(false,customerPanel.lblChangeSuccess.isVisible());\r\n    }\r\n\r\n    @Test\r\n    public void startChange() {\r\n        customerPanel.startChange();\r\n        assertEquals(true,customerPanel.lblChangeSuccess.isVisible());\r\n\r\n    }\r\n\r\n    @Test\r\n    public void startDispense() {\r\n        CustomerPanel customerPanel1 = new CustomerPanel(\"VMCS - Customer Panel\", true);\r\n        assertEquals(false,customerPanel1.btnTerminate.isEnabled());\r\n        assertEquals(false,customerPanel.lblStartDispensing.isVisible());\r\n    }\r\n\r\n    @Test\r\n    public void terminateMemento() {\r\n        customerPanel.terminateMemento();\r\n        ArrayList<Integer> a = new ArrayList<>();\r\n        assertEquals(a,customerPanel.terminateMemento.getState());\r\n    }\r\n\r\n    @Test\r\n    public void purchaseSuccess() {\r\n        chosenID = 1;\r\n        customerPanel.purchaseSuccess();\r\n        assertEquals(true,customerPanel.lblPurchaseSuccess.isVisible());\r\n        assertEquals(true,customerPanel.btnContinueToBuy.isVisible());\r\n        assertEquals(\"Coca-Cola\", customerPanel.lblCollectCanInfo.getText());\r\n    }\r\n\r\n    @Test\r\n    public void checkNullStock() {\r\n        chosenID = 2;\r\n        if(customerPanel.drinkList.getNumber(chosenID) == 0)\r\n            assertEquals(false,customerPanel.btnCans.get(chosenID).isEnabled());\r\n        else\r\n            assertEquals(true,customerPanel.btnCans.get(chosenID).isEnabled());\r\n\r\n    }\r\n\r\n    @Test\r\n    public void addBackControllerPanel() {\r\n        assertEquals(new SimulatorControlPanel(\"VMCS - Simulator Control Panel\", true).getTitle(), customerPanel.addBackControllerPanel(true));\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test/team3/Gryffindor/VM/CustomerPanelTest.java b/test/team3/Gryffindor/VM/CustomerPanelTest.java
+--- a/test/team3/Gryffindor/VM/CustomerPanelTest.java	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/test/team3/Gryffindor/VM/CustomerPanelTest.java	(date 1656683200020)
+@@ -72,7 +72,7 @@
+     @Test
+     public void startDispense() {
+         CustomerPanel customerPanel1 = new CustomerPanel("VMCS - Customer Panel", true);
+-        assertEquals(false,customerPanel1.btnTerminate.isEnabled());
++        assertEquals(false,customerPanel.btnTerminate.isEnabled());
+         assertEquals(false,customerPanel.lblStartDispensing.isVisible());
+     }
+ 
+Index: data/dwd_drink_info.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>drink_id,drink_name,drink_cnt,drink_price\r\n1,Coca-Cola,13,70\r\n2,Fanta,8,80\r\n3,Sarsi,14,85\r\n4,Soya Bean,15,60\r\n5,Sprite,10,30\r\n6,Bing Feng,9,70\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/dwd_drink_info.csv b/data/dwd_drink_info.csv
+--- a/data/dwd_drink_info.csv	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/data/dwd_drink_info.csv	(date 1656686853660)
+@@ -1,7 +1,7 @@
+ drink_id,drink_name,drink_cnt,drink_price
+-1,Coca-Cola,13,70
+-2,Fanta,8,80
++1,Coca-Cola,5,70
++2,Fanta,6,80
+ 3,Sarsi,14,85
+-4,Soya Bean,15,60
+-5,Sprite,10,30
+-6,Bing Feng,9,70
++4,Soya Bean,18,60
++5,Sprite,4,30
++6,Bing Feng,8,70
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12\" name=\"Changes\" comment=\"add lib files\">\r\n      <change afterPath=\"$PROJECT_DIR$/T3.eml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/VendingMachineT3.zip\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/build.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExportToHTMLSettings\">\r\n    <option name=\"OUTPUT_DIRECTORY\" value=\"$PROJECT_DIR$/../VendingMachineT3\\exportToHTML\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JUnit5 Test Class\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"rebase1\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"23f546d5-cc1e-42fa-9419-0687535068e8\" />\r\n        <option name=\"url\" value=\"https://github.com/mororolan/T30623.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2AfMppEnH3CUAxwz4novy8T7KG1\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\r\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;E:/eclipseWorkspace&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\test\\team3\\Gryffindor\\VM\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\\model\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\test\\team3\\passpasspass\\VM\\controller\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\\GUI\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\\GUI\" />\r\n    </key>\r\n    <key name=\"ExtractSuperBase.RECENT_KEYS\">\r\n      <recent name=\"team3.passpasspass.VM.controller.model\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"team3.passpasspass.VM.controller\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"team3.passpasspass.VM.controller\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"team3.passpasspass.VM.controller.model\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"T3\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"team3.passpasspass.VM.controller.SimulatorControlPanel\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"team3.passpasspass.VM.controller.SimulatorControlPanel\" />\r\n      <module name=\"T3\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"team3.passpasspass.VM.controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.team3.passpasspass.VM.controller.SimulatorControlPanel\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12\" name=\"Changes\" comment=\"add lib files\" />\r\n      <created>1655396374701</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1655396374701</updated>\r\n      <workItem from=\"1656411869641\" duration=\"1099000\" />\r\n      <workItem from=\"1656413548512\" duration=\"743000\" />\r\n      <workItem from=\"1656414315164\" duration=\"17227000\" />\r\n      <workItem from=\"1656432977018\" duration=\"1108000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add loginstatus\">\r\n      <created>1655995509458</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1655995509458</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"add loginstatus\">\r\n      <created>1655995552626</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1655995552626</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"add a lot of things\">\r\n      <created>1656219291285</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656219291285</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"fix a bug\">\r\n      <created>1656232261808</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656232261808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"merge peijun &amp; robin‘s work\">\r\n      <created>1656233711777</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656233711777</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"fix some structure problems\">\r\n      <created>1656233960833</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656233960833</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"merge all work\">\r\n      <created>1656234638894</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656234638894</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"fix a bug\">\r\n      <created>1656234972634</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656234972634</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"update\">\r\n      <created>1656252729443</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656252729443</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"update and fix some bugs\">\r\n      <created>1656254082258</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656254082258</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"write new layout and fix some bugs\">\r\n      <created>1656345298078</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656345298078</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"fix bugs and layout\">\r\n      <created>1656350540238</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656350540239</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"add customer layout\">\r\n      <created>1656424720809</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656424720809</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"add customer layout\">\r\n      <created>1656425116836</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656425116836</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"set checkPressEnter\">\r\n      <created>1656435745790</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656435745790</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"add button\">\r\n      <created>1656436886346</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656436886346</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"add button\">\r\n      <created>1656436967844</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656436967844</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"test\">\r\n      <created>1656516548004</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656516548004</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"the new version 0630\">\r\n      <created>1656519666470</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656519666470</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"refine code structure\">\r\n      <created>1656602832728</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656602832728</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"add TEST\">\r\n      <created>1656603165977</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656603165977</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"change addButton Name\">\r\n      <created>1656609599096</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656609599096</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"change addButton Name\">\r\n      <created>1656609646167</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656609646167</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"fix bugs\">\r\n      <created>1656609903026</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656609903026</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00025\" summary=\"add lib files\">\r\n      <created>1656611184344</created>\r\n      <option name=\"number\" value=\"00025\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656611184344</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"26\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ID_ORDER\">\r\n      <list>\r\n        <option value=\"Default.Root\" />\r\n        <option value=\"Default.Author\" />\r\n        <option value=\"Default.Date\" />\r\n        <option value=\"Default.Subject\" />\r\n        <option value=\"Space.CommitStatus\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/branch1\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"add loginstatus\" />\r\n    <MESSAGE value=\"add a lot of things\" />\r\n    <MESSAGE value=\"merge peijun &amp; robin‘s work\" />\r\n    <MESSAGE value=\"fix some structure problems\" />\r\n    <MESSAGE value=\"merge all work\" />\r\n    <MESSAGE value=\"fix a bug\" />\r\n    <MESSAGE value=\"update\" />\r\n    <MESSAGE value=\"update and fix some bugs\" />\r\n    <MESSAGE value=\"write new layout and fix some bugs\" />\r\n    <MESSAGE value=\"fix bugs and layout\" />\r\n    <MESSAGE value=\"add customer layout\" />\r\n    <MESSAGE value=\"set checkPressEnter\" />\r\n    <MESSAGE value=\"add button\" />\r\n    <MESSAGE value=\"test\" />\r\n    <MESSAGE value=\"the new version 0630\" />\r\n    <MESSAGE value=\"refine code structure\" />\r\n    <MESSAGE value=\"add TEST\" />\r\n    <MESSAGE value=\"change addButton Name\" />\r\n    <MESSAGE value=\"fix bugs\" />\r\n    <MESSAGE value=\"add lib files\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add lib files\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/awt/LayoutManager2.java</url>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NumberFormatException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/.idea/workspace.xml	(date 1656687919968)
+@@ -4,11 +4,31 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="add lib files">
+-      <change afterPath="$PROJECT_DIR$/T3.eml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/VendingMachineT3.zip" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
++    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="update">
++      <change beforePath="$PROJECT_DIR$/.github/workflows/JAVACIAnt.yml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.github/workflows/testCI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/testCI.yml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/buildTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buildTest.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/junit.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.apiguardian_1.0.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.hamcrest.core_1.3.0.v20180420-1519.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.api_5.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.engine_5.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.migrationsupport_5.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.jupiter.params_5.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.commons_1.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.engine_1.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.launcher_1.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.runner_1.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.platform.suite.api_1.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.junit.vintage.engine_5.4.0.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/lib/org.opentest4j_1.1.1.v20190212-2109.jar" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MaintainerPanel.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/test/team3/Gryffindor/VM/CustomerPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/CustomerPanelTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MaintainerPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MaintainerPanelTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -34,6 +54,7 @@
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="RESET_MODE" value="MIXED" />
+   </component>
+   <component name="GitSEFilterConfiguration">
+     <file-type-list>
+@@ -62,26 +83,27 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;E:/eclipseWorkspace&quot;,
+-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Downloaded.Files.Path.Enabled": "false",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3",
++    "project.structure.last.edited": "Libraries",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "run.code.analysis.last.selected.profile": "pProject Default",
++    "settings.editor.selected.configurable": "preferences.pluginManager"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="E:\IdeaWorkplace\VendingMachineT3" />
+       <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\Gryffindor\VM" />
++      <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\Gryffindor\VM\panel" />
+       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\model" />
+       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller" />
+-      <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\passpasspass\VM\controller" />
+-      <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\GUI" />
+     </key>
+     <key name="CreateTestDialog.Recents.Supers">
+       <recent name="" />
+@@ -102,7 +124,7 @@
+       <recent name="team3.passpasspass.VM.controller.model" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="Application.Main">
++  <component name="RunManager" selected="JUnit.MachinerySimulatorPanelTest">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Main" />
+       <module name="T3" />
+@@ -123,8 +145,41 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <configuration name="CustomerPanelTest.addChooseDrink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="T3" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="team3.Gryffindor.VM.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="team3.Gryffindor.VM" />
++      <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.CustomerPanelTest" />
++      <option name="METHOD_NAME" value="addChooseDrink" />
++      <option name="TEST_OBJECT" value="method" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <configuration name="MachinerySimulatorPanelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++      <module name="T3" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="team3.Gryffindor.VM.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <option name="PACKAGE_NAME" value="team3.Gryffindor.VM" />
++      <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.MachinerySimulatorPanelTest" />
++      <option name="TEST_OBJECT" value="class" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JUnit.MachinerySimulatorPanelTest" />
++        <item itemvalue="JUnit.CustomerPanelTest.addChooseDrink" />
+         <item itemvalue="Application.Main" />
+         <item itemvalue="Application.team3.passpasspass.VM.controller.SimulatorControlPanel" />
+       </list>
+@@ -318,7 +373,28 @@
+       <option name="project" value="LOCAL" />
+       <updated>1656611184344</updated>
+     </task>
+-    <option name="localTasksCounter" value="26" />
++    <task id="LOCAL-00026" summary="CI">
++      <created>1656612388291</created>
++      <option name="number" value="00026" />
++      <option name="presentableId" value="LOCAL-00026" />
++      <option name="project" value="LOCAL" />
++      <updated>1656612388291</updated>
++    </task>
++    <task id="LOCAL-00027" summary="update">
++      <created>1656683913034</created>
++      <option name="number" value="00027" />
++      <option name="presentableId" value="LOCAL-00027" />
++      <option name="project" value="LOCAL" />
++      <updated>1656683913034</updated>
++    </task>
++    <task id="LOCAL-00028" summary="update">
++      <created>1656687361050</created>
++      <option name="number" value="00028" />
++      <option name="presentableId" value="LOCAL-00028" />
++      <option name="project" value="LOCAL" />
++      <updated>1656687361050</updated>
++    </task>
++    <option name="localTasksCounter" value="29" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -346,7 +422,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="origin/branch1" />
++                        <option value="github/finalVersion" />
+                       </list>
+                     </value>
+                   </entry>
+@@ -366,7 +442,6 @@
+     <MESSAGE value="fix some structure problems" />
+     <MESSAGE value="merge all work" />
+     <MESSAGE value="fix a bug" />
+-    <MESSAGE value="update" />
+     <MESSAGE value="update and fix some bugs" />
+     <MESSAGE value="write new layout and fix some bugs" />
+     <MESSAGE value="fix bugs and layout" />
+@@ -380,7 +455,9 @@
+     <MESSAGE value="change addButton Name" />
+     <MESSAGE value="fix bugs" />
+     <MESSAGE value="add lib files" />
+-    <option name="LAST_COMMIT_MESSAGE" value="add lib files" />
++    <MESSAGE value="CI" />
++    <MESSAGE value="update" />
++    <option name="LAST_COMMIT_MESSAGE" value="update" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
+Index: data/dwd_money_stat.csv
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>money_type,money_cnt\r\n5,4\r\n10,7\r\n20,3\r\n50,16\r\n100,13\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/data/dwd_money_stat.csv b/data/dwd_money_stat.csv
+--- a/data/dwd_money_stat.csv	(revision 837f3306431054e27c42f9f12606cf28f6b2285b)
++++ b/data/dwd_money_stat.csv	(date 1656686853692)
+@@ -1,6 +1,6 @@
+ money_type,money_cnt
+-5,4
+-10,7
+-20,3
+-50,16
+-100,13
++5,1
++10,9
++20,7
++50,1
++100,27

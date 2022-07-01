@@ -1,0 +1,177 @@
+Index: build.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.xml b/build.xml
+new file mode 100644
+--- /dev/null	(date 1656612149294)
++++ b/build.xml	(date 1656612149294)
+@@ -0,0 +1,52 @@
++<?xml version="1.0" encoding="UTF-8" ?>
++<project name="Test" default="run" basedir=".">
++    <property name="src" value="src"/>
++    <property name="dest" value="classes"/>
++    <property name="base.dir" value="." />
++    <property name="lib.dir" value="${base.dir}/lib" />
++    <property name="doc.dir" value="doc"/>
++    <property name="cfcatest_jar" value="cfcasdk.jar"/>
++    <property name="main.class" value="hz.cfca.sdk.cfcasdk"/>
++    <path id="lib_classpath">
++        <fileset dir="${lib.dir}">
++            <include name="*.jar"/>
++        </fileset>
++
++    </path>
++    <target name="init">
++        <mkdir dir="${dest}"/>
++    </target>
++    <target name="compile" depends="init">
++        <javac srcdir="${src}" destdir="${dest}" includeantruntime="on" encoding="UTF-8">
++            <classpath refid="lib_classpath"/>
++        </javac>
++    </target>
++    <target name="build" depends="compile">
++        <jar jarfile="${cfcatest_jar}" basedir="${dest}" encoding="UTF-8">
++            <manifest>
++                <attribute name="Main-Class" value="${main.class}"/>
++                <attribute name="Class-Path" value="lib/servlet-api.jar lib/SADK-3.1.1.3.jar"/>
++            </manifest>
++        </jar>
++    </target>
++    <target name="run" depends="clean,build">
++
++    </target>
++    <target name="clean">
++        <delete dir="${dest}" />
++        <delete file="cfcatest_jar" />
++    </target>
++    <target name="rerun" depends="clean,run">
++        <ant target="clean" />
++        <ant target="run" />
++    </target>
++    <target name="createdoc">
++        <delete dir="${doc.dir}" />
++        <mkdir dir="${doc.dir}"/>
++        <javadoc destdir="${doc.dir}" encoding="UTF-8" docencoding="UTF-8">
++            <packageset dir="${src}">
++                <include name="**"/>
++            </packageset>
++        </javadoc>
++    </target>
++</project>
+\ No newline at end of file
+Index: T3.eml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/T3.eml b/T3.eml
+new file mode 100644
+--- /dev/null	(date 1656611309454)
++++ b/T3.eml	(date 1656611309454)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<component inherit-compiler-output="true" inheritJdk="true">
++	<output-test url="file://$MODULE_DIR$/out/test/T3"/>
++	<exclude-output/>
++	<contentEntry url="file://$MODULE_DIR$">
++		<testFolder url="file://$MODULE_DIR$/test"/>
++	</contentEntry>
++	<lib name="JUnit4" scope="TEST"/>
++	<lib name="JUnit4" scope="TEST"/>
++	<levels>
++		<level name="hamcrest-core-1.3" value="project"/>
++		<level name="junit-4.11" value="project"/>
++	</levels>
++</component>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12\" name=\"Changes\" comment=\"fix bugs\">\r\n      <change afterPath=\"$PROJECT_DIR$/VendingMachineT3.zip\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/T3.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/T3.iml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExportToHTMLSettings\">\r\n    <option name=\"OUTPUT_DIRECTORY\" value=\"$PROJECT_DIR$/../VendingMachineT3\\exportToHTML\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JUnit5 Test Class\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"rebase1\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"23f546d5-cc1e-42fa-9419-0687535068e8\" />\r\n        <option name=\"url\" value=\"https://github.com/mororolan/T30623.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2AfMppEnH3CUAxwz4novy8T7KG1\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"last_opened_file_path\": \"E:/IdeaWorkplace/VendingMachineT3\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\test\\team3\\Gryffindor\\VM\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\\model\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\test\\team3\\passpasspass\\VM\\controller\" />\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\\GUI\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"E:\\IdeaWorkplace\\VendingMachineT3\\src\\team3\\passpasspass\\VM\\controller\\GUI\" />\r\n    </key>\r\n    <key name=\"ExtractSuperBase.RECENT_KEYS\">\r\n      <recent name=\"team3.passpasspass.VM.controller.model\" />\r\n    </key>\r\n    <key name=\"MoveClassesOrPackagesDialog.RECENTS_KEY\">\r\n      <recent name=\"team3.passpasspass.VM.controller\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"team3.passpasspass.VM.controller\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"team3.passpasspass.VM.controller.model\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Application.Main\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"T3\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"team3.passpasspass.VM.controller.SimulatorControlPanel\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"team3.passpasspass.VM.controller.SimulatorControlPanel\" />\r\n      <module name=\"T3\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"team3.passpasspass.VM.controller.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n        <item itemvalue=\"Application.team3.passpasspass.VM.controller.SimulatorControlPanel\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"eb3649cd-5ec4-430e-b454-ed64e3fea342\" name=\"Changes\" comment=\"\" />\r\n      <created>1655396374701</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1655396374701</updated>\r\n      <workItem from=\"1656411869641\" duration=\"1099000\" />\r\n      <workItem from=\"1656413548512\" duration=\"743000\" />\r\n      <workItem from=\"1656414315164\" duration=\"17227000\" />\r\n      <workItem from=\"1656432977018\" duration=\"1108000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add loginstatus\">\r\n      <created>1655995509458</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1655995509458</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"add loginstatus\">\r\n      <created>1655995552626</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1655995552626</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"add a lot of things\">\r\n      <created>1656219291285</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656219291285</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"fix a bug\">\r\n      <created>1656232261808</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656232261808</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"merge peijun &amp; robin‘s work\">\r\n      <created>1656233711777</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656233711777</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"fix some structure problems\">\r\n      <created>1656233960833</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656233960833</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"merge all work\">\r\n      <created>1656234638894</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656234638894</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"fix a bug\">\r\n      <created>1656234972634</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656234972634</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"update\">\r\n      <created>1656252729443</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656252729443</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"update and fix some bugs\">\r\n      <created>1656254082258</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656254082258</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"write new layout and fix some bugs\">\r\n      <created>1656345298078</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656345298078</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"fix bugs and layout\">\r\n      <created>1656350540238</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656350540239</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"add customer layout\">\r\n      <created>1656424720809</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656424720809</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"add customer layout\">\r\n      <created>1656425116836</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656425116836</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"set checkPressEnter\">\r\n      <created>1656435745790</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656435745790</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"add button\">\r\n      <created>1656436886346</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656436886346</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"add button\">\r\n      <created>1656436967844</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656436967844</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"test\">\r\n      <created>1656516548004</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656516548004</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"the new version 0630\">\r\n      <created>1656519666470</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656519666470</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"refine code structure\">\r\n      <created>1656602832728</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656602832728</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"add TEST\">\r\n      <created>1656603165977</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656603165977</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"change addButton Name\">\r\n      <created>1656609599096</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656609599096</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00023\" summary=\"change addButton Name\">\r\n      <created>1656609646167</created>\r\n      <option name=\"number\" value=\"00023\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656609646167</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00024\" summary=\"fix bugs\">\r\n      <created>1656609903026</created>\r\n      <option name=\"number\" value=\"00024\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1656609903026</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"25\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ID_ORDER\">\r\n      <list>\r\n        <option value=\"Default.Root\" />\r\n        <option value=\"Default.Author\" />\r\n        <option value=\"Default.Date\" />\r\n        <option value=\"Default.Subject\" />\r\n        <option value=\"Space.CommitStatus\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/branch1\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"add loginstatus\" />\r\n    <MESSAGE value=\"add a lot of things\" />\r\n    <MESSAGE value=\"merge peijun &amp; robin‘s work\" />\r\n    <MESSAGE value=\"fix some structure problems\" />\r\n    <MESSAGE value=\"merge all work\" />\r\n    <MESSAGE value=\"fix a bug\" />\r\n    <MESSAGE value=\"update\" />\r\n    <MESSAGE value=\"update and fix some bugs\" />\r\n    <MESSAGE value=\"write new layout and fix some bugs\" />\r\n    <MESSAGE value=\"fix bugs and layout\" />\r\n    <MESSAGE value=\"add customer layout\" />\r\n    <MESSAGE value=\"set checkPressEnter\" />\r\n    <MESSAGE value=\"add button\" />\r\n    <MESSAGE value=\"test\" />\r\n    <MESSAGE value=\"the new version 0630\" />\r\n    <MESSAGE value=\"refine code structure\" />\r\n    <MESSAGE value=\"add TEST\" />\r\n    <MESSAGE value=\"change addButton Name\" />\r\n    <MESSAGE value=\"fix bugs\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"fix bugs\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/awt/LayoutManager2.java</url>\r\n          <option name=\"timeStamp\" value=\"2\" />\r\n        </line-breakpoint>\r\n        <breakpoint enabled=\"true\" type=\"java-exception\">\r\n          <properties class=\"java.lang.NumberFormatException\" package=\"java.lang\" />\r\n          <option name=\"timeStamp\" value=\"3\" />\r\n        </breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 79805e923c5db29fb9df3a6ca79057ef60131447)
++++ b/.idea/workspace.xml	(date 1656612335629)
+@@ -4,10 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="fix bugs">
++    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="add lib files">
++      <change afterPath="$PROJECT_DIR$/T3.eml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/VendingMachineT3.zip" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/T3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/T3.iml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -61,18 +62,19 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;E:/eclipseWorkspace&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\Gryffindor\VM" />
+@@ -131,7 +133,7 @@
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="eb3649cd-5ec4-430e-b454-ed64e3fea342" name="Changes" comment="" />
++      <changelist id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="add lib files" />
+       <created>1655396374701</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+@@ -309,7 +311,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1656609903026</updated>
+     </task>
+-    <option name="localTasksCounter" value="25" />
++    <task id="LOCAL-00025" summary="add lib files">
++      <created>1656611184344</created>
++      <option name="number" value="00025" />
++      <option name="presentableId" value="LOCAL-00025" />
++      <option name="project" value="LOCAL" />
++      <updated>1656611184344</updated>
++    </task>
++    <option name="localTasksCounter" value="26" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -370,7 +379,8 @@
+     <MESSAGE value="add TEST" />
+     <MESSAGE value="change addButton Name" />
+     <MESSAGE value="fix bugs" />
+-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
++    <MESSAGE value="add lib files" />
++    <option name="LAST_COMMIT_MESSAGE" value="add lib files" />
+   </component>
+   <component name="XDebuggerManager">
+     <breakpoint-manager>
