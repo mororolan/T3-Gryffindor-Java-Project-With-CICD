@@ -44,7 +44,6 @@ public class MachinerySimulatorPanelTest {
             bnt.setEnabled(unlockStatus.get());
 
             MSP.coinsChange(coins, unlockStatus, warning, finalI, num);
-            System.out.println(warning.getText());
             assertEquals("The door is closed, you can't change the data",warning.getText());
         }
 
@@ -62,7 +61,6 @@ public class MachinerySimulatorPanelTest {
             ArrayList<String[]> coinsNew = ReadCSV.readCSV("./data/dwd_money_stat.csv");
             String[] record = coinsNew.get(finalI);
 
-            System.out.println("expected: "+ String.valueOf(num)+ ", actual: "+ record[1]);
             int actual = Integer.parseInt(record[1]);
             assertEquals(num,actual,0.0);
             assertEquals("Congratulations on your simulated modification of the number of coins",warning.getText());
@@ -83,7 +81,6 @@ public class MachinerySimulatorPanelTest {
             ArrayList<String[]> coinsNew = ReadCSV.readCSV("./data/dwd_money_stat.csv");
             String[] record = coinsNew.get(finalI);
 
-            System.out.println("not expected: "+ String.valueOf(num)+ ", actual: "+ record[1]);
             int actual = Integer.parseInt(record[1]);
             assertNotEquals(num,actual,0.0);
             assertEquals("Wrong Input, please notify the range you can change is [0-40]",warning.getText());
@@ -104,7 +101,6 @@ public class MachinerySimulatorPanelTest {
             bnt.setEnabled(unlockStatus.get());
 
             MSP.cansChange(cans, unlockStatus, warning, finalI, num);
-            System.out.println(warning.getText());
             assertEquals("The door is closed, you can't change the data",warning.getText());
         }
 
@@ -123,7 +119,6 @@ public class MachinerySimulatorPanelTest {
             String[] record = coinsNew.get(finalI);
 
             int actual = Integer.parseInt(record[2]);
-            System.out.println("not expected: "+ String.valueOf(num)+ ", actual: "+ String.valueOf(actual));
             assertEquals(num,actual,0.0);
             assertEquals("Congratulations on your simulated modification of the number of cans",warning.getText());
         }
@@ -144,7 +139,6 @@ public class MachinerySimulatorPanelTest {
             String[] record = coinsNew.get(finalI);
 
             int actual = Integer.parseInt(record[2]);
-            System.out.println("not expected: "+ String.valueOf(num)+ ", actual: "+ String.valueOf(actual));
             assertNotEquals(num,actual,0.0);
             assertEquals("Wrong Input, please notify the range you can change is [0-20]",warning.getText());
         }
