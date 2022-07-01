@@ -6,6 +6,7 @@
     <property name="src" value="src"/>
     <property name="result" value="result"/>
     <property name="test_jar" value="test.jar"/>
+    <property name="CustomerPanelTest" value="test.team3.Gryffindor.VM.CustomerPanelTest"/>
     <!--每个target代表你想做的操作，给这个操作命名，及name值，depends是它所依赖的target在执行这个target，例如这里的compile之前ant会先检查init是否曾经被执行过，如果执行
         过则直接直接执行compile，如果没有则会先执行它依赖的target例如这里的init，然后在执行这个target-->
     <!--新建文件夹-->
@@ -17,9 +18,9 @@
         <javac srcdir="${src}" destdir="${result}"/>
     </target>
     <!--    test-->
-    <target name = "unittest">
+    <target name = "customerPanelTest">
         <junit haltonfailure = "true" printsummary = "true">
-            <test name = "test.team3,Gryffindor.VM.CustomerPanelTest"/>
+            <test name = "CustomerPanelTest"/>
         </junit>
     </target>
     <!--创建jar包-->
