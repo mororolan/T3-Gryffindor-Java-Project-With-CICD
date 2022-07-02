@@ -33,8 +33,6 @@
 <!--    </target>-->
 
     <target name="junit" depends="build">
-
-
         <junit printsummary="yes" haltonfailure="no">
             <!--classpath-->
             <classpath location="./jars/junit-4.11.jar"/>
@@ -45,6 +43,6 @@
             </batchtest>
         </junit>
     </target>
-
+<!--test-->
 
 </project>
