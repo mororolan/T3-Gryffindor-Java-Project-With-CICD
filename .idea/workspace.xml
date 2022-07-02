@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="change build">
+    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="change something">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/buildTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_drink_info.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_drink_info.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/ButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/ButtonFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,27 +62,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/IdeaWorkplace/VendingMachineT3&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "last_opened_file_path": "E:/IdeaWorkplace/VendingMachineT3/src/team3/Gryffindor/VM/GUI",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\Gryffindor\VM\GUI" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\test\team3\Gryffindor\VM" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\Gryffindor\VM\panel" />
       <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller\model" />
-      <recent name="E:\IdeaWorkplace\VendingMachineT3\src\team3\passpasspass\VM\controller" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -105,19 +107,6 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="T3" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="team3.passpasspass.VM.controller.SimulatorControlPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="team3.passpasspass.VM.controller.SimulatorControlPanel" />
-      <module name="T3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="team3.passpasspass.VM.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -153,12 +142,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SimulatorControlPanelTest.beginSimulation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="team3.Gryffindor.VM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="team3.Gryffindor.VM" />
+      <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.SimulatorControlPanelTest" />
+      <option name="METHOD_NAME" value="beginSimulation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulatorControlPanelTest.openMachineryPanel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="team3.Gryffindor.VM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="team3.Gryffindor.VM" />
+      <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.SimulatorControlPanelTest" />
+      <option name="METHOD_NAME" value="openMachineryPanel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SimulatorControlPanelTest.openMachineryPanel" />
+        <item itemvalue="JUnit.SimulatorControlPanelTest.beginSimulation" />
         <item itemvalue="JUnit.CustomerPanelTest.addChooseDrink" />
         <item itemvalue="JUnit.MachinerySimulatorPanelTest" />
-        <item itemvalue="Application.team3.passpasspass.VM.controller.SimulatorControlPanel" />
       </list>
     </recent_temporary>
   </component>
@@ -399,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656694208716</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="change something">
+      <created>1656729567650</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1656729567650</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,7 +492,8 @@
     <MESSAGE value="CI" />
     <MESSAGE value="update" />
     <MESSAGE value="change build" />
-    <option name="LAST_COMMIT_MESSAGE" value="change build" />
+    <MESSAGE value="change something" />
+    <option name="LAST_COMMIT_MESSAGE" value="change something" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
