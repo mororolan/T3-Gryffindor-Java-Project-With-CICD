@@ -1,4 +1,4 @@
-package team3.Gryffindor.VM.model;
+package team3.Gryffindor.VM.model.MementoPattern;
 
 import java.util.ArrayList;
 

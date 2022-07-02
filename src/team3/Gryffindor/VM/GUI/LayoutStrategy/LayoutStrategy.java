@@ -1,4 +1,4 @@
-package team3.Gryffindor.VM.GUI;
+package team3.Gryffindor.VM.GUI.LayoutStrategy;
 
 import java.awt.*;
 

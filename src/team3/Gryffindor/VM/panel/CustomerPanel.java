@@ -1,7 +1,12 @@
 package team3.Gryffindor.VM.panel;
 
 import team3.Gryffindor.VM.GUI.*;
+import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
+import team3.Gryffindor.VM.GUI.TextFactory;
+import team3.Gryffindor.VM.GUI.LayoutStrategy.AfAnyWhereLayout;
 import team3.Gryffindor.VM.model.*;
+import team3.Gryffindor.VM.model.CoinList;
+import team3.Gryffindor.VM.model.MementoPattern.TerminateMemento;
 
 import java.awt.*;
 

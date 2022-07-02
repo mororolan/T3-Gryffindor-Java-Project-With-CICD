@@ -1,8 +1,8 @@
 package team3.Gryffindor.VM.panel;
-import team3.Gryffindor.VM.GUI.ButtonFactory;
+import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
 import team3.Gryffindor.VM.GUI.T3Frame;
 import team3.Gryffindor.VM.GUI.TextFactory;
-import team3.Gryffindor.VM.GUI.VerticalLayout;
+import team3.Gryffindor.VM.GUI.LayoutStrategy.VerticalLayout;
 
 import javax.swing.*;
 

@@ -1,6 +1,9 @@
 package team3.Gryffindor.VM.panel;
 
 import team3.Gryffindor.VM.GUI.*;
+import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
+import team3.Gryffindor.VM.GUI.TextFactory;
+import team3.Gryffindor.VM.GUI.LayoutStrategy.VerticalLayout;
 import team3.Gryffindor.VM.model.CheckKeyType;
 import team3.Gryffindor.VM.model.ReadCSV;
 import team3.Gryffindor.VM.model.WriteCSV;

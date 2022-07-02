@@ -1,11 +1,11 @@
-package team3.Gryffindor.VM.model;
+package team3.Gryffindor.VM.model.IteratorPattern;
 
 import java.util.ArrayList;
 
-public class ChangeIterator {
+public class CoinIterator {
     ArrayList<String> changeSol;
 
-    public ChangeIterator(){
+    public CoinIterator(){
         changeSol = new ArrayList<>();
     }
 
