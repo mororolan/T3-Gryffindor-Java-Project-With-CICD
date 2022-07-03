@@ -1,4 +1,4 @@
-package team3.Gryffindor.VM.model.InterceptingFilterPattern;
+package team3.Gryffindor.VM.model;
 
 public interface Filter {
     public void execute(String request);

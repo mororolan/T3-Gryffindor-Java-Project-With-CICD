@@ -1,4 +1,4 @@
-package team3.Gryffindor.VM.model.ObserverPattern;
+package team3.Gryffindor.VM.model;
 
 import java.io.*;
 import java.util.ArrayList;

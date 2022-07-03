@@ -1,4 +1,4 @@
-package team3.Gryffindor.VM.model.IteratorPattern;
+package team3.Gryffindor.VM.model;
 
 import java.util.ArrayList;
 

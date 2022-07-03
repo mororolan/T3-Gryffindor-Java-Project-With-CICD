@@ -1,7 +1,5 @@
 package team3.Gryffindor.VM.model;
 
-import team3.Gryffindor.VM.model.IteratorPattern.CoinIterator;
-import team3.Gryffindor.VM.model.ReadCSV;
 import team3.Gryffindor.VM.panel.CustomerPanel;
 
 import java.util.ArrayList;

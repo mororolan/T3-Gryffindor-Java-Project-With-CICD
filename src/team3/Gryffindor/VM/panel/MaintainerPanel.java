@@ -1,11 +1,11 @@
 package team3.Gryffindor.VM.panel;
 
 import team3.Gryffindor.VM.GUI.*;
-import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
-import team3.Gryffindor.VM.GUI.TextFactory;
-import team3.Gryffindor.VM.GUI.LayoutStrategy.AfAnyWhereLayout;
+import team3.Gryffindor.VM.GUI.ButtonFactory;
+import team3.Gryffindor.VM.GUI.TextUtils;
+import team3.Gryffindor.VM.GUI.AfAnyWhereLayout;
 import team3.Gryffindor.VM.model.CheckKeyType;
-import team3.Gryffindor.VM.model.ObserverPattern.NumberObserver;
+import team3.Gryffindor.VM.model.NumberObserver;
 import team3.Gryffindor.VM.model.ReadCSV;
 import team3.Gryffindor.VM.model.WriteCSV;
 
@@ -49,12 +49,12 @@ public class MaintainerPanel extends T3Frame {
         JPanel panelTop_Top = new JPanel();
         panelTop_Top.setPreferredSize(new Dimension(600,30));
         panelTop_Top.setLayout(new AfAnyWhereLayout());
-        JLabel jlMaintainerTitle = new TextFactory("VMCS - Maintainer Penel", 15);
+        JLabel jlMaintainerTitle = new TextUtils("VMCS - Maintainer Penel", 15);
         //----Top_Bottom----//
         JPanel panelTop_Bottom = new JPanel();
         panelTop_Bottom.setPreferredSize(new Dimension(600,120));
         panelTop_Bottom.setLayout(new AfAnyWhereLayout());
-        JLabel jlMaintainerPassword = new TextFactory("Password:", 2);
+        JLabel jlMaintainerPassword = new TextUtils("Password:", 2);
         JPasswordField jpfMaintainerPassword = new JPasswordField();
         jpfMaintainerPassword.setPreferredSize(new Dimension(100,30));
         JButton jbMaintainerPasswordValid = ButtonFactory.addButton("Valid Password", "jbMaintainerPasswordValid");
@@ -83,7 +83,7 @@ public class MaintainerPanel extends T3Frame {
         JPanel panelCenter_Top = new JPanel();
         panelCenter_Top.setPreferredSize(new Dimension(600,250));
         panelCenter_Top.setLayout(new AfAnyWhereLayout());
-        JLabel jlCoins = new TextFactory("Quantity of Coins Available", 3);
+        JLabel jlCoins = new TextUtils("Quantity of Coins Available", 3);
         jlCoins.setPreferredSize(new Dimension(200,30));
 
         //------CENTER jpCoins and CoinsTextField-----//
@@ -134,7 +134,7 @@ public class MaintainerPanel extends T3Frame {
         JPanel panelCenter_Center = new JPanel();
         panelCenter_Center.setPreferredSize(new Dimension(600,230));
         panelCenter_Center.setLayout(new AfAnyWhereLayout());
-        JLabel jlDrinksAvailable = new TextFactory("Quantity of Drinks Available",4);
+        JLabel jlDrinksAvailable = new TextUtils("Quantity of Drinks Available",4);
         jlDrinksAvailable.setPreferredSize(new Dimension(200,30));
 
         //------CENTER jpDrinks and DrinksTextField-----//
@@ -159,7 +159,7 @@ public class MaintainerPanel extends T3Frame {
                     checkPressEnter(cans.get(),text,clickDrinkBnt.get(),"drink");
                 }}});
 
-        JLabel jlBrandPrice = new TextFactory("Brand Price",5);
+        JLabel jlBrandPrice = new TextUtils("Brand Price",5);
         JTextField jtfBrandPrice = new JTextField(null);
         jtfBrandPrice.setPreferredSize(new Dimension(80, 20));
         jtfBrandPrice.addKeyListener(new CheckKeyType());
@@ -244,7 +244,7 @@ public class MaintainerPanel extends T3Frame {
         panelBottom_Center.setLayout(new AfAnyWhereLayout());
         JButton jbCollectCash = ButtonFactory.addButton("Press to Collect All Cash","jbCollectCash");
         jbCollectCash.setPreferredSize(new Dimension(300,30));
-        JLabel jlCollectCash = new TextFactory("Collect Cash:",6);
+        JLabel jlCollectCash = new TextUtils("Collect Cash:",6);
         jlCollectCash.setPreferredSize(new Dimension(100,30));
         JTextField jtfCollectCash = new JTextField("0 c");
         jtfCollectCash.setPreferredSize(new Dimension(80,20));

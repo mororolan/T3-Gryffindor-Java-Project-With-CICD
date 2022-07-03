@@ -1,8 +1,8 @@
 package team3.Gryffindor.VM.panel;
-import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
+import team3.Gryffindor.VM.GUI.ButtonFactory;
 import team3.Gryffindor.VM.GUI.T3Frame;
-import team3.Gryffindor.VM.GUI.TextFactory;
-import team3.Gryffindor.VM.GUI.LayoutStrategy.VerticalLayout;
+import team3.Gryffindor.VM.GUI.TextUtils;
+import team3.Gryffindor.VM.GUI.VerticalLayout;
 
 import javax.swing.*;
 
@@ -18,7 +18,7 @@ public class  SimulatorControlPanel extends T3Frame {
         super(title);
         this.setLayout(new VerticalLayout());
         // set text
-        this.add(new TextFactory("Simulator Control Panel",12));
+        this.add(new TextUtils("Simulator Control Panel",12));
 
         bBeginSimulation = ButtonFactory.addButton("Begin Simulation","mainPanel");
         bEndSimulation = ButtonFactory.addButton("End Simulation","mainPanel");

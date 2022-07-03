@@ -3,7 +3,7 @@ package team3.Gryffindor.VM;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
+import team3.Gryffindor.VM.GUI.ButtonFactory;
 import team3.Gryffindor.VM.model.ReadCSV;
 import team3.Gryffindor.VM.panel.CustomerPanel;
 import team3.Gryffindor.VM.panel.SimulatorControlPanel;

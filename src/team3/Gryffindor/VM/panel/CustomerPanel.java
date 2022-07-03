@@ -1,12 +1,12 @@
 package team3.Gryffindor.VM.panel;
 
 import team3.Gryffindor.VM.GUI.*;
-import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
-import team3.Gryffindor.VM.GUI.TextFactory;
-import team3.Gryffindor.VM.GUI.LayoutStrategy.AfAnyWhereLayout;
+import team3.Gryffindor.VM.GUI.ButtonFactory;
+import team3.Gryffindor.VM.GUI.TextUtils;
+import team3.Gryffindor.VM.GUI.AfAnyWhereLayout;
 import team3.Gryffindor.VM.model.*;
 import team3.Gryffindor.VM.model.CoinList;
-import team3.Gryffindor.VM.model.MementoPattern.TerminateMemento;
+import team3.Gryffindor.VM.model.TerminateMemento;
 
 import java.awt.*;
 
@@ -132,13 +132,13 @@ public class CustomerPanel extends T3Frame {
         panelTop_Top = new JPanel();
         panelTop_Top.setPreferredSize(new Dimension(600,30));
         panelTop_Top.setLayout(new AfAnyWhereLayout());
-        lblTitle = new TextFactory("Soft Drink Dispenser",8);
+        lblTitle = new TextUtils("Soft Drink Dispenser",8);
         //CENTER
         panelTop_Center = new JPanel();
         panelTop_Center.setPreferredSize(new Dimension(600,70));
         panelTop_Center.setLayout(new AfAnyWhereLayout());
-        lblEnterCoins = new TextFactory("Enter Coins Here",7);
-        lblEnoughCoins = new TextFactory("Coins Entered is Enough",7);
+        lblEnterCoins = new TextUtils("Enter Coins Here",7);
+        lblEnoughCoins = new TextUtils("Coins Entered is Enough",7);
         for (int i=1; i<coins.size(); i++){
             btnCoins.add(ButtonFactory.addButton(coins.get(i)[0]+"c","jbEnterCoins"));
         }
@@ -148,7 +148,7 @@ public class CustomerPanel extends T3Frame {
         panelTop_Bottom = new JPanel();
         panelTop_Bottom.setPreferredSize(new Dimension(600,30));
         panelTop_Bottom.setLayout(new AfAnyWhereLayout());
-        lblWarningInvalid = new TextFactory("Invalid Coin",10);
+        lblWarningInvalid = new TextUtils("Invalid Coin",10);
     }
 
     public void showCenter(){
@@ -156,24 +156,24 @@ public class CustomerPanel extends T3Frame {
         panelCenter.setPreferredSize(new Dimension(600,390));
         panelCenter.setLayout(new AfAnyWhereLayout());
         //TOP
-        lblTotalMoney = new TextFactory("Total Money Inserted:",7);
-        lblTotalMoneyNum = new TextFactory("0 c",11);
+        lblTotalMoney = new TextUtils("Total Money Inserted:",7);
+        lblTotalMoneyNum = new TextUtils("0 c",11);
         //CENTER
         for (int i=1; i<cans.size(); i++){
             btnCans.add(ButtonFactory.addButton(cans.get(i)[1],"jbChooseDrink"));
         }
         for (int i=1; i<cans.size(); i++){
-            lblDrinkPrice.add(new TextFactory(cans.get(i)[3]+"c",11));
+            lblDrinkPrice.add(new TextUtils(cans.get(i)[3]+"c",11));
         }
         for (int i=1; i<cans.size(); i++){
             if(Integer.parseInt(cans.get(i)[2])>0)
-                lblDrinkCnt.add(new TextFactory("Not in Stock",10));
+                lblDrinkCnt.add(new TextUtils("Not in Stock",10));
             else
-                lblDrinkCnt.add(new TextFactory("Not in Stock",9));
+                lblDrinkCnt.add(new TextUtils("Not in Stock",9));
         }
         checkNullStock();
-        lblNoChange = new TextFactory("No Change Available",10);
-        lblChangeSuccess = new TextFactory("Change Successfully", 7);
+        lblNoChange = new TextUtils("No Change Available",10);
+        lblChangeSuccess = new TextUtils("Change Successfully", 7);
     }
 
     public void showBottom(){
@@ -181,8 +181,8 @@ public class CustomerPanel extends T3Frame {
         panelBottom.setPreferredSize(new Dimension(600,180));
         panelBottom.setLayout(new AfAnyWhereLayout());
         //TOP
-        lblStartDispensing = new TextFactory("Start Dispensing",2);
-        lblPurchaseSuccess = new TextFactory("Purchase Successfully",2);
+        lblStartDispensing = new TextUtils("Start Dispensing",2);
+        lblPurchaseSuccess = new TextUtils("Purchase Successfully",2);
         lblPurchaseSuccess.setPreferredSize(new Dimension(300,30));
         btnContinueToBuy = ButtonFactory.addButton("Continue to Buy","jbContinueToBuy");
         btnTerminate = ButtonFactory.addButton("Terminate and Return Cash","jbTerminate");
@@ -191,11 +191,11 @@ public class CustomerPanel extends T3Frame {
         else
             btnTerminate.setEnabled(true);
         //CENTER
-        lblCollectCoins = new TextFactory("Collect Coins:",7);
-        lblCollectCoinsNum = new TextFactory("0 c",11);
+        lblCollectCoins = new TextUtils("Collect Coins:",7);
+        lblCollectCoinsNum = new TextUtils("0 c",11);
         //BOTTOM
-        lblCollectCan = new TextFactory("Collect Can Here:",7);
-        lblCollectCanInfo = new TextFactory("NO CAN",11);
+        lblCollectCan = new TextUtils("Collect Can Here:",7);
+        lblCollectCanInfo = new TextUtils("NO CAN",11);
         btnBackController = ButtonFactory.addButton("Back to the Main Panel","jbCustomerBack");
     }
 

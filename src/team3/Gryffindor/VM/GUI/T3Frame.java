@@ -17,7 +17,7 @@ public class T3Frame extends JFrame {
         setLocation((int) (width - this.getWidth()) / 2,
                 (int) (height - this.getHeight()) / 2);
 
-        JLabel T3Mark = new TextFactory("@Copyright(c) Team #3: Gryffindor", 0);
+        JLabel T3Mark = new TextUtils("@Copyright(c) Team #3: Gryffindor", 0);
         this.add(T3Mark);
 
         setIconImage(Toolkit.getDefaultToolkit().getImage("./res/icon.gif"));

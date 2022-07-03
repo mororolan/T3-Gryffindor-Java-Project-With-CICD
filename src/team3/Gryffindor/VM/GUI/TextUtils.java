@@ -3,15 +3,15 @@ package team3.Gryffindor.VM.GUI;
 import javax.swing.*;
 import java.awt.*;
 
-public class TextFactory extends JLabel {
-    public TextFactory(String text) {
+public class TextUtils extends JLabel {
+    public TextUtils(String text) {
         super(text);
         this.setPreferredSize(new Dimension(250, 60));
         this.setHorizontalAlignment(SwingConstants.CENTER);
         this.setFont(new Font(Font.SERIF, Font.PLAIN, 24));
     }
 
-    public TextFactory(String text, int type) {
+    public TextUtils(String text, int type) {
         this(text);
         if (type == 0) {
             this.setFont(new Font("Times New Romans", Font.BOLD, 16));

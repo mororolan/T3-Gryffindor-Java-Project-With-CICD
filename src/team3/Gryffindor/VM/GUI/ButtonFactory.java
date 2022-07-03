@@ -1,4 +1,4 @@
-package team3.Gryffindor.VM.GUI.FactoryPattern;
+package team3.Gryffindor.VM.GUI;
 
 import javax.swing.*;
 import java.awt.*;

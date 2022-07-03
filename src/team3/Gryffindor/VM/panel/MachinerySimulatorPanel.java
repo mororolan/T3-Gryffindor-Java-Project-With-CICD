@@ -1,9 +1,9 @@
 package team3.Gryffindor.VM.panel;
 
 import team3.Gryffindor.VM.GUI.*;
-import team3.Gryffindor.VM.GUI.FactoryPattern.ButtonFactory;
-import team3.Gryffindor.VM.GUI.TextFactory;
-import team3.Gryffindor.VM.GUI.LayoutStrategy.VerticalLayout;
+import team3.Gryffindor.VM.GUI.ButtonFactory;
+import team3.Gryffindor.VM.GUI.TextUtils;
+import team3.Gryffindor.VM.GUI.VerticalLayout;
 import team3.Gryffindor.VM.model.CheckKeyType;
 import team3.Gryffindor.VM.model.ReadCSV;
 import team3.Gryffindor.VM.model.WriteCSV;
@@ -24,7 +24,7 @@ public class MachinerySimulatorPanel extends T3Frame {
         AtomicBoolean unlockStatus = new AtomicBoolean(loginStatus);
 
 
-        JLabel bigTitle = new TextFactory(title);
+        JLabel bigTitle = new TextUtils(title);
 
         JPanel coinContainer = new T3Panel();
         coinContainer.setLayout(new GridLayout(coins.size() - 1, 1, 40, 1));
@@ -34,7 +34,7 @@ public class MachinerySimulatorPanel extends T3Frame {
         canContainer.setLayout(new GridLayout(cans.size() - 1, 1, 40, 1));
         canContainer.setPreferredSize(new Dimension(350,100));
 
-        TextFactory warning = new TextFactory("No change",14);
+        TextUtils warning = new TextUtils("No change",14);
 
         showCoinsChange(coins, unlockStatus, warning, coinContainer);
         showCansChange(cans, unlockStatus, warning, canContainer);
@@ -54,9 +54,9 @@ public class MachinerySimulatorPanel extends T3Frame {
 
 
         this.add(bigTitle);
-        this.add(new TextFactory("Quantity of Coins", 1));
+        this.add(new TextUtils("Quantity of Coins", 1));
         this.add(coinContainer);
-        this.add(new TextFactory("Quantity of Cans", 1));
+        this.add(new TextUtils("Quantity of Cans", 1));
         this.add(canContainer);
         this.add(lockBox);
         this.add(warning);
@@ -74,13 +74,13 @@ public class MachinerySimulatorPanel extends T3Frame {
         this.dispose();
         return new SimulatorControlPanel("VMCS - Simulator Control Panel", loginStatus).getTitle();
     }
-    public void showCoinsChange(ArrayList<String[]> coins,AtomicBoolean unlockStatus,TextFactory warning,JPanel coinContainer){
+    public void showCoinsChange(ArrayList<String[]> coins, AtomicBoolean unlockStatus, TextUtils warning, JPanel coinContainer){
         for (int i = 1; i < coins.size(); i++) {
             String coinsName = coins.get(i)[0] + "c";
             if (coins.get(i)[0].equals("100")) {
                 coinsName = "$1";
             }
-            TextFactory a = new TextFactory(coinsName,13);
+            TextUtils a = new TextUtils(coinsName,13);
             JTextField b = new JTextField(coins.get(i)[1], 5);
             b.setBackground(Color.PINK);
             JButton bnt = new JButton("Change Simulator");
@@ -98,7 +98,7 @@ public class MachinerySimulatorPanel extends T3Frame {
             coinContainer.add(bnt);
         }
     }
-    public void coinsChange(ArrayList<String[]> coins,AtomicBoolean unlockStatus,TextFactory warning,int finalI,int testText){
+    public void coinsChange(ArrayList<String[]> coins, AtomicBoolean unlockStatus, TextUtils warning, int finalI, int testText){
         String type = "coin";
         if (!unlockStatus.get()) {
             cantChange(warning);
@@ -109,9 +109,9 @@ public class MachinerySimulatorPanel extends T3Frame {
         }
     }
 
-    public void showCansChange(ArrayList<String[]> cans,AtomicBoolean unlockStatus,TextFactory warning,JPanel canContainer){
+    public void showCansChange(ArrayList<String[]> cans, AtomicBoolean unlockStatus, TextUtils warning, JPanel canContainer){
         for (int i = 1; i < cans.size(); i++) {
-            TextFactory a = new TextFactory(cans.get(i)[1],13);
+            TextUtils a = new TextUtils(cans.get(i)[1],13);
             JTextField b = new JTextField(cans.get(i)[2], 5);
             b.setBackground(Color.PINK);
             JButton bnt = new JButton("Change Simulator");
@@ -132,7 +132,7 @@ public class MachinerySimulatorPanel extends T3Frame {
         }
     }
 
-    public void cansChange(ArrayList<String[]> cans,AtomicBoolean unlockStatus,TextFactory warning,int finalI,int testText){
+    public void cansChange(ArrayList<String[]> cans, AtomicBoolean unlockStatus, TextUtils warning, int finalI, int testText){
         String type = "can";
         if (!unlockStatus.get()) {
             cantChange(warning);
@@ -143,10 +143,10 @@ public class MachinerySimulatorPanel extends T3Frame {
         }
     }
 
-    public void cantChange(TextFactory warning){
+    public void cantChange(TextUtils warning){
         warning.setText("The door is closed, you can't change the data");
     }
-    public void canChange(ArrayList<String[]> data,TextFactory warning,int finalI,int testText,String type){
+    public void canChange(ArrayList<String[]> data, TextUtils warning, int finalI, int testText, String type){
         String[] record = data.get(finalI);
         String info = "";
 
@@ -168,7 +168,7 @@ public class MachinerySimulatorPanel extends T3Frame {
         warning.setText("Congratulations on your simulated modification of the number of "+type+"s");
     }
 
-    public void failToChange(TextFactory warning,String type){
+    public void failToChange(TextUtils warning, String type){
         switch (type){
             case "coin":
                 warning.setText("Wrong Input, please notify the range you can change is [0-40]");

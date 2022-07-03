@@ -3,7 +3,7 @@ package team3.Gryffindor.VM;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import team3.Gryffindor.VM.GUI.TextFactory;
+import team3.Gryffindor.VM.GUI.TextUtils;
 import team3.Gryffindor.VM.model.ReadCSV;
 import team3.Gryffindor.VM.panel.MachinerySimulatorPanel;
 
@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
 public class MachinerySimulatorPanelTest {
 
     private static MachinerySimulatorPanel MSP = new MachinerySimulatorPanel("VMCS - Machinery Panel", true);
-    private static TextFactory warning = new TextFactory("No change");
+    private static TextUtils warning = new TextUtils("No change");
     private static boolean loginStatus = true;
     private static AtomicBoolean unlockStatus = new AtomicBoolean(loginStatus);
     private static Random random = new Random();
@@ -37,7 +37,7 @@ public class MachinerySimulatorPanelTest {
         unlockStatus.set(false);
         // can't change
         for (int i = 1; i < coins.size(); i++) {
-            TextFactory a = new TextFactory(coins.get(i)[0]);
+            TextUtils a = new TextUtils(coins.get(i)[0]);
             JButton bnt = new JButton("Change Simulator");
             int finalI = i;
             int num = random.nextInt(30);
@@ -50,7 +50,7 @@ public class MachinerySimulatorPanelTest {
         unlockStatus.set(true);
         // can change & change successfully
         for (int i = 1; i < coins.size(); i++) {
-            TextFactory a = new TextFactory(coins.get(i)[0]);
+            TextUtils a = new TextUtils(coins.get(i)[0]);
             JButton bnt = new JButton("Change Simulator");
             int finalI = i;
             int num = random.nextInt(40)+1;
@@ -70,7 +70,7 @@ public class MachinerySimulatorPanelTest {
         unlockStatus.set(true);
         // can change & change successfully
         for (int i = 1; i < coins.size(); i++) {
-            TextFactory a = new TextFactory(coins.get(i)[0]);
+            TextUtils a = new TextUtils(coins.get(i)[0]);
             JButton bnt = new JButton("Change Simulator");
             int finalI = i;
             int num = random.nextInt(30)+41;
@@ -94,7 +94,7 @@ public class MachinerySimulatorPanelTest {
         unlockStatus.set(false);
         // can't change
         for (int i = 1; i < cans.size(); i++) {
-            TextFactory a = new TextFactory(cans.get(i)[0]);
+            TextUtils a = new TextUtils(cans.get(i)[0]);
             JButton bnt = new JButton("Change Simulator");
             int finalI = i;
             int num = random.nextInt(15);
@@ -107,7 +107,7 @@ public class MachinerySimulatorPanelTest {
         unlockStatus.set(true);
         // can change & change successfully
         for (int i = 1; i < cans.size(); i++) {
-            TextFactory a = new TextFactory(cans.get(i)[0]);
+            TextUtils a = new TextUtils(cans.get(i)[0]);
             JButton bnt = new JButton("Change Simulator");
             int finalI = i;
             int num = random.nextInt(20)+1;
@@ -127,7 +127,7 @@ public class MachinerySimulatorPanelTest {
         unlockStatus.set(true);
         // can change & change successfully
         for (int i = 1; i < cans.size(); i++) {
-            TextFactory a = new TextFactory(cans.get(i)[0]);
+            TextUtils a = new TextUtils(cans.get(i)[0]);
             JButton bnt = new JButton("Change Simulator");
             int finalI = i;
             int num = random.nextInt(30)+21;
