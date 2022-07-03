@@ -6,23 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="change structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/FactoryPattern/ButtonFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/ButtonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/LayoutStrategy/AfAnyWhereLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/AfAnyWhereLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/LayoutStrategy/LayoutStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/LayoutStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/LayoutStrategy/VerticalLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/VerticalLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/T3Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/T3Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/TextFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/GUI/TextUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/CoinList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/CoinList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/InterceptingFilterPattern/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/IteratorPattern/CoinIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/CoinIterator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/MementoPattern/TerminateMemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/TerminateMemento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/ObserverPattern/NumberObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/model/NumberObserver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/CustomerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/CustomerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MachinerySimulatorPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MaintainerPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/MaintainerPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/SimulatorControlPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/team3/Gryffindor/VM/panel/SimulatorControlPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/team3/Gryffindor/VM/CustomerPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/CustomerPanelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/team3/Gryffindor/VM/MachinerySimulatorPanelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,10 +101,25 @@
       <recent name="team3.passpasspass.VM.controller.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.CustomerPanelTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="T3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerPanelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="T3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="team3.Gryffindor.VM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="team3.Gryffindor.VM" />
+      <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.CustomerPanelTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,21 +136,6 @@
       <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.CustomerPanelTest" />
       <option name="METHOD_NAME" value="addChooseDrink" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MachinerySimulatorPanelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="T3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="team3.Gryffindor.VM.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="team3.Gryffindor.VM" />
-      <option name="MAIN_CLASS_NAME" value="team3.Gryffindor.VM.MachinerySimulatorPanelTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -190,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerPanelTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SimulatorControlPanelTest.openMachineryPanel" />
         <item itemvalue="JUnit.SimulatorControlPanelTest.beginSimulation" />
         <item itemvalue="JUnit.CustomerPanelTest.addChooseDrink" />
-        <item itemvalue="JUnit.MachinerySimulatorPanelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -456,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656772903762</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="change structure">
+      <created>1656855036852</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1656855036852</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
