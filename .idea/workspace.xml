@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="change structure">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/dwd_money_stat.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/dwd_money_stat.csv" afterDir="false" />
+    <list default="true" id="b5f907ab-8c72-4dbf-99c5-c3f4bc51ae12" name="Changes" comment="update CI files">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/testCI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/testCI.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -447,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656855036852</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="update CI files">
+      <created>1656855805318</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1656855805318</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +495,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add loginstatus" />
     <MESSAGE value="add a lot of things" />
     <MESSAGE value="merge peijun &amp; robin‘s work" />
     <MESSAGE value="fix some structure problems" />
@@ -514,7 +519,8 @@
     <MESSAGE value="change something" />
     <MESSAGE value="edit ButtonFactory.java" />
     <MESSAGE value="change structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="change structure" />
+    <MESSAGE value="update CI files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update CI files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
