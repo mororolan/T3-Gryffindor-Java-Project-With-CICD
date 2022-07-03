@@ -82,15 +82,3 @@ class MaintainerPanel implements VMPanel{
 }
 
 
-//Concrete Observer2: Customer Panel
-class CustomerPanel implements VMPanel{
-
-	@Override
-	public void changeNumber(int number, String path) {
-		// TODO 
-		
-	}
-}
-
-
-
